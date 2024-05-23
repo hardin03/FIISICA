@@ -245,6 +245,8 @@ footer {
         position: inherit;
         gap: 1rem;
         align-items: end;
+        text-align: end;
+        right: 0;
         padding: 0;
         background-color: transparent;
     }
