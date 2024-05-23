@@ -1,45 +1,25 @@
-const nav = document.querySelector("#nav");
+document.addEventListener("DOMContentLoaded", () => {
+    const nav = document.querySelector(".nav");
+    const navLinks = document.querySelectorAll(".nav-list li a");
+    const sections = document.querySelectorAll(".section");
 
-const open = document.querySelector("#open");
-const close = document.querySelector("#close");
-const dropdown = document.querySelector("#dropdown-list");
+    // Smooth scrolling for navigation links
+    navLinks.forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
 
-const down = document.querySelector("#buttom-down");
-const up = document.querySelector("#buttom-up");
+            window.scrollTo({
+                top: targetSection.offsetTop - nav.offsetHeight,
+                behavior: 'smooth'
+            });
+        });
+    });
 
-const down_left = document.querySelector("#down-left");
-const up_left = document.querySelector("#up-left");
+    // Intersection Observer for section animations
+    const options = {
+        threshold: 0.25
+    };
 
-open.addEventListener("click", () => {
-    nav.classList.add("visible");
-    dropdown.classList.remove("down");
-})
-close.addEventListener("click", () => {
-    nav.classList.remove("visible");
-    up_left.classList.add("invisible");
-    down_left.classList.remove("invisible");
-})
-
-
-down.addEventListener("click", () => {
-    dropdown.classList.add("down");
-    down.classList.add("invisible");
-    up.classList.remove("invisible");
-})
-up.addEventListener("click", () => {
-    dropdown.classList.remove("down");
-    down.classList.remove("invisible");
-    up.classList.add("invisible");
-})
-
-
-down_left.addEventListener("click", () => {
-    dropdown.classList.add("down");
-    down_left.classList.add("invisible");
-    up_left.classList.remove("invisible");
-})
-up_left.addEventListener("click", () => {
-    dropdown.classList.remove("down");
-    down_left.classList.remove("invisible");
-    up_left.classList.add("invisible");
-})
+    const

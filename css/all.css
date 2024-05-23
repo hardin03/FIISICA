@@ -4,31 +4,31 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Arial, sans-serif;
 }
 
-body{
-    background-image: url(../img/fondo_ecuaciones.jpg);
-    background-attachment: fixed;
-}
-main {
-    background-color: #fff;
-    width: 80%;
-    max-width: 1000px;
-    min-width: 600px;
-    margin: 50px auto 70px;
-    border-radius: 10px;
-    padding: 30px;
-}
 header {
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    background-color: #fff;
-    padding: 1rem;
+    align-items: center;
+    background: #fff;
+    padding: 15px 0 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.nav-list li a {
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.nav-list li a:hover{
+    color: #007bff;
 }
 .logo {
-    width: 100px;
+    width: 70px;
 }
 .buttom-down-left {
     display: none;
@@ -47,24 +47,25 @@ header {
 .buttom-down.invisible {
     display: none;
 }
-
-.nav-operation {
-    margin-left: 20px;
-}
 .dropdown-list {
     display: none;
 }
+.nav-operation {
+    position: relative;
+}
 .dropdown-list.down {
     display: flex;
-    width: 140px;
+    width: 150px;
     position: absolute;
+    right: -20px;
     background-color: #fff;
     padding: 1.5rem 0;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     list-style-type: none;
     gap: 2rem;
-    margin-top: 27.5px;
+    margin-top: 36px;
     transition: all .4s;
 }
 .dropdown li a {
@@ -76,7 +77,7 @@ header {
 }
 .nav-list {
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
     list-style-type: none;
 }
 .nav-list  li  a {
@@ -84,22 +85,95 @@ header {
     color: #000
 }
 
+
 footer {
     background: #000;
-    padding: 30px 0
+    color: #fff;
+    padding: 2rem 0;
 }
+
 .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-row {
     display: flex;
     justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
 }
-.footer-links,.footer-links > ul > li > a , .social-link > a{
+
+.footer-links {
+    flex: 1;
+    margin: 1rem;
+    min-width: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links h4 {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-links ul li a {
     color: #fff;
-
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-@media (max-width: 710px) {
+.footer-links ul li a:hover {
+    color: #007bff;
+}
+.footer-links i {
+    font-size: 20px;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-link a {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.social-link a:hover {
+    color: #007bff;
+}
+
+.footer-img {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.footer-img img {
+    width: 230px;
+}
+
+@media (max-width: 600px) {
     header {
         justify-content: space-between;
+        padding: 15px 20px 10px;
     }
     .nav-operation {
         margin-left: 0;
@@ -154,6 +228,8 @@ footer {
     .nav.visible {
         opacity: 1;
         visibility: visible;
+        height: 100vmax;
+        padding: 40px 20px;
     }
     .nav-list {
         flex-direction: column;
@@ -165,25 +241,11 @@ footer {
     }
     .dropdown-list.down {
         width: 105.36px;
-        margin: 30px 0 0;
+        margin: 30px 0;
         position: inherit;
         gap: 1rem;
         align-items: end;
         padding: 0;
         background-color: transparent;
-    }
-    main {
-        min-width: 80%
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        gap: 3rem;
-    }
-    .footer-links {
-        margin: 20px 0;
     }
 }
