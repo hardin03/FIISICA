@@ -6,7 +6,6 @@
     list-style: none;
     font-family: Arial, sans-serif;
 }
-
 header {
     display: flex;
     justify-content: space-around;
@@ -30,34 +29,30 @@ header {
 .logo {
     width: 70px;
 }
-.buttom-down-left {
+.deploy-left {
     display: none;
 }
-.buttom-up-left {
-    display: none;
-}
-.buttom-down, .buttom-up{
+.deploy{
     border: 0;
     background-color: transparent;
     cursor: pointer;
+    transition: all .4s;
 }
-.buttom-up.invisible {
-    display: none;
-}
-.buttom-down.invisible {
-    display: none;
-}
-.dropdown-list {
-    display: none;
+
+.deploy.rotate {
+    transform: rotate(180deg);
 }
 .nav-operation {
     position: relative;
+    z-index: 2;
 }
-.dropdown-list.down {
+.nav-operation:hover > button, .nav-operation:hover > a {
+    cursor: pointer;
+    color: #007bff
+}
+.dropdown-list {
     display: flex;
     width: 150px;
-    position: absolute;
-    right: -20px;
     background-color: #fff;
     padding: 1.5rem 0;
     flex-direction: column;
@@ -65,14 +60,20 @@ header {
     text-align: center;
     list-style-type: none;
     gap: 2rem;
-    margin-top: 36px;
-    transition: all .4s;
+    display: none;
+    position: absolute;
+    right: -20px;
+    transform: translateY(-288px);
+}
+.dropdown-list.down {
+    display: flex;
+    transform: translateY(35px);
 }
 .dropdown li a {
     text-decoration: none;
 }
 
-.open-toggle, .close-toggle {
+.nav-toggle{
     display: none;
 }
 .nav-list {
@@ -87,6 +88,7 @@ header {
 
 
 footer {
+    margin-top: 100px;
     background: #000;
     color: #fff;
     padding: 2rem 0;
@@ -178,36 +180,34 @@ footer {
     .nav-operation {
         margin-left: 0;
     }
-    .buttom-down, .buttom-up{
+    .deploy{
         display: none;
     }
-    .buttom-down-left, .buttom-up-left{
+    .deploy-left{
         border: 0;
         background-color: transparent;
         cursor: pointer;
         color: #fff;
         display: inline;
+        transition: all .2s;
     }
-    .buttom-up-left.invisible {
-        display: none;
+    .deploy-left.rotate {
+        transform: rotate(180deg);
     }
-    .buttom-down-left.invisible {
-        display: none;
-    }
-    .open-toggle, .close-toggle {
+    .nav-toggle {
         display: block;
         border: 0;
         font-size: 1.2rem;
         background-color: transparent;
         cursor: pointer;
-    }
-    #open {
         color: #000;
+        position: absolute;
+        right: 20px;
+        z-index: 2;
     }
-    #close {
+    .nav-toggle.white {
         color: #fff;
     }
-
     .nav {
         opacity: 0;
         visibility: hidden;
@@ -216,22 +216,23 @@ footer {
         align-items: end;
         box-shadow: 0 0 0 100vmax rgb(0, 0, 0, 0.5);
         position: absolute;
-        top: 0;
+        z-index: 1;
+        top: -300px;
         right: 0;
         bottom: 0;
         background-color: #1c1c1c;
         padding: 1.6rem 1rem;
-    }
-    .close-toggle {
-        margin-bottom: 40px;
+        transition: all .3s;
     }
     .nav.visible {
-        opacity: 1;
         visibility: visible;
-        height: 100vmax;
+        opacity: 1;
+        height: 100vh;
         padding: 40px 20px;
+        top: 0;
     }
     .nav-list {
+        margin-top: 60px;
         flex-direction: column;
         align-items: end;
         gap: 3.5rem;
@@ -241,7 +242,6 @@ footer {
     }
     .dropdown-list.down {
         width: 105.36px;
-        margin: 30px 0;
         position: inherit;
         gap: 1rem;
         align-items: end;
@@ -249,5 +249,6 @@ footer {
         right: 0;
         padding: 0;
         background-color: transparent;
+        margin-bottom: 30px;
     }
 }

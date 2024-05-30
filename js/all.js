@@ -1,45 +1,53 @@
-const nav = document.querySelector("#nav");
+const nav = document.querySelector ('#nav');
+const btnDeploy = document.querySelector ("#deploy");
+const dropdown = document.querySelector ('#dropdown-list');
+const btnDeployLeft = document.querySelector ('#btn-left')
+const bars = document.querySelector ('#bar-toggle');
+var cntDeploy = 0;
+var cntBars = 0;
+var cntDeployLeft = 0;
 
-const open = document.querySelector("#open");
-const close = document.querySelector("#close");
-const dropdown = document.querySelector("#dropdown-list");
-
-const down = document.querySelector("#buttom-down");
-const up = document.querySelector("#buttom-up");
-
-const down_left = document.querySelector("#down-left");
-const up_left = document.querySelector("#up-left");
-
-open.addEventListener("click", () => {
-    nav.classList.add("visible");
-    dropdown.classList.remove("down");
-})
-close.addEventListener("click", () => {
-    nav.classList.remove("visible");
-    up_left.classList.add("invisible");
-    down_left.classList.remove("invisible");
-})
-
-
-down.addEventListener("click", () => {
-    dropdown.classList.add("down");
-    down.classList.add("invisible");
-    up.classList.remove("invisible");
-})
-up.addEventListener("click", () => {
-    dropdown.classList.remove("down");
-    down.classList.remove("invisible");
-    up.classList.add("invisible");
-})
+const deploy = () =>{
+    if (cntDeploy == 0) {
+        btnDeploy.classList.add ('rotate');
+        dropdown.classList.add('down');
+        cntDeploy = 1;
+    }
+    else {
+        btnDeploy.classList.remove('rotate');
+        dropdown.classList.remove ('down');
+        cntDeploy = 0;
+    }
+}
+btnDeploy.addEventListener ('click', deploy, true);
 
 
-down_left.addEventListener("click", () => {
-    dropdown.classList.add("down");
-    down_left.classList.add("invisible");
-    up_left.classList.remove("invisible");
-})
-up_left.addEventListener("click", () => {
-    dropdown.classList.remove("down");
-    down_left.classList.remove("invisible");
-    up_left.classList.add("invisible");
-})
+const deployLeftBars = () => {
+    if (cntBars == 0) {
+        bars.classList.add('white');
+        nav.classList.add ('visible');
+        cntBars = 1;
+    }   else {
+        bars.classList.remove('white');
+        nav.classList.remove ('visible');
+        btnDeployLeft.classList.remove ('rotate');
+        dropdown.classList.remove('down');
+        cntDeployLeft = 0;
+        cntBars = 0;
+    }
+}
+bars.addEventListener ('click', deployLeftBars, true);
+
+
+const deployLeft = () => {
+    if (cntDeployLeft == 0) {
+        btnDeployLeft.classList.add('rotate');
+        dropdown.classList.add('down');
+        cntDeployLeft = 1;
+    }   else {
+        btnDeployLeft.classList.remove ('rotate');
+        dropdown.classList.remove('down');
+        cntDeployLeft = 0;
+    }
+}
+btnDeployLeft.addEventListener ('click', deployLeft, true);
