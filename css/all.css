@@ -17,6 +17,9 @@ header {
     top: 0;
     z-index: 1000;
 }
+body {
+    background-color: #f0f0f0;
+}
 .nav-list li a {
     color: #333;
     text-transform: uppercase;

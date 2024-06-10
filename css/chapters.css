@@ -1,0 +1,27 @@
+body {
+    background: url("../img/background-chapters.jpg");
+    background-repeat: none;
+    background-attachment: fixed;
+}
+.container {
+    width: 80%;
+    margin: 50px auto;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #f0f0f0;
+    max-width: 900px;
+}
+.tittle {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+.introduccion {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

@@ -1,0 +1,42 @@
+.container {
+    width: 90%;
+    margin: 30px auto;
+}
+.books-head.deploy button {
+    transform: rotate(180deg);
+}
+.books-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+    text-align: center;
+    background-color: #ddd;
+    height: 0;
+    overflow: hidden;
+}
+.n-grid > img {
+    width: 100px;
+}
+.section__head {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    cursor: pointer;
+}
+.section__head button {
+    transition: transform .4s;
+    cursor: pointer;
+    background: none;
+    color: #000;
+    border: none;
+    font-size: 15px;
+}
+.section__head.rotate > button {
+    transform: rotate(180deg);
+}
+.section__body {
+    height: 0;
+    transition: height .3s;
+    color: #000;
+}

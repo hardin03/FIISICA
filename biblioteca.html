@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIISICA</title>
+    <title>BIBLIOTECA</title>
     <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/biblioteca.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://kit.fontawesome.com/8d1aadf525.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/jpg" href="img/einstein.png"/>
@@ -34,8 +34,8 @@
                         
                         <ul id="dropdown-list" class="dropdown-list">
                             <li><a href="virtual_laboratory.html">Laboratorios Virtuales</a></li>
-                            <li><a href="academic_resources.html">Recursos Académicos</a></li>
-                            <li><a href="#">Multimedia</a></li>
+                            <li><a href="academic_resources.html">Material Teórico</a></li>
+                            <li><a href="#">Biblioteca</a></li>
                         </ul>        
                     </div>
                     
@@ -46,6 +46,57 @@
             </ul>
         </nav>
     </header>
+
+    <div class="container">
+        <div class="section__books">
+            <div class="section__head">
+                <div class="books-head-txt">
+                    <h5>Aquí encontrarás libros que te ayudaran en tus estudios:)</h5>
+                </div>
+                <button>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+            </div>
+            <div class="section__body books-body">
+                <div class="n-grid">
+                    <img src="img/book1.png">
+                    <p class="description">BOOK1</p>
+                </div>
+                <div class="n-grid">
+                    <img src="img/book1.png">
+                    <p class="description">BOOK1</p>
+                </div>
+                <div class="n-grid">
+                    <img src="img/book1.png">
+                    <p class="description">BOOK1</p>
+                </div>
+                <div class="n-grid">
+                    <img src="img/book1.png">
+                    <p class="description">BOOK1</p>
+                </div>
+                <div class="n-grid">
+                    <img src="img/book1.png">
+                    <p class="description">BOOK1</p>
+                </div>
+                <div class="n-grid">
+                    <img src="img/book1.png">
+                    <p class="description">BOOK1</p>
+                </div>
+                <div class="n-grid">
+                    <img src="img/book1.png">
+                    <p class="description">BOOK1</p>
+                </div>
+                <div class="n-grid">
+                    <img src="img/book1.png">
+                    <p class="description">BOOK1</p>
+                </div>
+                <div class="n-grid">
+                    <img src="img/book1.png">
+                    <p class="description">BOOK1</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-container">
@@ -79,7 +130,21 @@
     </footer>
     
 
-
-    <script src="js/all.js"></script>
+    <script>
+        let listElementsInfo = document.querySelectorAll ('.section__head')
+        listElementsInfo.forEach (listElement => {
+        listElement.addEventListener ('click', () => {
+            listElement.classList.toggle ('rotate');
+            let heightInfo = 0;
+            let info = listElement.nextElementSibling;
+            if (info.clientHeight == "0") {
+                heightInfo = info.scrollHeight;
+            }
+            info.style.height = `${heightInfo}px`;
+            })
+        })
+    </script>
+    <script src="js/all.js">
+    </script>
 </body>
 </html>
