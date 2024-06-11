@@ -7,6 +7,7 @@
     <title>CAPITULO 6</title>
     <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="../css/chapters.css">
+    <link rel="stylesheet" href="../css/chapter-6.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://kit.fontawesome.com/8d1aadf525.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/jpg" href="img/einstein.png"/>
@@ -24,13 +25,15 @@
                 </li>
                 <li>
                     <div class="nav-operation">
-                        <button id="btn-left" class="deploy-left">
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </button>
-                        <a href="#">Recursos</a>
-                        <button id="deploy" class="deploy">
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </button>
+                        <div class="deploy" id="deploy">
+                            <button id="btn-left" class="deploy-left">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <a>Recursos</a>
+                            <button class="deploy-right">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
                         
                         <ul id="dropdown-list" class="dropdown-list">
                             <li><a href="../virtual_laboratory.html">Laboratorios Virtuales</a></li>
@@ -58,6 +61,9 @@
                 aplicación de fuerzas externas y cómo se deforman y 
                 recuperan su forma original cuando estas fuerzas 
                 se retiran.
+            </div>
+            <div class="resorte">
+                <img src="../img/resorte.png">
             </div>
             <div class="p-txt p-2">
                 El concepto central en la elasticidad es el 
@@ -92,7 +98,7 @@
                     <div class="p-sub-tittle">
                         Cuerpos no Deformables
                     </div>
-                    <div class="p-txt">
+                    <div class="p-txt p-txt__">
                         También denominado cuerpos rígidos, 
                         son aquellos objetos cuya forma no 
                         cambia cuando se les aplica una fuerza 
@@ -102,13 +108,13 @@
                         si la deformación es despreciable.
                     </div>
                 </div>
-                <img src="../img/cuerpo-no-deformable.jpg">
+                <img class="img" src="../img/cuerpo-no-deformable.jpg">
             </div>
             <div class="cuerpos-deformables">
                 <div class="p-sub-tittle">
                     Cuerpos Deformables
                 </div>
-                <div class="p-txt">
+                <div class="p-txt p-txt__">
                     Son aquellos objetos cuya forma puede 
                     cambiar bajo la influencia de fuerzas 
                     externas. Esto significa que pueden 
@@ -119,26 +125,28 @@
                     de comportamiento como la ley de Hooke.
 
                 </div>
-                <img src="../img/cuerpo-deformable.png">
+                <img class="img" src="../img/cuerpo-deformable.png">
             </div>
             <div class="p-txt">
                 Los cuerpos deformables se clasifican en:
             </div>
             <div class="cuerpos-elasticos">
-                <div class="p-sub-tittle">
-                    Cuerpos Elásticos
+                <div>
+                    <div class="p-sub-tittle">
+                        Cuerpos Elásticos
+                    </div>
+                    <div class="p-txt">
+                        Los cuerpos elásticos son aquellos que, 
+                        bajo la influencia de una fuerza externa, 
+                        se deforman, pero tienen la característica
+                         de volver a su forma natural. Estos 
+                         cuerpos tienen un punto límite de 
+                         deformación, mientras no se pase ese 
+                         límite el cuerpo volverá a tomar la 
+                         forma inicial.
+                    </div>
                 </div>
-                <div class="p-txt">
-                    Los cuerpos elásticos son aquellos que, 
-                    bajo la influencia de una fuerza externa, 
-                    se deforman, pero tienen la característica
-                     de volver a su forma natural. Estos 
-                     cuerpos tienen un punto límite de 
-                     deformación, mientras no se pase ese 
-                     límite el cuerpo volverá a tomar la 
-                     forma inicial.
-                </div>
-                <img src="../img/cuerpo-elastico.jpg">
+                <img class="img" src="../img/cuerpo-elastico.jpg">
             </div>
             <div class="cuerpos-plasticos">
                 <div class="p-sub-tittle">
@@ -152,21 +160,23 @@
                      completamente a su forma inicial y sufre 
                      un cambio permanente.
                 </div>
-                <img src="../img/cuerpo-plastico.png">
+                <img class="img" src="../img/cuerpo-plastico.png">
             </div>
         </div>
         <div class="esfuerzo">
-            <div class="p-sub-tittle">
-                ESFUERZO (s)
-            </div>
-            <div class="p-txt">
-                Se define el esfuerzo como la acción de una 
-                fuerza externa perpendicular actuando sobre una 
-                superficie de área. El esfuerzo puede ser de tensión 
-                o de compresión. Un esfuerzo de tensión es aquel donde 
-                la fuerza va en contra del centro de masa del cuerpo. 
-                Un esfuerzo de compresión es aquel donde la fuerza va 
-                hacia el centro de masa del cuerpo.
+            <div class="__txt">
+                <div class="p-sub-tittle">
+                    ESFUERZO (s)
+                </div>
+                <div class="p-txt">
+                    Se define el esfuerzo como la acción de una 
+                    fuerza externa perpendicular actuando sobre una 
+                    superficie de área. El esfuerzo puede ser de tensión 
+                    o de compresión. Un esfuerzo de tensión es aquel donde 
+                    la fuerza va en contra del centro de masa del cuerpo. 
+                    Un esfuerzo de compresión es aquel donde la fuerza va 
+                    hacia el centro de masa del cuerpo.
+                </div>
             </div>
             <div class="p-formula">
                 <img src="../img/esfuerzo-formula.png">
@@ -222,8 +232,8 @@
                         superficie donde se actúa.
                     </div>
                     <div class="__img">
-                        <img src="../img/elastico-transversal.jpg">
-                        <img src="">
+                        <img src="../img/modulo-elastico-transversal.png">
+                        <img src="../img/img-transversal.jpg">
                     </div>
                 </div>
                 <div class="modulo-3">
@@ -238,8 +248,8 @@
                         No implica cambio de forma, tan solo de volumen.
                     </div>
                     <div class="__img">
-                        <img src="../img/elastico-volumetrico.png">
-                        <img src="">
+                        <img src="../img/modulo-elastico-volumetrico.png">
+                        <img src="../img/img-volumetrico.png">
                     </div>
                 </div>
             </div>
@@ -247,8 +257,7 @@
         <div class="ejercicios">
 
         </div>
-        <iframe src="https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_es.html" width="600" height="400" allowfullscreen>
-        </iframe>  
+        
     </div>
 
     <footer>
@@ -283,7 +292,18 @@
     </footer>
     
 
-
+    <script>
+        const resorte = document.querySelector (".resorte");
+        let variable = 1;
+        setInterval (function () {
+            resorte.style.width = `100%`;
+            variable++;
+            if (variable == 2) {
+                resorte.style.width = `300px`;
+                variable = 0;
+            }
+        }, 1300)
+    </script>
     <script src="../js/all.js"></script>
 </body>
 </html>

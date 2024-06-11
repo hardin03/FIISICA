@@ -39,7 +39,7 @@ listElementsInfo.forEach (listElement => {
     let heightInfo = 0;
     let info = listElement.nextElementSibling;
     if (info.clientHeight == "0") {
-      heightInfo = info.scrollHeight + 100;
+      heightInfo = info.scrollHeight + 20;
     }
     info.style.height = `${heightInfo}px`;
   })

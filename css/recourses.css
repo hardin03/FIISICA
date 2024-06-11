@@ -1,8 +1,16 @@
+body {
+    background: url("../img/fondo-barras.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .container {
-    margin: 20px auto;
+    margin: 90px auto 20px;
     width: 80%;
-    min-width: 500px;
     padding: 40px;
+    background-color: rgb(228, 224, 218);
+    box-shadow: 0 0 10px #000;
+    border-radius: 20px;
 }
 
 .section__chapter {
@@ -21,6 +29,7 @@
     justify-content: space-between;
     padding: 20px 0;
     cursor: pointer;
+    border-bottom: 1px solid #000;
 }
 .section__head button {
     transition: transform .4s;
@@ -37,6 +46,13 @@
     height: 0;
     transition: height .3s;
     color: #000;
+    background-color: #daf5f8dd;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+}
+.section__body p {
+    text-align: initial;
+    padding: 20px;
 }
 .section__body button {
     border: none;
@@ -45,6 +61,7 @@
     cursor: pointer;
     padding: 20px;
     transition: background .4s;
+    text-align: center;
 }
 .section__body button:hover {
     background-color: #181c55;
