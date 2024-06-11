@@ -26,7 +26,7 @@ body {
     font-weight: bold;
     transition: color 0.3s;
 }
-.nav-list li a:hover{
+.nav-list li a:hover, .deploy:hover button{
     color: #007bff;
 }
 .logo {
@@ -35,42 +35,38 @@ body {
 .deploy-left {
     display: none;
 }
-.deploy{
+.deploy {
+    cursor: pointer;
+}
+.deploy button{
     border: 0;
     background-color: transparent;
-    cursor: pointer;
     transition: all .4s;
 }
 
-.deploy.rotate {
+.deploy.rotate  button {
     transform: rotate(180deg);
 }
 .nav-operation {
     position: relative;
     z-index: 2;
 }
-.nav-operation:hover > button, .nav-operation:hover > a {
-    cursor: pointer;
-    color: #007bff
-}
 .dropdown-list {
     display: flex;
+    overflow: hidden;
     width: 150px;
     background-color: #fff;
-    padding: 1.5rem 0;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
     text-align: center;
     list-style-type: none;
-    gap: 2rem;
-    display: none;
+    gap: 1rem;
+    height: 0;
     position: absolute;
-    right: -20px;
-    transform: translateY(-288px);
-}
-.dropdown-list.down {
-    display: flex;
-    transform: translateY(35px);
+    right: -19px;
+    top: 60px;
+    transition: height .4s;
+    box-shadow: 0 0 2px #000;
 }
 .dropdown li a {
     text-decoration: none;
@@ -88,7 +84,6 @@ body {
     text-decoration: none;
     color: #000
 }
-
 
 footer {
     margin-top: 100px;
@@ -183,7 +178,7 @@ footer {
     .nav-operation {
         margin-left: 0;
     }
-    .deploy{
+    .deploy-right{
         display: none;
     }
     .deploy-left{
@@ -194,9 +189,7 @@ footer {
         display: inline;
         transition: all .2s;
     }
-    .deploy-left.rotate {
-        transform: rotate(180deg);
-    }
+
     .nav-toggle {
         display: block;
         border: 0;
@@ -214,25 +207,27 @@ footer {
     .nav {
         opacity: 0;
         visibility: hidden;
+        overflow: hidden;
+        width: 0;
         display: flex;
         flex-direction: column;
         align-items: end;
         box-shadow: 0 0 0 100vmax rgb(0, 0, 0, 0.5);
         position: absolute;
         z-index: 1;
-        top: -300px;
+        top: 0;
         right: 0;
         bottom: 0;
         background-color: #1c1c1c;
         padding: 1.6rem 1rem;
-        transition: all .3s;
+        transition: all .4s;
     }
     .nav.visible {
         visibility: visible;
         opacity: 1;
         height: 100vh;
         padding: 40px 20px;
-        top: 0;
+        width: 310px;
     }
     .nav-list {
         margin-top: 60px;
@@ -243,15 +238,18 @@ footer {
     .nav-list li a {
         color: #fff;
     }
-    .dropdown-list.down {
+    .dropdown-list{
         width: 105.36px;
         position: inherit;
         gap: 1rem;
         align-items: end;
+        justify-content: center;
         text-align: end;
         right: 0;
+        top: 0;
+        height: 50px;
         padding: 0;
         background-color: transparent;
-        margin-bottom: 30px;
+        box-shadow: none;
     }
 }
