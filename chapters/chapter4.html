@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CODIGO LATEX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],  // Define delimitadores para matemáticas en línea
+                displayMath: [['$$', '$$'], ['\\[', '\\]']], // Define delimitadores para matemáticas en bloque
+                processEscapes: true,
+                tags: 'ams'  // Usa etiquetado estilo AMS para numerar ecuaciones automáticamente si es necesario
+            },
+            options: {
+                ignoreHtmlClass: 'tex2jax_ignore',  // Ignora las clases CSS asignadas a este nombre
+                processHtmlClass: 'tex2jax_process'  // Procesa solo las clases CSS asignadas a este nombre
+            },
+            startup: {
+                pageReady: () => {
+                    return MathJax.startup.defaultPageReady().then(() => {
+                        document.querySelectorAll("mjx-container").forEach((node) => {
+                        node.style.fontSize = "1.2em"; // Ajusta el tamaño de la fuente de las fórmulas
+                        });
+                    });
+                }
+            }
+        };
+    </script>
+
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DINÁMICA DE UN SISTEMA DE PARTÍCULAS</title>
+    <link rel="stylesheet" href="../css/resources-dropdown.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/chapter-4.css">
+    <link rel="stylesheet" href="../css/chapters.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/8d1aadf525.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="img/einstein.png"/>
+</head>
+<body>
+    <header>
+        <img src="../img/fisica_logo.png" class="logo" alt="">
+        <button id="bar-toggle" class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav" id="nav">
+            <ul class="nav-list">
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <div class="nav-operation">
+                        <div class="deploy" id="deploy">
+                            <button id="btn-left" class="deploy-left">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <a>Recursos</a>
+                            <button class="deploy-right">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        
+                        <ul id="dropdown-list" class="dropdown-list">
+                            <li><a href="../virtual_laboratory.html">Laboratorios Virtuales</a></li>
+                            <li><a href="../academic_resources.html">Recursos Académicos</a></li>
+                            <li><a href="../biblioteca.html">biblioteca</a></li>
+                        </ul>        
+                    </div>
+                    
+                </li>
+                <li>
+                    <a href="../comments.html" >Envianos tu comentario</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="menu">
+        <div class="item__left">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="list__item">
+            <div class="list__button list__button-click">
+                <i class="fa-solid fa-bookmark"></i>
+                <a>CAPITULOS</a>
+                <div class="deploy_caps">
+                    <i class ="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="list__show">
+                <ul>
+                    <li><a href="chapter1.html">CAPITULO 1</a></li>
+                    <li><a href="chapter2.html">CAPITULO 2</a></li>
+                    <li><a href="chapter3.html">CAPITULO 3</a></li>
+                    <li><a href="#">CAPITULO 4</a></li>
+                    <li><a href="chapter5.html">CAPITULO 5</a></li>
+                    <li><a href="chapter6.html">CAPITULO 6</a></li>
+                    <li><a href="chapter7.html">CAPITULO 7</a></li>
+                    <li><a href="chapter8.html">CAPITULO 8</a></li>
+                    <li><a href="chapter9.html">CAPITULO 9</a></li>
+                    <li><a href="chapter10.html">CAPITULO 10</a></li>
+                    <li><a href="chapter11.html">CAPITULO 11</a></li>
+                    <li><a href="chapter12.html">CAPITULO 12</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="tittle">
+            <h1>
+                DINÁMICA DE UN SISTEMA DE PARTÍCULAS
+            </h1>
+        </div>
+        <div class="introduccion">
+            La dinámica de un sistema de partículas 
+            es un área fundamental en la física que 
+            estudia el movimiento de varias partículas 
+            interaccionando entre sí. Este campo es 
+            esencial para comprender cómo objetos en el 
+            universo se mueven y cambian con el tiempo.<br>
+        </div>
+        <div class="cap-temas">
+            <div class="cantidad-movimiento-sp">
+                <div class="tema-tittle">
+
+                </div>
+                <div class="p-txt">
+
+                </div>
+                <img src="../img/sp.jpg" alt="">
+                <div class="p-txt">
+
+                </div>
+                <div class="form">
+
+                </div>
+            </div>
+            <div class="impulso-fuerza">
+                <div class="tema-tittle">
+
+                </div>
+                <div class="p-txt">
+
+                </div>
+                <div class="form">
+
+                </div>
+                <div class="p-txt">
+
+                </div>
+                <img src="../img/impulso.jpg" alt="">
+            </div>
+            <div class="impulso-fuerza-resultante">
+                <div class="tema-tittle">
+
+                </div>
+                <div class="p-txt">
+                    El impulso de una fuerza 
+                    resultante, se vincula con 
+                    la variación de la cantidad 
+                    de movimiento. Esto se 
+                    demuestra de la siguiente 
+                    manera:<br><br>
+                    Primero por segunda ley de Newton:
+                </div>
+                <div class="form">
+
+                </div>
+                <div class="p-txt">
+                    La aceleracion se expresa como:
+                </div>
+                <div class="form">
+
+                </div>
+                <div class="p-txt">
+                    Reemplazando (2) en (1):
+                </div>
+                <div class="form">
+
+                </div>
+                <div class="p-txt">
+                    Ahora, el impulso de la fuerza resultante 
+                    se expresa como:
+                </div>
+                <div class="form">
+
+                </div>
+                <div class="p-txt">
+                    Reemplazando (3) en (4):
+                </div>
+                <div class="form">
+
+                </div>
+                <div class="p-txt">
+                    Por lo tanto:
+                </div>
+                <div class="form">
+                    
+                </div>
+                <div class="p-txt">
+                    Ésta va a ser otra forma alternativa 
+                    de expresar la segunda Ley de Newton, en este caso 
+                    para fuerzas que dependen del tiempo.
+                </div>
+            </div>
+            <div class="centro-masa-sp">
+                <div class="tema-tittle">
+                    Centro de Masa de un Sistema de Partículas
+                </div>
+                <div class="p-txt">
+                    El centro de masa de un sistema de partículas 
+                    es un punto que, a muchos efectos, se mueve como 
+                    si fuera una partícula de masa igual a la masa 
+                    total del sistema sometida a la resultante de varias 
+                    fuerzas que actúan sobre el mismo. <br><br>
+                    Para calcular el centro de masa de un sistema de 
+                    partículas, disponemos un sistema de coordenadas 
+                    y tener el vector posicion de cada particula.
+                </div>
+                <div class="flex">
+                    <div class="flex-left">
+                        <img src="" alt="">
+                    </div>
+                    <div class="flex-right">
+                        <div class="p-txt">
+                            El vector centro de masa se hallará 
+                            de la siguiente manera:
+                        </div>
+                        <div class="form">
+
+                        </div>
+                        <div class="p-txt">
+                            Sea  por lo tanto:
+                        </div>
+                        <div class="form">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="p-txt">
+                    Para hallar la velocidad del centro de masa, consideraremos que cada 
+                    partícula tiene un vector velocidad.
+                </div>
+                <div class="form">
+                    
+                </div>
+                <div class="p-txt">
+                    Recordemos que por definición:
+                </div>
+                <div class="form">
+
+                </div>
+                <div class="p-txt">
+                    Por lo tanto la velocidad del centro de masa 
+                    se expresa de la siguiente manera:
+                </div>
+                <div class="form">
+
+                </div>
+                <div class="p-txt">
+                    También se puede expresar de la siguiente manera:
+                </div>
+                <div class="form">
+
+                </div>
+                <div class="p-txt">
+                    Para hallar la aceleración del centro de masa, 
+                    consideraremos que cada partícula tiene un vector 
+                    aceleración:
+                </div>
+                <div class="form">
+
+                </div>
+                <div class="p-txt">
+                    Y en el dinámico:
+                </div>
+                <div class="form">
+
+                </div>
+                <div class="p-txt">
+                    Por lo tanto
+                </div>
+                <div class="form">
+
+                </div>
+                <div class="p-txt">
+                    Con este resultado, se puede inferir que el sistema de 
+                    partículas puede reemplazarse por una partícula con la masa 
+                    del SP, M, moviéndose según rcm
+                </div>
+            </div>
+            <div class="energia-sp">
+                <div class="tema-tittle">
+                    Energía de un Sistema de Partículas
+                </div>
+                <div class="cinetica">
+                    <div class="subtema-tittle">
+                        Energía Cinética de un Sistema de Partículas
+                    </div>
+                </div>
+                <div class="potencial">
+                    <div class="subtema-tittle">
+                        Energía Potencial de un Sistema de Partículas
+                    </div>
+                </div>
+                <div class="mecanica">
+                    <div class="subtema-tittle">
+                        Energía Mecanica de un Sistema de Partículas
+                    </div>
+                </div>
+            </div>
+            <div class="momento-angular-sp">
+                
+            </div>
+            <div class="torque-sp">
+    
+            </div>
+            <div class="choques">
+    
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>##</h4>
+                    <ul>
+                        <li><a href="https://portal.uni.edu.pe/" target="_blank">UNIVERSIDAD NACIONAL DE INGENIERIA</a></li>
+                        <li><a href="http://www0.unsl.edu.ar/~cornette/FISICA_LQ/Francis%20Sears,%20Mark%20Zemansky.pdf" target="_blank">FISICA UNIVERSITARIA. YOUNG FREEDMAN</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>¡Sigue a la UNI!</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/UNIoficial.pe/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/uni_oficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>¡Sigue a la FIIS!</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/FacultaddeIngenieriaIndustrialydeSistemas/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ceiis.uni/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-img">
+                <img src="../img/logouniblanco.png" alt="Logo UNI">
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/all.js"></script>
+    <script src="../js/academic_resources.js"></script>
+</body>
+</html>

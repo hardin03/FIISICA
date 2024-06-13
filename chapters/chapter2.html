@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- CODIGO LATEX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],  // Define delimitadores para matemáticas en línea
+                displayMath: [['$$', '$$'], ['\\[', '\\]']], // Define delimitadores para matemáticas en bloque
+                processEscapes: true,
+                tags: 'ams'  // Usa etiquetado estilo AMS para numerar ecuaciones automáticamente si es necesario
+            },
+            options: {
+                ignoreHtmlClass: 'tex2jax_ignore',  // Ignora las clases CSS asignadas a este nombre
+                processHtmlClass: 'tex2jax_process'  // Procesa solo las clases CSS asignadas a este nombre
+            },
+            startup: {
+                pageReady: () => {
+                    return MathJax.startup.defaultPageReady().then(() => {
+                        document.querySelectorAll("mjx-container").forEach((node) => {
+                        node.style.fontSize = "1.2em"; // Ajusta el tamaño de la fuente de las fórmulas
+                        });
+                    });
+                }
+            }
+        };
+    </script>
+
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DINAMICA DE UNA PARTÍCULA</title>
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/chapters.css">
+    <link rel="stylesheet" href="../css/chapter-2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/8d1aadf525.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="img/einstein.png"/>
+</head>
+<body>
+    <header>
+        <img src="../img/fisica_logo.png" class="logo" alt="">
+        <button id="bar-toggle" class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav" id="nav">
+            <ul class="nav-list">
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <div class="nav-operation">
+                        <div class="deploy" id="deploy">
+                            <button id="btn-left" class="deploy-left">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <a>Recursos</a>
+                            <button class="deploy-right">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        
+                        <ul id="dropdown-list" class="dropdown-list">
+                            <li><a href="../virtual_laboratory.html">Laboratorios Virtuales</a></li>
+                            <li><a href="../academic_resources.html">Material Teórico</a></li>
+                            <li><a href="../biblioteca.html">Biblioteca</a></li>
+                        </ul>        
+                    </div>
+                    
+                </li>
+                <li>
+                    <a href="../comments.html" >Envianos tu comentario</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="tittle">
+            <h1>Dinámica de una Partícula</h1>
+        </div>
+        <div class="introduction">
+            <p>La dinámica es la parte de la Mecánica que estudia las relaciones entre las causas que originan los movimientos y las propiedades de los movimientos originados. Las Leyes de Newton constituyen los tres principios básicos que explican el movimiento de los cuerpos según la mecánica clásica, formuladas por primera vez por Newton en 1687, aunque la primera de ellas ya fue enunciada por Galileo.
+            Tal y como las vamos a ver aquí sólo son válidas para un Sistema de Referencia Inercial.
+            </p>
+            <p>La primera y la Segunda Ley te darán la justificación.</p>
+        </div>
+        <section class="newton-laws">
+            <h2>Primera Ley de Newton (Ley de Inercia)</h2>
+            <div class="cuadro-primeraley">
+                <p class="parrafo-primeraley">Todo cuerpo que no está sometido a ninguna interacción (cuerpo libre o aislado) permanece en reposo o se traslada con velocidad constante</p>
+            </div>
+            <p>Esta ley es conocida como la ley de inercia y explica que para modificar el estado de movimiento de un cuerpo es necesario actuar sobre él. Definimos una nueva magnitud vectorial llamada momento lineal (o cantidad de movimiento) \( \vec{p} \) de una partícula:</p>
+            <p>
+                \[ \vec{p} = m\vec{v} \] 
+            </p>
+            <p>
+                donde \( m \) es la masa y \( \vec{v} \) es la velocidad. 
+            </p>  
+            <p>Entonces la primera ley es equivalente a decir que un cuerpo libre se mueve con \( \vec{p} \) constante.
+                 Consideremos el caso de dos partículas que, debido a su interacción mutua, describen un movimiento en el que sus velocidades respectivas varían:
+            </p>
+            <div class="img-chapter"><img src="../img/particulas-interacciones.png"></div>
+            <div class="h6"><h6>Dos partículas que interaccionan se mueven con velocidad constante</h6></div>
+            <p>La fórmula para la fuerza es \( F = ma \), donde \( m \) es la masa y \( a \) es la aceleración.</p>
+            <p>La ley de conservación del momento lineal se expresa como:</p>
+            <p>\[ m_1 \vec{v}_1 + m_2 \vec{v}_2 = m_1 \vec{v}_1' + m_2 \vec{v}_2' \]</p>  
+            <p>Como el conjunto de las dos partículas está aislado, su momento lineal total se conserva:</p>
+            <p>\[ m_1 \vec{v}_1 + m_2 \vec{v}_2 = m_1 \vec{v}_1' + m_2 \vec{v}_2' \]</p>
+            <p>Esta expresión se conoce como principio de conservación del momento lineal y se puede hacer extensivo a un conjunto de \( N \) partículas. Operando en la ecuación anterior obtenemos que:</p>
+            <p>\[ -\Delta\vec{p}_1 = \Delta\vec{p}_2 \]</p>
+            <p>Esto significa que, como el momento lineal del conjunto de las dos partículas se conserva pero el de cada una de ellas por separado no permanece constante, lo que aumenta el momento lineal de una de ellas ha de ser igual a lo que disminuye el momento lineal de la otra. El ejemplo típico que demuestra este hecho es el retroceso que experimenta un arma al ser disparada.</p>
+            <p>Estamos ya en disposición de enunciar la segunda ley.</p>
+
+            <h2>Segunda Ley de Newton</h2>
+            <p>La unidad de fuerza en el S.I. es el Newton (N).</p>
+            <p>Una fuerza representa entonces una interacción. Cuando una partícula no está sometida a ninguna fuerza, se mueve con momento lineal constante (Primera Ley). Sustituyendo la definición de momento lineal y suponiendo que la masa de la partícula es constante, se llega a otra expresión para la Segunda Ley:</p>
+            <p>\[ \vec{F} = \frac{d}{dt} (m\vec{v}) = m \frac{d\vec{v}}{dt} = m\vec{a} \]</p>
+            <p>Comentaremos algunos aspectos interesantes de esta ecuación:</p>
+            <ul>
+                <li>La aceleración que adquiere un cuerpo es proporcional a la fuerza aplicada, y la constante de proporcionalidad es la masa del cuerpo.</li>
+                <li>Si actúan varias fuerzas, esta ecuación se refiere a la fuerza resultante, suma vectorial de todas ellas.</li>
+                <li>Esta es una ecuación vectorial, luego se debe cumplir componente a componente.</li>
+                <li>En ocasiones será útil recordar el concepto de componentes intrínsecas: si la trayectoria no es rectilínea es porque hay una aceleración normal, luego habrá también una fuerza normal; si el módulo de la velocidad varía, es porque hay una aceleración tangencial, luego habrá una fuerza tangencial.</li>
+                <li>La fuerza y la aceleración son vectores paralelos, pero esto no significa que el vector velocidad sea paralelo a la fuerza. Es decir, la trayectoria no tiene por qué ser tangente a la fuerza aplicada.</li>
+                <li>Esta ecuación debe cumplirse para todos los cuerpos. Cuando analicemos un problema con varios cuerpos, deberemos entonces tener en cuenta las fuerzas que actúan sobre cada uno de ellos y aplicar la ecuación por separado.</li>
+            </ul>
+
+            <h2>Tercera Ley de Newton</h2>
+            <p>Volvamos a la ecuación que relaciona las variaciones del momento lineal de dos partículas que interaccionan entre sí. Si dividimos por el intervalo tiempo transcurrido y tomamos el límite cuando \( \Delta t \) tiende a cero:</p>
+            <p>\[ -\frac{\Delta \vec{p}_1}{\Delta t} = \frac{\Delta \vec{p}_2}{\Delta t} \quad \Rightarrow \quad \frac{d \vec{p}_1}{dt} = \frac{d \vec{p}_2}{dt} \]</p>
+            <p>Atendiendo a la definición de fuerza vista en la segunda ley:</p>
+            <p>\[ -\vec{F}{12} = \vec{F}{21} \]</p>
+            <p>Enunciamos ya la tercera ley:</p>
+            <p>Esta ley es conocida como la Ley de Acción y Reacción.</p>
+            <p>Un error muy común es cancelar las fuerzas que constituyen un par acción-reacción al estudiar un cuerpo, pero hay que tener en cuenta que dichas fuerzas se ejercen sobre cuerpos distintos, luego sólo se cancelarán entre sí cuando consideremos el sistema formado por los dos cuerpos en su conjunto.</p>
+            <p>Otro factor a tener en cuenta es que las fuerzas que constituyen un par acción-reacción siempre responden al mismo tipo de interacción.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>##</h4>
+                    <ul>
+                        <li><a href="https://portal.uni.edu.pe/" target="_blank">UNIVERSIDAD NACIONAL DE INGENIERIA</a></li>
+                        <li><a href="http://www0.unsl.edu.ar/~cornette/FISICA_LQ/Francis%20Sears,%20Mark%20Zemansky.pdf" target="_blank">FISICA UNIVERSITARIA. YOUNG FREEDMAN</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>¡Sigue a la UNI!</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/UNIoficial.pe/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/uni_oficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>¡Sigue a la FIIS!</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/FacultaddeIngenieriaIndustrialydeSistemas/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ceiis.uni/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-img">
+                <img src="img/logouniblanco.png" alt="Logo UNI">
+            </div>
+        </div>
+    </footer>
+    
+
+
+    <script src="../js/all.js"></script>
+</body>
+</html>

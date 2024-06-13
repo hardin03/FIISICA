@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CODIGO LATEX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],  // Define delimitadores para matemáticas en línea
+                displayMath: [['$$', '$$'], ['\\[', '\\]']], // Define delimitadores para matemáticas en bloque
+                processEscapes: true,
+                tags: 'ams'  // Usa etiquetado estilo AMS para numerar ecuaciones automáticamente si es necesario
+            },
+            options: {
+                ignoreHtmlClass: 'tex2jax_ignore',  // Ignora las clases CSS asignadas a este nombre
+                processHtmlClass: 'tex2jax_process'  // Procesa solo las clases CSS asignadas a este nombre
+            },
+            startup: {
+                pageReady: () => {
+                    return MathJax.startup.defaultPageReady().then(() => {
+                        document.querySelectorAll("mjx-container").forEach((node) => {
+                        node.style.fontSize = "1.2em"; // Ajusta el tamaño de la fuente de las fórmulas
+                        });
+                    });
+                }
+            }
+        };
+    </script>
+
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPITULO 6</title>
+    <link rel="stylesheet" href="../css/resources-dropdown.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/chapters.css">
+    <link rel="stylesheet" href="../css/chapter-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/8d1aadf525.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="img/einstein.png"/>
+</head>
+<body>
+    <header>
+        <img src="../img/fisica_logo.png" class="logo" alt="">
+        <button id="bar-toggle" class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav" id="nav">
+            <ul class="nav-list">
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <div class="nav-operation">
+                        <div class="deploy" id="deploy">
+                            <button id="btn-left" class="deploy-left">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <a>Recursos</a>
+                            <button class="deploy-right">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        
+                        <ul id="dropdown-list" class="dropdown-list">
+                            <li><a href="../virtual_laboratory.html">Laboratorios Virtuales</a></li>
+                            <li><a href="../academic_resources.html">Recursos Académicos</a></li>
+                            <li><a href="../biblioteca.html">biblioteca</a></li>
+                        </ul>        
+                    </div>
+                    
+                </li>
+                <li>
+                    <a href="../comments.html" >Envianos tu comentario</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="menu">
+        <div class="item__left">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="list__item">
+            <div class="list__button list__button-click">
+                <i class="fa-solid fa-bookmark"></i>
+                <a>CAPITULOS</a>
+                <div class="deploy_caps">
+                    <i class ="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="list__show">
+                <ul>
+                    <li><a href="#">CAPITULO 1</a></li>
+                    <li><a href="chapter2.html">CAPITULO 2</a></li>
+                    <li><a href="chapter3.html">CAPITULO 3</a></li>
+                    <li><a href="chapter4.html">CAPITULO 4</a></li>
+                    <li><a href="chapter5.html">CAPITULO 5</a></li>
+                    <li><a href="chapter6.html">CAPITULO 6</a></li>
+                    <li><a href="chapter7.html">CAPITULO 7</a></li>
+                    <li><a href="chapter8.html">CAPITULO 8</a></li>
+                    <li><a href="chapter9.html">CAPITULO 9</a></li>
+                    <li><a href="chapter10.html">CAPITULO 10</a></li>
+                    <li><a href="chapter11.html">CAPITULO 11</a></li>
+                    <li><a href="chapter12.html">CAPITULO 12</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container">
+        <div class="tittle">
+            <h1>CINEMÁTICA DE UNA PARTÍCULA</h1>
+        </div>
+        <div class="introduccion">
+            La cinemática es una rama fundamental de 
+            la mecanica clásica que se ocupa de describir 
+            el movimiento de los cuerpos sin considerar las causas 
+            que lo generan. En este contexto, "partícula" se refiere 
+            a un objeto idealizado con masa, pero sin dimensiones 
+            espaciales, lo que permite simplificar el estudio de su mvimiento.
+            <br>El análisis cinemático proporiona una base esencial para la comprensión 
+            de fenomenos físicos y para el desarrollo de habilidades analíticas 
+            y matemáticas que son cruciales en diversas disciplinas 
+            científicas y de ingeniería.
+        </div>
+        <div class="cap-temas">
+            <div class="def-basicas">
+                <h3>DEFINICIONES PREVIAS</h3>
+                <div class="particula">
+                    <h4>Partícula</h4>
+                    <div class="p-txt">
+                        Es un objeto idealizado que posee masa, pero carecec 
+                        de dimensiones espaciales, lo cual permite simplificar el análisis del movimiento 
+                        al considerar solo la posición y los cambios en dicha posición 
+                        a lo largo del tiempo.
+                    </div>
+                </div>
+                <div class="trayectoria">
+                    <h4>Trayectoria</h4>
+                    <div class="p-txt">
+                        Es el camino que sigue una partícula en su movimiento a lo largo del tiepo. 
+                        La trayectoria puede ser rectilínea o curvilínea.
+                    </div>
+                </div>
+                <div class="desplazamiento">
+                    <h4>Desplazamiento</h4>
+                    <div class="p-txt">
+                        Es el cambio de posición de una partícula desde una posición inicial 
+                        hasta una posición final. Se representa comom un vector que indica 
+                        la dirección  la magnitud de cambio.
+                    </div>
+                </div>
+                <div class="velocidad">
+                    <h4>Velocidad</h4>
+                    <div class="p-txt">
+                        Es la razón de cambio del desplazamiento con respecto al tiempo. 
+                        Se puede expresar como velocidad media o velocidad instantánea. 
+                        La velocidad es un vector que tiene tanto magnitud (rapidez) como dirección.
+                    </div>
+                </div>
+                <div class="aceleracion">
+                    <h4>Aceleración</h4>
+                    <div class="p-txt">
+                        Es la razónde cambio de la velocidad con respecto al tiempo. Al igual 
+                        que la velocidad, la aceleración es un vector que tiene 
+                        magnitud y dirección.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="descripcion-movimiento">
+            <div class="p-tittle">
+                <h3>DESCRIPCIÓN DEL MOVIMIENTO</h3>
+            </div>
+            <div class="movimiento-rectilineo">
+                <h4>Movimiento rectilíneo</h4>
+                <div class="p-txt">
+                    Es el movimiento de una partícula a lo largo de una línea recta. 
+                    Se caracteriza por tener una trayectoria rectilínea y puede ser uniforme
+                    (vlocidad constante) o acelerado (velocidad variable).
+                </div>
+            </div>
+            <div class="movimiento-curvilineo">
+                <h4>Movimiento curvilineo</h4>
+                <div class="p-txt">
+                    Es el movimiento de una partícula a lo largo 
+                    de una trayectoria curva. En este tipo de movimiento, 
+                    tanto la magnitud como la dirección de la velocidad pueden 
+                    cambiar.
+                </div>
+            </div>
+        </div>
+        <div class="sistemas-referencia">
+            <h3>SISTEMAS DE REFERENCIA</h3>
+            <div class="sistema-inercial">
+                <h4>Sistema inercial</h4>
+                <div class="p-txt">
+                    Es un sistema de referencial en el cual las 
+                    leyes de Newton son válidas y no existen fuerzas ficticias. En un sistema 
+                    inercial, una partícula en reposo o en movimiento 
+                    rectilíneo uniforme seguirá en ee etado a menos 
+                    que actúe una fuerza externa sobre ella
+                </div>
+            </div>
+            <div class="sistema-no-inercial">
+                <h4>Sistema no inercial</h4>
+                <div class="p-txt">
+                    Es un sistema de referencia que está acelerado 
+                    respecto a un sistema inercial. En estos sistemas, aparecen fuerzas ficticias 
+                    (como la fuerza centrífuga o la fuerza de Ciriolis) 
+                    que deben ser consideradas para dscribir el movimiento correctamente.
+                </div>
+            </div>
+        </div>
+        <div class="movimiento">
+            <h3>TIPOS DE MOVIMIENTO</h3>
+            <div class="mru">
+                <h4>Movimiento Rectilíneo Uniforme (MRU)</h4>
+                <div class="p-txt">
+                    Es un tipo de movimiento, la partícula s desplaza en línea recta 
+                    con una velocidad constante. No hay aceleración, lo que significa 
+                    que la velocidad no cambia con el tiempo.
+                </div>
+                <div class="flex">
+                    <div class="flex-left">
+                        <img src="" alt="">
+                    </div>
+                    <div class="flex-right">
+                        <div class="form">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mruv">
+                <h4>Movimiento Rectilíneo Uniformemente Variado (MRUV)</h4>
+                <div class="p-txt">
+                    En este caso, la partícula se mueve en línea recta con una aceleración 
+                    constante. <br>La velocidad de la partícula cambia linealmente 
+                    con el tiempo.
+                </div>
+                <div class="flex">
+                    <div class="flex-left">
+                        <img src="" alt="">
+                    </div>
+                    <div class="flex-right">
+                        <div class="form">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mpcl">
+                <h4>Movimiento Parabólico de Caída Libre (MPCL)</h4>
+                <div class="p-txt">
+                    Este tipo de movimiento ocurre n dos dimensiones y la 
+                    trayectoria de la partícula es una parábola. Es típico 
+                    en el caso de un proyectil lanzado bajo la influencia 
+                    de la gravedad. Donde en el je X s aplica MRU (a=0) y 
+                    en el eje Y se aplica MRUV (a = gravedad) donde:
+                </div>
+                <div class="form">Mov Parab = MRUx + MRUVy</div>
+                <div class="flex">
+                    <div class="flex-left">
+                        <img src="" alt="">
+                    </div>
+                    <div class="flex-right">
+                        <div class="form">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mcu">
+                <h4>Movimiento Circunferencial (MCU)</h4>
+                <div class="p-txt">
+                    En este tipo de movimiento, la partícula se desplaza en una 
+                    trayectoria circular con una velocidad angular constante.
+                </div>
+                <img src="">
+                <div class="flex">
+                    <div class="flex-left">
+                        <div class="form">
+
+                        </div>
+                    </div>
+                    <div class="flex-right">
+                        Radio de Curvtura (R): Es la distancia desde el 
+                        centro de la trayectoria circular hasta la partícula en movimiento. Es constante 
+                        para una tractoria circular perfecta.
+                        <br><br>
+                        Periodo (t): Es el tiempo que tarda la partícula en 
+                        completar una vuelta completa alrededor de la 
+                        trayectoria circular. Se mide en segundos (s).
+                        <br><br>
+                        Frecuencia (f): Es el número de vueltas que la partícula completa en una unidad 
+                        de tiempo. Se mide en hertzios (Hz).
+                        <br><br>
+                        Velocidad Angular (ω): Es la tasa de cambio del ángulo con respecto 
+                        al tiempo. Representa cuán rápido está 
+                        girando la partícula alrededor del centro de 
+                        la trayectoria circular. Se mide en radianes 
+                        por segundo (rad/s).
+                        <br><br>
+                        Posición Angular (θ): Es el ángulo que la 
+                        línea que une el centro de la trayectoria con 
+                        la partícula forma con una línea de referencia fija. 
+                        Se mide en radianes.
+                        <br><br>
+                        Velocidad Tangencial (v): Es la velocidad lineal de la partícula a lo 
+                        largo de la trayectoria circular.
+                    </div>
+                </div>
+            </div>
+            <div class="mcuv">
+
+            </div>
+        </div>
+        <div class="movimiento-analisis">
+            <div class="vector-posicion">
+
+            </div>
+            <div class="vectori-velocidad">
+
+            </div>
+            <div class="vectori-aceleracion">
+
+            </div>
+        </div>
+
+    </div>
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>##</h4>
+                    <ul>
+                        <li><a href="https://portal.uni.edu.pe/" target="_blank">UNIVERSIDAD NACIONAL DE INGENIERIA</a></li>
+                        <li><a href="http://www0.unsl.edu.ar/~cornette/FISICA_LQ/Francis%20Sears,%20Mark%20Zemansky.pdf" target="_blank">FISICA UNIVERSITARIA. YOUNG FREEDMAN</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>¡Sigue a la UNI!</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/UNIoficial.pe/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/uni_oficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>¡Sigue a la FIIS!</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/FacultaddeIngenieriaIndustrialydeSistemas/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ceiis.uni/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-img">
+                <img src="../img/logouniblanco.png" alt="Logo UNI">
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="../js/all.js"></script>
+    <script src="../js/academic_resources.js"></script>
+</body>
+</html>

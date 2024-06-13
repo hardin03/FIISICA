@@ -74,9 +74,9 @@ margin-bottom: 100px;
     text-align: initial;
 }
 .esfuerzo {
-    display: flex;
-    align-items: center;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
     gap: 30px;
 }
 .esfuerzo .p-txt {
@@ -85,6 +85,72 @@ margin-bottom: 100px;
     padding: 20px;
     box-shadow: 0 0 10px ;
     color: #fff;
+}
+.p-formula {
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+.form {
+    font-size: 30px;
+}
+.form-datos {
+    text-align: initial;
+    font-size: 17px;
+}
+.deformacion-unitaria {
+    padding: 50px;
+    text-align: center;
+}
+.deformacion-unitaria .p-txt {
+    border-radius: 20px;
+    background-color: #213088;
+    padding: 20px;
+    box-shadow: 0 0 10px ;
+    color: #fff;
+}
+.deformacion-unitaria .p-formula {
+    margin-top: 30px;
+    width: 100%;
+}
+.deformacion-unitaria .p-formula img {
+    width: 50%;
+    min-width: 450px;
+}
+.modulos-elasticos {
+    padding: 30px;
+}
+.parte-1 {
+    padding: 30px;
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    gap: 20px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    box-shadow: 0 0 5px ;
+}
+.parte-1 .p-sub-tittle {
+    font-size: 25px;
+    text-align: initial;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-weight: 100;
+    color: rgb(29, 29, 146);
+}
+.parte-2 {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+.form {
+    text-align: center;
+    margin-bottom: 15px;
 }
 @media (max-width:700px) {
     .resorte {
@@ -106,5 +172,22 @@ margin-bottom: 100px;
     }
     .esfuerzo {
         flex-direction: column;
+    }
+    .p-formula {
+        text-align: center;
+    }
+    .parte-1 {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .parte-1 .p-sub-tittle {
+        font-size: 20px
+    }
+    .deformacion-unitaria .p-formula img {
+        width: 100%;
+    }
+    .p-formula {
+        flex-direction: column;
+        gap: 20px;
     }
 }

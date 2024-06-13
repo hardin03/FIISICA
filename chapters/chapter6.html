@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- CODIGO LATEX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],  // Define delimitadores para matemáticas en línea
+                displayMath: [['$$', '$$'], ['\\[', '\\]']], // Define delimitadores para matemáticas en bloque
+                processEscapes: true,
+                tags: 'ams'  // Usa etiquetado estilo AMS para numerar ecuaciones automáticamente si es necesario
+            },
+            options: {
+                ignoreHtmlClass: 'tex2jax_ignore',  // Ignora las clases CSS asignadas a este nombre
+                processHtmlClass: 'tex2jax_process'  // Procesa solo las clases CSS asignadas a este nombre
+            },
+            startup: {
+                pageReady: () => {
+                    return MathJax.startup.defaultPageReady().then(() => {
+                        document.querySelectorAll("mjx-container").forEach((node) => {
+                        node.style.fontSize = "1.2em"; // Ajusta el tamaño de la fuente de las fórmulas
+                        });
+                    });
+                }
+            }
+        };
+    </script>
+
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAPITULO 6</title>
+    <link rel="stylesheet" href="../css/resources-dropdown.css">
     <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="../css/chapters.css">
     <link rel="stylesheet" href="../css/chapter-6.css">
@@ -38,7 +65,7 @@
                         <ul id="dropdown-list" class="dropdown-list">
                             <li><a href="../virtual_laboratory.html">Laboratorios Virtuales</a></li>
                             <li><a href="../academic_resources.html">Recursos Académicos</a></li>
-                            <li><a href="../multimedia.html">Multimedia</a></li>
+                            <li><a href="../biblioteca.html">biblioteca</a></li>
                         </ul>        
                     </div>
                     
@@ -50,9 +77,40 @@
         </nav>
     </header>
     
+    <div class="menu">
+        <div class="item__left">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="list__item">
+            <div class="list__button list__button-click">
+                <i class="fa-solid fa-bookmark"></i>
+                <a>CAPITULOS</a>
+                <div class="deploy_caps">
+                    <i class ="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="list__show">
+                <ul>
+                    <li><a href="chapter1.html">CAPITULO 1</a></li>
+                    <li><a href="chapter2.html">CAPITULO 2</a></li>
+                    <li><a href="chapter3.html">CAPITULO 3</a></li>
+                    <li><a href="chapter4.html">CAPITULO 4</a></li>
+                    <li><a href="chapter5.html">CAPITULO 5</a></li>
+                    <li><a href="#">CAPITULO 6</a></li>
+                    <li><a href="chapter7.html">CAPITULO 7</a></li>
+                    <li><a href="chapter8.html">CAPITULO 8</a></li>
+                    <li><a href="chapter9.html">CAPITULO 9</a></li>
+                    <li><a href="chapter10.html">CAPITULO 10</a></li>
+                    <li><a href="chapter11.html">CAPITULO 11</a></li>
+                    <li><a href="chapter12.html">CAPITULO 12</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="tittle">
-            <h1>CAPÍTULO 6: ELASTICIDAD</h1>
+            <h1>ELASTICIDAD</h1>
         </div>
         <div class="introduccion">
             <div class="p-txt p-1">
@@ -179,7 +237,11 @@
                 </div>
             </div>
             <div class="p-formula">
-                <img src="../img/esfuerzo-formula.png">
+                <div class="form">\( s = \frac {F}{A} \)</div>
+                <div class="form-datos">
+                    \(F\) : Fuerza ejercida sobre el área<br>
+                    \(A\) : Área transversal
+                </div>
             </div>
         </div>
         <div class="deformacion-unitaria">
@@ -192,16 +254,24 @@
                 normal sobre un material.
             </div>
             <div class="p-formula">
-                <img src="../img/deformacion-unitaria-formula.png">
+                <div class="form">\( e = \frac {\Delta l}{L} \)</div>
+                <div class="form-datos">
+                    \(\Delta l\) : Variación de la longitud<br>
+                    \(L\) : Longitud Natural
+                </div>
             </div>
         </div>
         <div class="modulos-elasticos">
             <div class="parte-1">
                 <div class="p-sub-tittle">
-                    Un módulo elástico es un tipo de constante
-                     elástica que relaciona una medida 
-                     relacionada con la tensión y una medida 
-                     relacionada con la deformación.
+                    Un módulo elástico es un tipo de constante 
+                    elástica que relaciona una medida  
+                    relacionada con la tensión y una medida 
+                    relacionada con la deformación.<br><br>
+                    Los 3 tipos de módulos elásticos son:<br>
+                    - MÓDULO DE YOUNG<br>
+                    - MÓDULO ELÁSTICO TRANSVERSAL<br>
+                    - MÓDULO VOLUMÉTRICO
                 </div>
                 <img src="../img/modulos-elasticos.jpg">
             </div>
@@ -218,7 +288,20 @@
                           aplique y el consiguiente aumento o disminución de 
                           la longitud del cuerpo.
                     </div>
-                    <img src="../img/young-formula.png">
+                    <div class="p-formula">
+                        <img src="../img/young-formula.png" width="300px" alt="">
+                        <div class="form-container">
+                            <div class="form">\( Y = \frac {F .\Delta l}{A . L} = \frac {s} {e} \)</div>
+                            <div class="form-datos">
+                                \(F\) : Fuerza normal sobre el área<br>
+                                \(A\) : Área transversal<br>
+                                \(\Delta l\) : Variación de la longitud<br>
+                                \(L\) : Longitud Natural <br>
+                                \(s\) : Esfuerzo<br>
+                                \(e\) : Deformación unitaria
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="modulo-2">
                     <div class="p-sub-tittle">
@@ -231,9 +314,17 @@
                         corte, es decir, aplicado en dirección tangente a la 
                         superficie donde se actúa.
                     </div>
-                    <div class="__img">
-                        <img src="../img/modulo-elastico-transversal.png">
-                        <img src="../img/img-transversal.jpg">
+                    <div class="p-formula">
+                        <img src="../img/elastico-transversal.jpg" alt="">
+                        <div class="form-container">
+                            <div class="form">\( S = \frac {\vec{F}_S . L}{A . \Delta X} \)</div>
+                            <div class="form-datos">
+                                \(\vec {F}_S\) : Fuerza tangente sobre el área<br>
+                                \(L\) : Longitud normal a la fuerza<br>
+                                \(A\) : Área transversal<br>
+                                \(\Delta X\) : Deslizamiento
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modulo-3">
@@ -247,9 +338,17 @@
                         actúan perpendicularmente a su superficie. 
                         No implica cambio de forma, tan solo de volumen.
                     </div>
-                    <div class="__img">
-                        <img src="../img/modulo-elastico-volumetrico.png">
-                        <img src="../img/img-volumetrico.png">
+                    <div class="p-formula">
+                        <img src="../img/elastico-volumetrico.png" alt="">
+                        <div class="form-container">
+                            <div class="form">\( B = \frac {F . V}{A . \Delta V} \)</div>
+                            <div class="form-datos">
+                                \(F\) : Fuerza normal sobre el área<br>
+                                \(V\) : Volumen natural<br>
+                                \(A\) : Área transversal<br>
+                                \(\Delta V\) : Variación de volumen
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -305,5 +404,6 @@
         }, 1300)
     </script>
     <script src="../js/all.js"></script>
+    <script src="../js/academic_resources.js"></script>
 </body>
 </html>
