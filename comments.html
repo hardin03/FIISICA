@@ -62,7 +62,7 @@
                 </div>
                 <div class="section">
                     <label for="coment">COMENTARIO</label>
-                    <textarea name="coment" id="comentario" ></textarea>
+                    <textarea name="comment" id="comentario" ></textarea>
                 </div>
                 <div class="section">
                     <label for="calificacion">Puntuación</label>
@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <div class="section">
-                    <button><input type="button" value="Enviar Respuesta"></button>
+                    <input type="submit" class="botonenviar" value="Enviar Respuesta">
                 </div>
             </form>
         </div>
@@ -113,7 +113,9 @@
         </div>
     </footer>
     
+    <script src="js/typewriter.js"></script>
     <script src="js/all.js"></script>
+    <script src="js/animation.js"></script>
     <script>
         const stars = document.querySelectorAll('.star');
         const calificacionInput = document.getElementById('calificacion');

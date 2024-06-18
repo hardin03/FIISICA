@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=VT323:wght@300;400&display=swap');
+
 body {
     background-color: inherit;
     background: url("../img/Imagen1.jpg");
@@ -5,44 +8,62 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+
 .formulario {
     margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    display: flex; /* Cambiar a flex para mejor alineación */
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Aumentar el tamaño de la sección de comentarios */
 }
+
 form {
-    margin-left: 100px;
     padding: 30px 20px;
-    border: 1px solid rgb(93, 141, 150);
-    border-radius: 30px;
-    width: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borde semitransparente */
+    border-radius: 30px; /* Bordes bien redondeados */
+    width: 80%;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
 }
+
 .section {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    gap: 20px;
-    padding: 0 0 20px 0 ;
-    border-bottom: 1px solid rgb(93, 141, 150);
+    gap: 10px;
+    align-items: center;
 }
+
 label {
-    color: aqua;
-    font-size: 17px;
-    font-weight: 700;
-    border-bottom: 1px solid rgb(93, 141, 150) ;
-    padding: 0 0 10px;
+    color: white; /* Cambiar color del texto de las etiquetas a blanco */
+    font-family: 'VT323', monospace; /* Fuente digital */
+    font-weight: 300; /* Cambiar peso de la fuente a 300 */
+    font-size: 1.5rem; /* Aumentar tamaño de las etiquetas */
 }
-input {
-    border: none;
-    background-color: none;
-    font-size: 17px;
+
+input[type="text"], textarea {
+    background-color: rgba(255, 255, 255, 0.05); /* Hacer más transparentes las casillas de texto */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borde semitransparente */
+    border-radius: 20px; /* Bordes bien redondeados */
+    color: white; /* Letras blancas */
+    font-weight: 300; /* Cambiar peso de la fuente a 300 */
+    font-family: 'VT323', monospace; /* Fuente digital */
+    font-size: 1.2rem; /* Aumentar el tamaño de la letra */
+    padding: 10px;
+    width: 100%; /* Asegurar que las cajas de texto ocupen el 100% del contenedor */
 }
-button {
-    background-color: antiquewhite;
+
+input[type="submit"] {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borde semitransparente */
+    border-radius: 20px; /* Bordes bien redondeados */
+    color: white; /* Letras blancas */
+    font-weight: 300; /* Cambiar peso de la fuente a 300 */
+    font-family: 'VT323', monospace; /* Fuente digital */
+    padding: 10px 20px;
+    cursor: pointer;
 }
 .rating {
     display: flex;
@@ -50,19 +71,107 @@ button {
 }
 .star {
     color: #ccc;
-    font-size: 27px;
+    font-size: 35px;
     cursor: pointer;
     transition: color .3s ease;
 }
 .star.checked, .star:hover {
     color: #ffc107;
 }
-@media only screen and (max-width:530px) {
-    .formulario {
-        align-items: center;
-        grid-template-columns: none;
+/* Estilo para el overlay de oscurecimiento */
+/* Estilo para el overlay de oscurecimiento */
+/* Estilo para el botón de enviar */
+.botonenviar {
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo más transparente */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borde semitransparente */
+    border-radius: 20px; /* Bordes bien redondeados */
+    color: white; /* Letras blancas */
+    font-weight: 300; /* Cambiar peso de la fuente a 300 */
+    font-family: 'VT323', monospace; /* Fuente digital */
+    padding: 10px 20px;
+    cursor: pointer;
+    outline: none; /* Eliminar borde adicional */
+    box-shadow: none; /* Eliminar sombra adicional */
+    transition: background .4s;
+}
+
+.botonenviar:focus {
+    outline: none; /* Eliminar borde adicional al enfocarse */
+    box-shadow: none; /* Eliminar sombra adicional al enfocarse */
+}
+.botonenviar:hover {
+    background-color: #666;
+}
+
+/* Estilos para la explosión */
+.explosion {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 50%, rgba(0,0,0,0) 100%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: explosion 1s forwards;
+}
+
+@keyframes explosion {
+    0% {
+        transform: scale(0.5) translate(-50%, -50%);
     }
-    form {
-        margin-left: inherit;
+    100% {
+        transform: scale(1.5) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+/* Estilos para los átomos */
+.atoms-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.atom {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    animation: moveAtom 3s linear infinite;
+}
+
+@keyframes moveAtom {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(calc(100vw - 10px), calc(100vh - 10px));
+    }
+}
+
+/* Estilos para el mensaje final */
+.message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    color: white;
+    animation: showMessage 2s forwards;
+}
+
+@keyframes showMessage {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
