@@ -1,0 +1,68 @@
+.trabajo {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+.cabeza {
+    color: red;
+    font-size: 19px;
+}
+.resaltado {
+    padding: 30px;
+    border: 3px solid blue;
+    width: 200px;
+    margin: 0 auto;
+}
+.p-txt {
+    line-height: 1.8;
+}
+.form {
+    margin: 30px 0;
+    text-align: center;
+}
+.img {
+    width: 500px;
+}
+.trabajo-img {
+    text-align: center;
+    margin: 50px 0;
+}
+.energia-cinetica {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.energia-img {
+    text-align: center;
+    margin: 50px 0;
+}
+.fuerzas-conservativas {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+.fuerza-conservativa-img {
+    text-align: center;
+    margin: 50px 0;
+}
+.trabajo-energia-fuerzas {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+@media only screen and (max-width: 730px) {
+    .img {
+        width: 100%;
+    }
+    .form {
+        font-size: 13px;
+    }
+}
+

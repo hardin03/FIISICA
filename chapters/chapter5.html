@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CODIGO LATEX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],  // Define delimitadores para matemáticas en línea
+                displayMath: [['$$', '$$'], ['\\[', '\\]']], // Define delimitadores para matemáticas en bloque
+                processEscapes: true,
+                tags: 'ams'  // Usa etiquetado estilo AMS para numerar ecuaciones automáticamente si es necesario
+            },
+            options: {
+                ignoreHtmlClass: 'tex2jax_ignore',  // Ignora las clases CSS asignadas a este nombre
+                processHtmlClass: 'tex2jax_process'  // Procesa solo las clases CSS asignadas a este nombre
+            },
+            startup: {
+                pageReady: () => {
+                    return MathJax.startup.defaultPageReady().then(() => {
+                        document.querySelectorAll("mjx-container").forEach((node) => {
+                        node.style.fontSize = "1.2em"; // Ajusta el tamaño de la fuente de las fórmulas
+                        });
+                    });
+                }
+            }
+        };
+    </script>
+
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPITULO 5</title>
+    <link rel="stylesheet" href="../css/resources-dropdown.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/chapters.css">
+    <link rel="stylesheet" href="../css/chapter-5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/8d1aadf525.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="../img/einstein.png"/>
+</head>
+<body>
+    <header>
+        <img src="../img/fisica_logo.png" class="logo" alt="">
+        <button id="bar-toggle" class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav" id="nav">
+            <ul class="nav-list">
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <div class="nav-operation">
+                        <div class="deploy" id="deploy">
+                            <button id="btn-left" class="deploy-left">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <a>Recursos</a>
+                            <button class="deploy-right">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        
+                        <ul id="dropdown-list" class="dropdown-list">
+                            <li><a href="../virtual_laboratory.html">Laboratorios Virtuales</a></li>
+                            <li><a href="../academic_resources.html">Recursos Académicos</a></li>
+                            <li><a href="../biblioteca.html">biblioteca</a></li>
+                        </ul>        
+                    </div>
+                    
+                </li>
+                <li>
+                    <a href="../comments.html" >Envianos tu comentario</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="menu">
+        <div class="item__left">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="list__item">
+            <div class="list__button list__button-click">
+                <i class="fa-solid fa-bookmark"></i>
+                <a>CAPITULOS</a>
+                <div class="deploy_caps">
+                    <i class ="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="list__show">
+                <ul>
+                    <li><a href="#">CAPITULO 1</a></li>
+                    <li><a href="chapter2.html">CAPITULO 2</a></li>
+                    <li><a href="chapter3.html">CAPITULO 3</a></li>
+                    <li><a href="chapter4.html">CAPITULO 4</a></li>
+                    <li><a href="chapter5.html">CAPITULO 5</a></li>
+                    <li><a href="chapter6.html">CAPITULO 6</a></li>
+                    <li><a href="chapter7.html">CAPITULO 7</a></li>
+                    <li><a href="chapter8.html">CAPITULO 8</a></li>
+                    <li><a href="chapter9.html">CAPITULO 9</a></li>
+                    <li><a href="chapter10.html">CAPITULO 10</a></li>
+                    <li><a href="chapter11.html">CAPITULO 11</a></li>
+                    <li><a href="chapter12.html">CAPITULO 12</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="header">
+                <div class="tittle">
+                    <h1>DINÁMICA DEL MOVIMIENTO DE ROTACIÓN</h1>
+                </div>
+            </div>
+            <section id="introduccion">
+                <h2>Definición de Cuerpo Rígido</h2>
+                <p> (1) Cuerpo ideal cuyas partes (partículas que lo forman) tienen posiciones relativas fijas, entre sí cuando se somete a fuerzas externas, es decir es no deformable. Con esta definición se elimina la posibilidad de que el objeto tenga movimiento de vibración.</p>
+                <div class="image-container">
+                    <img src="../img/CuerpoRigido.png" alt="Introducción a la dinámica de rotación">
+                </div>
+                <p> (2) Es un cuerpo donde sus dimensiones no se pueden despreciar y mantienen su forma y tamaño cuando son sometidos a fuerzas y con ello la distancia entre dos puntos del cuerpo se mantienen constante. (pueden incluso tener movimiento de traslación y rotación)</p>
+            </section>
+            <section>
+                <h2>Definición de Movimiento de Rotación Pura</h2>
+                <p>Cuando un cuerpo rígido realiza un movimiento de rotación pura todos sus puntos realizan desplazamientos angulares iguales respecto al eje de rotación.</p>
+                <div class="image-container">
+                    <img src="../img/MovimientoDeRotacionPura.png" alt="Movimiento de Rotacion Pura">
+                </div>
+            </section>
+            <section id="definicion-torca">
+                <h2>Definición de Torca</h2>
+                <p>
+                <b>Puedes conocerla con otros nombres como:</b>
+                <ul>
+                    <li> Momento de Fuerza</li>
+                    <li> Momento de Giro</li>
+                    <li> Par Torsor</li>
+                    <li> Momento de torsión</li>
+                    <li> Par motor (en el contexto de motores y maquinaria)</li>
+                </ul>
+                o simplemente Momento <br> <br>
+                </p>
+                <p>Sabemos que las fuerzas que actúan sobre un cuerpo pueden afectar su movimiento de traslación, es decir, el movimiento del cuerpo como un todo en el espacio. Ahora queremos aprender qué aspectos de una fuerza determinan qué tan efectiva es ésta para provocar o modificar el movimiento de rotación. La magnitud y la dirección de la fuerza son importantes, al igual que el punto de su aplicación sobre el cuerpo.</p>
+                <p>
+                    Cuando un cuerpo rígido realiza un movimiento de rotación pura todos sus puntos realizan desplazamientos angulares iguales respecto al eje de rotación.
+                </p>
+                <div class="image-container">
+                    <img src="../img/torca.png" alt="Definición de Torca">
+                </div>
+                <p>La torca es una medida cuantitativa de la tendencia de una fuerza para provocar o modificar el movimiento de rotación de un cuerpo. Decimos que una fuerza genera una torca sobre un punto específico. En general, la torca para una fuerza de magnitud \( F \) cuya línea de acción es una distancia perpendicular \( l \) desde el punto de rotación es:</p>
+                <p id="formula1">\( \tau = F \cdot l \)</p>
+                <p>La torca también puede calcularse utilizando el producto vectorial:</p>
+                <p id="formula2">\( \tau = \vec{r} \times \vec{F} \)</p>
+                <p>Donde:</p>
+                <ul>
+                    <li>\( \tau \) es la torca</li>
+                    <li>\( \vec{r} \) es el vector de posición</li>
+                    <li>\( \vec{F} \) es la fuerza</li>
+                </ul>
+                <p>La torca es fundamental para entender el comportamiento de sistemas mecánicos. En ingeniería y física, el cálculo preciso de la torca es crucial para diseñar mecanismos que puedan soportar fuerzas específicas sin fallar.</p>
+            </section>
+
+            <section id="formulas-torca">
+                <h2>Fórmulas de Torca</h2>
+                <p>La fórmula general para la torca es:</p>
+                <p id="formula3">\( \tau = \vec{r} \times \vec{F} \)</p>
+                <p>Dónde:</p>
+                <ul>
+                    <li>\( \tau \) es la torca</li>
+                    <li>\( \vec{r} \) es el vector de posición</li>
+                    <li>\( \vec{F} \) es la fuerza</li>
+                </ul>
+                <p>La torca también puede calcularse usando el brazo de palanca:</p>
+                <p id="formula4">\( \tau = F \cdot l \cdot \sin(\theta) \)</p>
+                <p>Dónde:</p>
+                <ul>
+                    <li>\( F \) es la magnitud de la fuerza</li>
+                    <li>\( l \) es la longitud del brazo de palanca</li>
+                    <li>\( \theta \) es el ángulo entre el brazo de palanca y la dirección de la fuerza</li>
+                </ul>
+                <p>El concepto de brazo de palanca es fundamental para el diseño de herramientas y máquinas. Por ejemplo, en una llave inglesa, el largo del mango actúa como un brazo de palanca que amplifica la fuerza aplicada para generar una torca mayor.</p>
+            </section>
+            <section id="Equilibrio-de-cuerpo-rigido">
+                <h2>EQUILIBRIO DE CUERPO RÍGIDO</h2>
+                <p>Como el cuerpo rígido puede trasladarse o rotar, existen condiciones de equilibrio para cada uno de esos movimientos y ambas deben cumplirse</p>
+                
+                <div class="conditions">
+                    <div class="condition">
+                        <h3>Primera condición de equilibrio</h3>
+                        <p>Realizado el DCL: \(\vec{F}_{\text{Resultante}} = \sum \vec{F} = \vec{0}\)</p>
+                    </div>
+                    <div class="condition">
+                        <h3>Segunda condición de equilibrio</h3>
+                        <p>Elegido un eje: 
+                            \(\vec{\tau}_{\text{Resultante}} = \sum \vec{\tau} = \vec{0}\)
+                        </p>
+                    </div>
+                </div>
+
+                <p>Si un cuerpo rígido en equilibrio mecánico está sometido a tres fuerzas coplanares, estas o son concurrentes o son paralelas.</p>
+                <div class="image-container">
+                    <img src="../img/conditions.png" alt="Conservación del Momento Angular">
+                </div>
+            </section>
+            <section id="trabajo-potencia">
+                <h2>Trabajo y Potencia en Movimiento de Rotación</h2>
+                <p>En el movimiento de rotación, el trabajo realizado por una fuerza es:</p>
+                <p id="formula5">\( W = \tau \theta \)</p>
+                <p>Y la potencia es:</p>
+                <p id="formula6">\( P = \tau \omega \)</p>
+                <p>Dónde:</p>
+                <ul>
+                    <li>\( W \) es el trabajo</li>
+                    <li>\( \tau \) es la torca</li>
+                    <li>\( \theta \) es el ángulo de rotación</li>
+                    <li>\( P \) es la potencia</li>
+                    <li>\( \omega \) es la velocidad angular</li>
+                </ul>
+                <p>El trabajo en el movimiento de rotación se puede entender de manera similar al trabajo en el movimiento lineal. Si aplicamos una torca a un cuerpo, estamos realizando trabajo sobre ese cuerpo, y la cantidad de trabajo realizado está dada por el producto de la torca y el ángulo a través del cual se aplica la torca.</p>
+                <p>La potencia en el movimiento de rotación es la tasa a la cual se realiza trabajo. Es decir, es la cantidad de trabajo realizado por unidad de tiempo. Al igual que en el movimiento lineal, la potencia se puede calcular como el producto de la torca y la velocidad angular del cuerpo.</p>
+                <p>En los motores eléctricos, la potencia y el trabajo rotacional son conceptos esenciales. Un motor convierte energía eléctrica en energía mecánica rotacional, y su eficiencia depende de cuán efectivamente puede convertir esa energía y transmitirla a una carga.</p>
+            </section>
+
+            <section id="momento-angular">
+                <h2>Momento Angular</h2>
+                <p>El momento angular es una cantidad vectorial que representa el estado de rotación de un objeto. Se define como el producto del momento de inercia y la velocidad angular. Para un cuerpo rígido que gira alrededor de un eje fijo, el momento angular se expresa como:</p>
+                <p id="formula7">\( L = I \omega \)</p>
+                <p>Dónde:</p>
+                <ul>
+                    <li>\( L \) es el momento angular</li>
+                    <li>\( I \) es el momento de inercia</li>
+                    <li>\( \omega \) es la velocidad angular</li>
+                </ul>
+                <p>El momento angular de un sistema de partículas se calcula sumando los momentos angulares individuales de todas las partículas. En el caso de un cuerpo rígido, esto se simplifica ya que todas las partículas del cuerpo tienen la misma velocidad angular.</p>
+                <p>El momento angular es crucial para comprender el comportamiento de sistemas en rotación, como los planetas en el sistema solar. Su conservación explica por qué los planetas siguen órbitas estables y por qué los cuerpos en rotación tienden a mantener su orientación.</p>
+            </section>
+
+            <section id="conservacion-momento">
+                <h2>Conservación del Momento Angular</h2>
+                <p>El principio de conservación del momento angular establece que si no hay una torca neta externa actuando sobre un sistema, el momento angular total del sistema permanece constante. Este principio es fundamental en muchos fenómenos físicos, desde el movimiento de los planetas hasta el comportamiento de los patinadores artísticos.</p>
+                <p>Un ejemplo común de conservación del momento angular es un patinador sobre hielo que gira con los brazos extendidos y luego los recoge. Al hacerlo, su velocidad de rotación aumenta para conservar el momento angular. Este fenómeno se debe a que el momento de inercia disminuye cuando el patinador recoge los brazos, por lo que la velocidad angular debe aumentar para mantener el producto \( L = I \omega \) constante.</p>
+                <p>La conservación del momento angular también se aplica en sistemas astrofísicos. Por ejemplo, las estrellas en colapso que se convierten en púlsares giran a velocidades extremadamente altas debido a la conservación del momento angular. Al colapsar, el radio de la estrella disminuye significativamente, lo que reduce su momento de inercia y aumenta su velocidad angular.</p>
+                <div class="image-container">
+                    <img src="../img/conservaciondelmomentoangular.png" alt="Conservación del Momento Angular">
+                </div>
+            </section>
+
+            <section id="giroscopios">
+                <h2>Giroscopios</h2>
+                <p>Un giroscopio es un dispositivo que utiliza el principio de conservación del momento angular para mantener su orientación. Consiste en un disco o rueda que gira rápidamente alrededor de su eje. Debido a la conservación del momento angular, el eje de un giroscopio permanecerá apuntando en la misma dirección, a menos que una torca externa actúe sobre él.</p>
+                <p>Los giroscopios se utilizan en una variedad de aplicaciones, desde juguetes y dispositivos electrónicos hasta sistemas de navegación en aviones y satélites. Su capacidad para mantener una orientación estable los hace ideales para estas aplicaciones.</p>
+                <p>La precesión es un fenómeno asociado con los giroscopios. Cuando se aplica una torca a un giroscopio, en lugar de cambiar su orientación directamente, el eje del giroscopio se desplaza perpendicularmente a la dirección de la torca aplicada. Este movimiento es conocido como precesión, y la velocidad de precesión se puede calcular utilizando la siguiente fórmula:</p>
+                <p id="formula8">\( \Omega = \frac{\tau}{L} \)</p>
+                <p>Dónde:</p>
+                <ul>
+                    <li>\( \Omega \) es la velocidad de precesión</li>
+                    <li>\( \tau \) es la torca aplicada</li>
+                    <li>\( L \) es el momento angular</li>
+                </ul>
+            </section>
+
+            <section id="precesion">
+                <h2>Precesión</h2>
+                <p>La precesión es el movimiento que describe el eje de un cuerpo rotatorio cuando se aplica una torca. En lugar de cambiar directamente su orientación, el eje del cuerpo se desplaza en un movimiento circular. La precesión es un fenómeno crucial en la dinámica de rotación y se observa en giroscopios y otros sistemas rotatorios.</p>
+                <p>Un ejemplo claro de precesión es un trompo que gira. Cuando el trompo empieza a perder velocidad, su eje comienza a describir un círculo en lugar de mantenerse vertical. Este movimiento de precesión se debe a la combinación de la gravedad y la rotación del trompo.</p>
+                <p>La precesión giroscópica tiene aplicaciones prácticas en la estabilización de aeronaves y naves espaciales. Los sistemas de control utilizan giroscopios para detectar y corregir cambios en la orientación, asegurando que la nave mantenga su rumbo.</p>
+                <div class="image-container">
+                    <img src="../img/precesion.png" alt="Precesión">
+                </div>
+            </section>
+
+            <section id="ejemplos">
+                <h2>Ejemplo de Cálculo de Torca</h2>
+                <p>Para aflojar una junta de tubería, un plomero ensarta un pedazo de tubo (una “extensión”) en el mango de su llave. Se coloca de pie en el extremo del tubo, aplicando todo su peso de 900 N en un punto a 0.80 m del centro de la junta. El mango de la llave y la extensión forman un ángulo de 19° con la horizontal. Encuentre la magnitud y dirección de la torca que se aplica en torno al centro de la junta.</p>
+                <p><strong>Solución:</strong></p>
+                <p id="formula9">\( \tau = F \cdot l \cdot \sin(\theta) \)</p>
+                <p>Donde:</p>
+                <ul>
+                    <li>\( F = 900 \, \text{N} \)</li>
+                    <li>\( l = 0.80 \, \text{m} \)</li>
+                    <li>\( \theta = 19° \)</li>
+                </ul>
+                <p>Calculando la torca:</p>
+                <p id="formula10">\( \tau = 900 \, \text{N} \times 0.80 \, \text{m} \times \sin(19°) = 680 \, \text{N} \cdot \text{m} \)</p>
+
+                <h2>Ejemplo de Momento Angular</h2>
+                <p>Un patinador artístico gira sobre el hielo con los brazos extendidos. Su momento de inercia con los brazos extendidos es \( 5 \, \text{kg} \cdot \text{m}^2 \) y su velocidad angular es \( 2 \, \text{rad/s} \). ¿Cuál es su momento angular?</p>
+                <p><strong>Solución:</strong></p>
+                <p id="formula11">\( L = I \omega \)</p>
+                <p>Donde:</p>
+                <ul>
+                    <li>\( I = 5 \, \text{kg} \cdot \text{m}^2 \)</li>
+                    <li>\( \omega = 2 \, \text{rad/s} \)</li>
+                </ul>
+                <p>Calculando el momento angular:</p>
+                <p id="formula12">\( L = 5 \, \text{kg} \cdot \text{m}^2 \times 2 \, \text{rad/s} = 10 \, \text{kg} \cdot \text{m}^2 \cdot \text{rad/s} \)</p>
+
+                <h2>Ejemplo de Precesión Giroscópica</h2>
+                <p>Un giroscopio con un momento angular de \( 5 \, \text{kg} \cdot \text{m}^2 \cdot \text{rad/s} \) experimenta una torca de \( 2 \, \text{N} \cdot \text{m} \). ¿Cuál es la velocidad de precesión?</p>
+                <p><strong>Solución:</strong></p>
+                <p id="formula13">\( \Omega = \frac{\tau}{L} \)</p>
+                <p>Donde:</p>
+                <ul>
+                    <li>\( \Omega = \frac{2 \, \text{N} \cdot \text{m}}{5 \, \text{kg} \cdot \text{m}^2 \cdot \text{rad/s}} = 0.4 \, \text{rad/s} \)</li>
+                </ul>
+            </section>
+
+            <section id="maquinas">
+                <h3>Máquinas Simples</h3>
+                        <p>Son dispositivos que nos permiten realizar el mismo objetivo (trabajo) aplicando una menor fuerza.<br></p>
+                    <p>Las máquinas simples son:</p>
+                <div id="maquinasSimples">
+                    <div class = "contenido1">
+                        <div class="box">
+                            <h2>El plano inclinado.</h2>
+                            <p>Es una máquina simple que nos permite elevar cuerpos con una menor fuerza respecto a levantarla verticalmente.</p>
+                            <div class = "image-container">
+                                <img src="../img/plano_inclinado.png" alt="Plano Inclinado">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h2>Poleas</h2>
+                            <p>Permite cambiar la dirección de la fuerza y en un sistema de poleas permite disminuir la fuerza aplicada.</p>
+                            <div class = "image-container">
+                                <img src="../img/poleas.png" alt="Poleas">
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "contenido1">
+                        <div class="box">
+                            <h2>Palancas</h2>
+                            <p>Nos permite disminuir la fuerza aplicada en la medida que se aumenta la distancia entre esta fuerza aplicada y el punto de apoyo. Se cumplen en las palancas las aplicaciones de torques respecto a un apoyo.</p>
+                            <div class = "image-container">
+                                <img src="../img/palancas.png" alt="Palancas">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h2>Máquina de Atwood</h2>
+                            <p>Es un dispositivo simple compuesto por una polea por la que se pasa una cuerda, de cuyos extremos penden dos masas.</p>
+                            <p>Se usa en el laboratorio para calcular el valor de la aceleración de la gravedad, así como la aceleración y magnitud de la fuerza de fricción en la cuerda.</p>
+                            <div class = "image-container">
+                                <img src="../img/atwood.png" alt="Máquina de Atwood">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="aplicaciones">
+                <h2>Aplicaciones Prácticas de la Dinámica de Rotación</h2>
+                <p>La dinámica de rotación tiene numerosas aplicaciones prácticas en la ingeniería y la física. A continuación, se describen algunas de las más importantes:</p>
+
+                <h3>1. Motores y Generadores Eléctricos</h3>
+                <p>Los motores eléctricos convierten la energía eléctrica en energía mecánica rotacional, mientras que los generadores hacen lo opuesto. La comprensión de la torca y el momento angular es crucial para diseñar y optimizar estos dispositivos.</p>
+
+                <h3>2. Rotores de Helicópteros</h3>
+                <p>El diseño de los rotores de helicópteros depende de la dinámica de rotación. La estabilidad y el control de vuelo se logran mediante el ajuste preciso de la torca y el momento angular de los rotores.</p>
+
+                <h3>3. Sistemas de Navegación Inercial</h3>
+                <p>Los sistemas de navegación inercial utilizan giroscopios para mantener la orientación y la estabilidad de vehículos como aviones y submarinos. La precesión y la conservación del momento angular son principios clave en estos sistemas.</p>
+
+                <h3>4. Equipos Deportivos</h3>
+                <p>En deportes como el patinaje artístico y la gimnasia, los atletas utilizan la conservación del momento angular para realizar giros y saltos complejos. La comprensión de estos principios permite a los entrenadores y atletas mejorar su rendimiento.</p>
+
+                <h3>5. Ingeniería Civil</h3>
+                <p>En la construcción de puentes y edificios, se considera la torca y el momento angular para asegurar que las estructuras puedan soportar fuerzas externas como el viento y los terremotos.</p>
+
+                <h3>6. Astrofísica</h3>
+                <p>El estudio del movimiento de los planetas y las estrellas se basa en la dinámica de rotación. La conservación del momento angular explica fenómenos como la formación de sistemas planetarios y la evolución de las estrellas.</p>
+
+                <div class="image-container">
+                    <img src="../img/aplicaciones.png" alt="Aplicaciones de la Dinámica de Rotación">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>##</h4>
+                    <ul>
+                        <li><a href="https://portal.uni.edu.pe/" target="_blank">UNIVERSIDAD NACIONAL DE INGENIERIA</a></li>
+                        <li><a href="http://www0.unsl.edu.ar/~cornette/FISICA_LQ/Francis%20Sears,%20Mark%20Zemansky.pdf" target="_blank">FISICA UNIVERSITARIA. YOUNG FREEDMAN</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>¡Sigue a la UNI!</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/UNIoficial.pe/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/uni_oficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>¡Sigue a la FIIS!</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/FacultaddeIngenieriaIndustrialydeSistemas/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ceiis.uni/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-img">
+                <img src="../img/logouniblanco.png" alt="Logo UNI">
+            </div>
+        </div>
+    </footer>
+    <script src="../js/all.js"></script>
+    <script src="../js/academic_resources.js"></script>
+</body>
+</html>

@@ -30,14 +30,14 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAPITULO 6</title>
+    <title>CAPÍTULO 1</title>
     <link rel="stylesheet" href="../css/resources-dropdown.css">
     <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="../css/chapters.css">
     <link rel="stylesheet" href="../css/chapter-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://kit.fontawesome.com/8d1aadf525.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/jpg" href="img/einstein.png"/>
+    <link rel="icon" type="image/jpg" href="../img/einstein.png"/>
 </head>
 <body>
     <header>
@@ -108,227 +108,315 @@
         </div>
     </div>
 
-    
     <div class="container">
         <div class="tittle">
             <h1>CINEMÁTICA DE UNA PARTÍCULA</h1>
         </div>
-        <div class="introduccion">
-            La cinemática es una rama fundamental de 
-            la mecanica clásica que se ocupa de describir 
-            el movimiento de los cuerpos sin considerar las causas 
-            que lo generan. En este contexto, "partícula" se refiere 
-            a un objeto idealizado con masa, pero sin dimensiones 
-            espaciales, lo que permite simplificar el estudio de su mvimiento.
-            <br>El análisis cinemático proporiona una base esencial para la comprensión 
-            de fenomenos físicos y para el desarrollo de habilidades analíticas 
-            y matemáticas que son cruciales en diversas disciplinas 
-            científicas y de ingeniería.
-        </div>
-        <div class="cap-temas">
-            <div class="def-basicas">
-                <h3>DEFINICIONES PREVIAS</h3>
-                <div class="particula">
-                    <h4>Partícula</h4>
-                    <div class="p-txt">
-                        Es un objeto idealizado que posee masa, pero carecec 
-                        de dimensiones espaciales, lo cual permite simplificar el análisis del movimiento 
-                        al considerar solo la posición y los cambios en dicha posición 
-                        a lo largo del tiempo.
-                    </div>
-                </div>
-                <div class="trayectoria">
-                    <h4>Trayectoria</h4>
-                    <div class="p-txt">
-                        Es el camino que sigue una partícula en su movimiento a lo largo del tiepo. 
-                        La trayectoria puede ser rectilínea o curvilínea.
-                    </div>
-                </div>
-                <div class="desplazamiento">
-                    <h4>Desplazamiento</h4>
-                    <div class="p-txt">
-                        Es el cambio de posición de una partícula desde una posición inicial 
-                        hasta una posición final. Se representa comom un vector que indica 
-                        la dirección  la magnitud de cambio.
-                    </div>
-                </div>
-                <div class="velocidad">
-                    <h4>Velocidad</h4>
-                    <div class="p-txt">
-                        Es la razón de cambio del desplazamiento con respecto al tiempo. 
-                        Se puede expresar como velocidad media o velocidad instantánea. 
-                        La velocidad es un vector que tiene tanto magnitud (rapidez) como dirección.
-                    </div>
-                </div>
-                <div class="aceleracion">
-                    <h4>Aceleración</h4>
-                    <div class="p-txt">
-                        Es la razónde cambio de la velocidad con respecto al tiempo. Al igual 
-                        que la velocidad, la aceleración es un vector que tiene 
-                        magnitud y dirección.
-                    </div>
-                </div>
+        <div class="cuerpo">
+            <div class="introduccion">
+                La cinemática es una rama fundamental de 
+                la mecanica clásica que se ocupa de describir 
+                el movimiento de los cuerpos sin considerar las causas 
+                que lo generan. En este contexto, "partícula" se refiere 
+                a un objeto idealizado con masa, pero sin dimensiones 
+                espaciales, lo que permite simplificar el estudio de su mvimiento.
+                <br>El análisis cinemático proporiona una base esencial para la comprensión 
+                de fenomenos físicos y para el desarrollo de habilidades analíticas 
+                y matemáticas que son cruciales en diversas disciplinas 
+                científicas y de ingeniería.
             </div>
-        </div>
-        <div class="descripcion-movimiento">
-            <div class="p-tittle">
-                <h3>DESCRIPCIÓN DEL MOVIMIENTO</h3>
-            </div>
-            <div class="movimiento-rectilineo">
-                <h4>Movimiento rectilíneo</h4>
-                <div class="p-txt">
-                    Es el movimiento de una partícula a lo largo de una línea recta. 
-                    Se caracteriza por tener una trayectoria rectilínea y puede ser uniforme
-                    (vlocidad constante) o acelerado (velocidad variable).
-                </div>
-            </div>
-            <div class="movimiento-curvilineo">
-                <h4>Movimiento curvilineo</h4>
-                <div class="p-txt">
-                    Es el movimiento de una partícula a lo largo 
-                    de una trayectoria curva. En este tipo de movimiento, 
-                    tanto la magnitud como la dirección de la velocidad pueden 
-                    cambiar.
-                </div>
-            </div>
-        </div>
-        <div class="sistemas-referencia">
-            <h3>SISTEMAS DE REFERENCIA</h3>
-            <div class="sistema-inercial">
-                <h4>Sistema inercial</h4>
-                <div class="p-txt">
-                    Es un sistema de referencial en el cual las 
-                    leyes de Newton son válidas y no existen fuerzas ficticias. En un sistema 
-                    inercial, una partícula en reposo o en movimiento 
-                    rectilíneo uniforme seguirá en ee etado a menos 
-                    que actúe una fuerza externa sobre ella
-                </div>
-            </div>
-            <div class="sistema-no-inercial">
-                <h4>Sistema no inercial</h4>
-                <div class="p-txt">
-                    Es un sistema de referencia que está acelerado 
-                    respecto a un sistema inercial. En estos sistemas, aparecen fuerzas ficticias 
-                    (como la fuerza centrífuga o la fuerza de Ciriolis) 
-                    que deben ser consideradas para dscribir el movimiento correctamente.
-                </div>
-            </div>
-        </div>
-        <div class="movimiento">
-            <h3>TIPOS DE MOVIMIENTO</h3>
-            <div class="mru">
-                <h4>Movimiento Rectilíneo Uniforme (MRU)</h4>
-                <div class="p-txt">
-                    Es un tipo de movimiento, la partícula s desplaza en línea recta 
-                    con una velocidad constante. No hay aceleración, lo que significa 
-                    que la velocidad no cambia con el tiempo.
-                </div>
-                <div class="flex">
-                    <div class="flex-left">
-                        <img src="" alt="">
+            <div class="cap-temas">
+                <div class="def-basicas estilo-seccion">
+                    <h3>DEFINICIONES PREVIAS</h3>
+                    <div class="particula">
+                        <h4>Partícula</h4>
+                        <div class="p-txt">
+                            Es un objeto idealizado que posee masa, pero carecec 
+                            de dimensiones espaciales, lo cual permite simplificar el análisis del movimiento 
+                            al considerar solo la posición y los cambios en dicha posición 
+                            a lo largo del tiempo.
+                        </div>
                     </div>
-                    <div class="flex-right">
-                        <div class="form">
-
+                    <div class="trayectoria">
+                        <h4>Trayectoria</h4>
+                        <div class="p-txt">
+                            Es el camino que sigue una partícula en su movimiento a lo largo del tiepo. 
+                            La trayectoria puede ser rectilínea o curvilínea.
+                        </div>
+                    </div>
+                    <div class="desplazamiento">
+                        <h4>Desplazamiento</h4>
+                        <div class="p-txt">
+                            Es el cambio de posición de una partícula desde una posición inicial 
+                            hasta una posición final. Se representa comom un vector que indica 
+                            la dirección  la magnitud de cambio.
+                        </div>
+                    </div>
+                    <div class="velocidad">
+                        <h4>Velocidad</h4>
+                        <div class="p-txt">
+                            Es la razón de cambio del desplazamiento con respecto al tiempo. 
+                            Se puede expresar como velocidad media o velocidad instantánea. 
+                            La velocidad es un vector que tiene tanto magnitud (rapidez) como dirección.
+                        </div>
+                    </div>
+                    <div class="aceleracion">
+                        <h4>Aceleración</h4>
+                        <div class="p-txt">
+                            Es la razónde cambio de la velocidad con respecto al tiempo. Al igual 
+                            que la velocidad, la aceleración es un vector que tiene 
+                            magnitud y dirección.
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="mruv">
-                <h4>Movimiento Rectilíneo Uniformemente Variado (MRUV)</h4>
-                <div class="p-txt">
-                    En este caso, la partícula se mueve en línea recta con una aceleración 
-                    constante. <br>La velocidad de la partícula cambia linealmente 
-                    con el tiempo.
+            <div class="descripcion-movimiento estilo-seccion">
+                <div class="p-tittle">
+                    <h3>DESCRIPCIÓN DEL MOVIMIENTO</h3>
                 </div>
-                <div class="flex">
-                    <div class="flex-left">
-                        <img src="" alt="">
-                    </div>
-                    <div class="flex-right">
-                        <div class="form">
-
-                        </div>
+                <div class="movimiento-rectilineo">
+                    <h4>Movimiento rectilíneo</h4>
+                    <div class="p-txt">
+                        Es el movimiento de una partícula a lo largo de una línea recta. 
+                        Se caracteriza por tener una trayectoria rectilínea y puede ser uniforme
+                        (vlocidad constante) o acelerado (velocidad variable).
                     </div>
                 </div>
-            </div>
-            <div class="mpcl">
-                <h4>Movimiento Parabólico de Caída Libre (MPCL)</h4>
-                <div class="p-txt">
-                    Este tipo de movimiento ocurre n dos dimensiones y la 
-                    trayectoria de la partícula es una parábola. Es típico 
-                    en el caso de un proyectil lanzado bajo la influencia 
-                    de la gravedad. Donde en el je X s aplica MRU (a=0) y 
-                    en el eje Y se aplica MRUV (a = gravedad) donde:
-                </div>
-                <div class="form">Mov Parab = MRUx + MRUVy</div>
-                <div class="flex">
-                    <div class="flex-left">
-                        <img src="" alt="">
-                    </div>
-                    <div class="flex-right">
-                        <div class="form">
-
-                        </div>
+                <div class="movimiento-curvilineo">
+                    <h4>Movimiento curvilineo</h4>
+                    <div class="p-txt">
+                        Es el movimiento de una partícula a lo largo 
+                        de una trayectoria curva. En este tipo de movimiento, 
+                        tanto la magnitud como la dirección de la velocidad pueden 
+                        cambiar.
                     </div>
                 </div>
             </div>
-            <div class="mcu">
-                <h4>Movimiento Circunferencial (MCU)</h4>
-                <div class="p-txt">
-                    En este tipo de movimiento, la partícula se desplaza en una 
-                    trayectoria circular con una velocidad angular constante.
+            <div class="sistemas-referencia estilo-seccion">
+                <h3>SISTEMAS DE REFERENCIA</h3>
+                <div class="sistema-inercial">
+                    <h4>Sistema inercial</h4>
+                    <div class="p-txt">
+                        Es un sistema de referencial en el cual las 
+                        leyes de Newton son válidas y no existen fuerzas ficticias. En un sistema 
+                        inercial, una partícula en reposo o en movimiento 
+                        rectilíneo uniforme seguirá en ee etado a menos 
+                        que actúe una fuerza externa sobre ella
+                    </div>
                 </div>
-                <img src="">
-                <div class="flex">
-                    <div class="flex-left">
-                        <div class="form">
-
+                <div class="sistema-no-inercial">
+                    <h4>Sistema no inercial</h4>
+                    <div class="p-txt">
+                        Es un sistema de referencia que está acelerado 
+                        respecto a un sistema inercial. En estos sistemas, aparecen fuerzas ficticias 
+                        (como la fuerza centrífuga o la fuerza de Ciriolis) 
+                        que deben ser consideradas para dscribir el movimiento correctamente.
+                    </div>
+                </div>
+            </div>
+            <div class="movimiento estilo-seccion">
+                <h3>TIPOS DE MOVIMIENTO</h3>
+                <div class="mru">
+                    <h4>Movimiento Rectilíneo Uniforme (MRU)</h4>
+                    <div class="p-txt">
+                        Es un tipo de movimiento, la partícula s desplaza en línea recta 
+                        con una velocidad constante. No hay aceleración, lo que significa 
+                        que la velocidad no cambia con el tiempo.
+                    </div>
+                    <div class="flex flex-mru">
+                        <div class="flex-left tren-animacion">
+                            <img id="transicion" src="../img/tren-mru.jpg">
+                        </div>
+                        <div class="flex-right">
+                            <div class="form">
+                                \( \vec{v} = cte \)<br>\( \vec {r} = \vec{r}(t) \)<br>\( \vec{r}(t) = \vec{r}(t_i) + [ \vec{v}\times(t - t_i)] \)<br>
+                                \( \vec{v}(t) \rightarrow \vec{r} = \int \vec{v}\, dt  \)
+                            </div>
                         </div>
                     </div>
-                    <div class="flex-right">
-                        Radio de Curvtura (R): Es la distancia desde el 
+                </div>
+                <div class="mruv">
+                    <h4>Movimiento Rectilíneo Uniformemente Variado (MRUV)</h4>
+                    <div class="p-txt">
+                        En este caso, la partícula se mueve en línea recta con una aceleración 
+                        constante. <br>La velocidad de la partícula cambia linealmente 
+                        con el tiempo.
+                    </div>
+                    <div class="flex flex-mruv">
+                        <div class="flex-left carro-animacion">
+                            <img id="transicion" src="../img/carro-mruv.png">
+                        </div>
+                        <div class="flex-right">
+                            <div class="form">
+                                \( \vec{a} = cte \) <br>\( \vec{v}(t) \rightarrow \vec{v} = \int \vec {a}\, dt \)<br>
+                                \( \vec{v}(t)=\vec{v}(t_i)+ [\vec{a}\times(t-t_i)]  \)<br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-cnt">
+                        <div class="form">\( \vec{r}(t)=\vec{r}(t_i)+ [\vec{v}(t_i)\times(t-t_i)] + [\frac{1}{2}\times\vec{a}\times(t_f-t_i)]  \)</div>
+                    </div>
+                </div>
+                <div class="mpcl">
+                    <h4>Movimiento Parabólico de Caída Libre (MPCL)</h4>
+                    <div class="p-txt">
+                        Este tipo de movimiento ocurre n dos dimensiones y la 
+                        trayectoria de la partícula es una parábola. Es típico 
+                        en el caso de un proyectil lanzado bajo la influencia 
+                        de la gravedad. Donde en el je X s aplica MRU (a=0) y 
+                        en el eje Y se aplica MRUV (a = gravedad) donde:
+                    </div>
+                    <div class="form">Mov Parab = MRUx + MRUVy</div>
+                    <div class="flex">
+                        <div class="flex-left">
+                            <img class="mpcl-img" src="../img/mpcl.jpg" alt="">
+                        </div>
+                        <div class="flex-right">
+                            <div class="form">
+                                \( t_v=\frac{2v(0)sin(\alpha)}{g} \)<br>
+                                \( R=\frac{v^{2}(0)sin(2\alpha)}{g} \)<br>
+                                \( h_{maxima}=\frac{v^{2}(0)sin^2(\alpha)}{g} \)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mcu">
+                    <h4>Movimiento Circunferencial (MCU)</h4>
+                    <div class="p-txt">
+                        En este tipo de movimiento, la partícula se desplaza en una 
+                        trayectoria circular con una velocidad angular constante.
+                    </div>
+                    
+                    <div class="flex flex-mcu">
+                        <div class="flex-left">
+                            <img class="mcu-img" src="../img/mcu.jpg">
+                        </div>
+                        <div class="flex-right">
+                            <div class="form">
+                                \( {\theta} ={\omega}t \)<br>
+                                \( T=\frac{2\pi}{\omega}=\frac{1}{f} \)<br>
+                                \( L=vt \)<br>
+                                \( a_c=\frac{v^2}{R}={\omega}^{2}R \)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-txt">
+                        <em>Radio de Curvtura (R):</em> Es la distancia desde el 
                         centro de la trayectoria circular hasta la partícula en movimiento. Es constante 
                         para una tractoria circular perfecta.
                         <br><br>
-                        Periodo (t): Es el tiempo que tarda la partícula en 
+                        <em>Periodo (t):</em> Es el tiempo que tarda la partícula en 
                         completar una vuelta completa alrededor de la 
                         trayectoria circular. Se mide en segundos (s).
                         <br><br>
-                        Frecuencia (f): Es el número de vueltas que la partícula completa en una unidad 
+                        <em>Frecuencia (f):</em> Es el número de vueltas que la partícula completa en una unidad 
                         de tiempo. Se mide en hertzios (Hz).
                         <br><br>
-                        Velocidad Angular (ω): Es la tasa de cambio del ángulo con respecto 
+                        <em>Velocidad Angular (ω):</em> Es la tasa de cambio del ángulo con respecto 
                         al tiempo. Representa cuán rápido está 
                         girando la partícula alrededor del centro de 
                         la trayectoria circular. Se mide en radianes 
                         por segundo (rad/s).
                         <br><br>
-                        Posición Angular (θ): Es el ángulo que la 
+                        <em>Posición Angular (θ):</em> Es el ángulo que la 
                         línea que une el centro de la trayectoria con 
                         la partícula forma con una línea de referencia fija. 
                         Se mide en radianes.
                         <br><br>
-                        Velocidad Tangencial (v): Es la velocidad lineal de la partícula a lo 
+                        <em>Longitud de Desplazamiento (L):</em> Es el desplazamiento lineal del cuerpo en la trayectoria.
+                        <br><br>
+                        <em>Velocidad Tangencial (v):</em> Es la velocidad lineal de la partícula a lo 
                         largo de la trayectoria circular.
+                    </div>
+                </div> 
+                <div class="mcuv">
+                    <h4>Movimiento Circunferencial Uniformemente Variado (MCUV)</h4>
+                    <div class="p-txt">
+                        El movimiento circular se refiere a la trayectoria de 
+                        una partícula que se desplaza en un camino circular. 
+                        En particular, el movimiento circular uniformemente 
+                        variado (MCUV) se caracteriza por una aceleración 
+                        angular constante (α), lo que significa que la velocidad 
+                        angular de la partícula cambia uniformemente con el tiempo.
+                    </div>
+                    <div class="flex flex-mcuv">
+                        <div class="flex-img">
+                            <img class="mcuv-img" src="../img/mcuv.jpg">
+                        </div>
+                        <div class="flex-left">
+                            <div class="form">
+                                \( {\omega}_f={\omega}_i {\pm} {\alpha}t \)<br>
+                                \( {\theta}={\omega}_it {\pm} \frac{{\alpha}t^2}{2} \)<br>
+                                \( {\theta}=(\frac{{\omega}_i {\pm} {\omega}_f}{2}).t \)<br>
+                                \( {\omega}^2_f={\omega}^2_i {\pm} 2{\alpha}{\theta} \)<br>
+                                \( v_f=v_i{\pm}a_{tan} t \)<br>
+                                \( L=v_it{\pm}\frac{a_{tan} t^2}{2} \)<br>
+                            </div>
+                        </div>
+                        <div class="flex-right">
+                            <div class="form">
+                                \( L=(\frac{v_i {\pm} v_f}{2}).t \)<br>
+                                \( v^2_f=v^2_i {\pm} 2a_{tan}L \)<br>
+                                \( L=R{\theta} \)<br>
+                                \( v={\omega}R \)<br>
+                                \( a_{tan}={\alpha}R \)<br>
+                                \( a_c=\frac{v^2}{R}={\omega}^2R \)<br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-txt">
+                        Donde<br><em>Aceleración Centrípeta (\( a_c \)):</em> Es la aceleración dirigida 
+                        hacia el centro de la trayectoria circular, que mantiene a la partícula en su camino circular.
+                        <br><br><em>Aceleración Angular (\( \alpha \)):</em> Es la tasa de cambio de la velocidad angular 
+                        con respecto al timepo.
                     </div>
                 </div>
             </div>
-            <div class="mcuv">
-
+            <div class="movimiento-analisis estilo-seccion">
+                <h3>Análisis vectorial del movimiento</h3>
+                <div class="p-txt">
+                    El análisis vectorial del movimiento es fundamental para entender cómo las cantidades cinemáticas se 
+                    relacionan y varían en el espacio. 
+                </div>
+                <div class="vector-posicion">
+                    <h4>Vector Posición</h4>
+                    <div class="p-txt">
+                        Describe la posición de una partícula en el espacio 
+                        en un instante de tiempo, en un sistema de coordenadas 
+                        cartesianas, el vector posición es representado en función del tiempo.
+                    </div>
+                    <div class="nobody" style="text-align: center;">
+                        <div class="form">
+                            \( \vec{r}=r(t) \)
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="vectori-velocidad">
+                    <h4>Vector Velocidad</h4>
+                    <div class="p-txt">
+                        Describe los cambios de la posición respecto del tiempo.
+                    </div>
+                    <div class="nobody" style="text-align: center;">
+                        <div class="form">
+                            \( \vec{v}=\frac{d\vec{r}}{dt} \)
+                        </div>
+                    </div>
+                </div>
+                <div class="vectori-aceleracion">
+                    <h4>Vector Aceleración</h4>
+                    <div class="p-txt">
+                        Describe los cambios de la velocidad respecto al tiempo.
+                    </div>
+                    <div class="nobody" style="text-align: center;">
+                        <div class="form">
+                            \( \vec{a}=\frac{d\vec{v}}{dt}=\frac{d^2\vec{r}}{dt^2} \)
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="movimiento-analisis">
-            <div class="vector-posicion">
-
-            </div>
-            <div class="vectori-velocidad">
-
-            </div>
-            <div class="vectori-aceleracion">
-
-            </div>
-        </div>
+        
 
     </div>
     

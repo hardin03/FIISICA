@@ -1,0 +1,101 @@
+.temas {
+    display: grid;
+    gap: 80px;
+    padding: 0 80px;
+}
+.mas {
+    margin-top: 40px;
+
+}
+.tema-tittle {
+    text-align: center;
+    line-height: 1.8;
+    font-size: 20px;
+    color: #814;
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+}
+.sub-tittle {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.p-txt {
+    line-height: 2;
+}
+.mas-img {
+    width: 60%;
+    margin-bottom: 40px;
+}
+.mas-img img {
+    width: 100%;
+}
+.cabecero {
+    margin-bottom: 20px;
+}
+.form {
+    font-size: 17px;
+    text-align: center;
+}
+.p-txt {
+    font-size: 15px;
+    text-align: inherit;
+}
+.cuerpo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 250px);
+    grid-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.cuerpo2 {
+    margin: 60px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.casos-maa {
+    margin: 100px 0;
+}
+.casos-maa {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.subamortiguado {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.critico-amortiguado {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sobre-amortiguado {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.p-tittle {
+    font-size: 19px;
+    color: rgb(17, 136, 80);
+}
+@media only screen and (max-width:800px) {
+    .temas {
+        padding: 0 30px;
+    }
+    .cuerpo {
+        grid-template-columns: none;
+        grid-template-rows: none;
+        gap: 60px;
+        text-align: center;
+    }
+    .cuerpo2 {
+        grid-template-columns: none;
+    }
+}

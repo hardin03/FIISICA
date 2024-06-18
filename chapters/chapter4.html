@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="../css/chapters.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://kit.fontawesome.com/8d1aadf525.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/jpg" href="img/einstein.png"/>
+    <link rel="icon" type="image/jpg" href="../img/einstein.png"/>
 </head>
 <body>
     <header>
@@ -125,37 +125,45 @@
         <div class="cap-temas">
             <div class="cantidad-movimiento-sp">
                 <div class="tema-tittle">
-
+                    Cantidad de movimiento de un Sistema de Partículas
                 </div>
                 <div class="p-txt">
-
+                    Se tiene un sistema de partículas, donde todas las partículas 
+                    se mueven con una velocidad diferente, simultáneamente al mismo momento.
                 </div>
-                <img src="../img/sp.jpg" alt="">
+                <img class="img" src="../img/sp.jpg" alt="">
                 <div class="p-txt">
-
+                    Para hallar la cantidad de movimiento del sistema de partículas, sumaremos todas las cantidades de movimiento 
+                    de cada partícula.
                 </div>
                 <div class="form">
-
+                    \( \vec{p}=m.\vec {v} \frac {kg.m}{s} \)<br>
+                    \( \vec{p}_{sp}=\sum_{i=1}^{n} \vec{p}_i = \vec{p}_1+\vec{p}_2+\vec{p}_3+...+\vec{p}_n \)
                 </div>
             </div>
             <div class="impulso-fuerza">
                 <div class="tema-tittle">
-
+                    Impulso de una fuerza
                 </div>
                 <div class="p-txt">
-
+                    El impulso es un término que cuantifica el efecto general 
+                    de una fuerza que actúa con el tiempo. Se define como la integral de la función fuerza con respecto al tiempo.
                 </div>
                 <div class="form">
-
+                    \( \vec{I}_{t_1 \rightarrow t_2}^{\vec{F}} = \int_{t_1}^{t_2} F(t)\,dt \)<br>
                 </div>
                 <div class="p-txt">
-
+                    Caso Particular:
                 </div>
-                <img src="../img/impulso.jpg" alt="">
+                <div class="form">
+                    \( \vec{I}_{t_1 \rightarrow t_2}^{\vec{F}}=\vec{F} \Delta t \)<br>
+                    Donde \( \Delta t= t_2 - t_1 \)
+                </div>
+                <img class="img" src="../img/impulso.jpg" alt="">
             </div>
             <div class="impulso-fuerza-resultante">
                 <div class="tema-tittle">
-
+                    Impulso de una fuerza resultante
                 </div>
                 <div class="p-txt">
                     El impulso de una fuerza 
@@ -167,38 +175,38 @@
                     Primero por segunda ley de Newton:
                 </div>
                 <div class="form">
-
+                    \( \sum \vec{F}=\vec{F}_{res}=m.\vec{a} \)......(1)
                 </div>
                 <div class="p-txt">
                     La aceleracion se expresa como:
                 </div>
                 <div class="form">
-
+                    \( \vec{a}=\frac{\vec{v}_f-\vec{v}_i}{\Delta t} \)......(2)
                 </div>
                 <div class="p-txt">
                     Reemplazando (2) en (1):
                 </div>
                 <div class="form">
-
+                    \( \vec{F}_{res}=m.\vec{a}=m.\frac{\vec{v}_f-\vec{v}_i}{\Delta t}\)<br>\(=\frac{m\vec{v}_f-m\vec{v}_i}{\Delta t}=\frac{\vec{p}_f-\vec{p}_i}{\Delta t} =\frac{\Delta \vec{p}}{\Delta t} \).....(3)
                 </div>
                 <div class="p-txt">
                     Ahora, el impulso de la fuerza resultante 
                     se expresa como:
                 </div>
                 <div class="form">
-
+                    \(\vec{I}_{t_1 \rightarrow t_2}^{\vec{F}_{res}}=\vec{F}_{res}.\Delta t \).....(4)
                 </div>
                 <div class="p-txt">
                     Reemplazando (3) en (4):
                 </div>
                 <div class="form">
-
+                    \( \vec{F}_{res}.\Delta t=\frac{\vec{p}_f-\vec{p}_i}{\Delta t}.\Delta t=\vec{p}_f-\vec{p}_i=\Delta \vec{p} \)
                 </div>
                 <div class="p-txt">
                     Por lo tanto:
                 </div>
                 <div class="form">
-                    
+                    \( \vec{I}_{t_1 \rightarrow t_2 }^{\vec{F}_{res}}=\Delta \vec{p} \)
                 </div>
                 <div class="p-txt">
                     Ésta va a ser otra forma alternativa 
@@ -222,7 +230,7 @@
                 </div>
                 <div class="flex">
                     <div class="flex-left">
-                        <img src="" alt="">
+                        <img class="img" src="../img/centro-masa.jpg" alt="">
                     </div>
                     <div class="flex-right">
                         <div class="p-txt">
@@ -230,13 +238,13 @@
                             de la siguiente manera:
                         </div>
                         <div class="form">
-
+                            \(\vec{r}_{CM}=\frac{m_1.\vec{r}_1+m_2.\vec{r}_2+...+m_n.\vec{r}_n}{m_1+m_2+...+m_n} \)
                         </div>
                         <div class="p-txt">
-                            Sea  por lo tanto:
+                            Sea \( M=m_1+_2+...+m_n \)  por lo tanto:
                         </div>
                         <div class="form">
-
+                            \(\vec{r}_{CM}=\frac{1}{M}.\sum_{i=1}^{n}m_i.\vec{r}_i=\frac{1}{M}\int p\,dv\vec{r} \)
                         </div>
                     </div>
                 </div>
@@ -245,26 +253,27 @@
                     partícula tiene un vector velocidad.
                 </div>
                 <div class="form">
-                    
+                    \( \vec{v}_{CM}=\frac{1}{M}\sum_{i=1}^{n}m_i.\vec{v}_i \)
                 </div>
                 <div class="p-txt">
                     Recordemos que por definición:
                 </div>
                 <div class="form">
-
+                    \( \vec{p}=m.\vec{v} \)<br>
+                    \( \vec{p}_{total}=\sum_{i=1}^{n}m_i.\vec{p}_i \)
                 </div>
                 <div class="p-txt">
                     Por lo tanto la velocidad del centro de masa 
                     se expresa de la siguiente manera:
                 </div>
                 <div class="form">
-
+                    \( \vec{p}_{CM}=\vec{v}_{CM}.M \)
                 </div>
                 <div class="p-txt">
                     También se puede expresar de la siguiente manera:
                 </div>
                 <div class="form">
-
+                    \( \vec{v}_{CM}=\frac{1}{M}\int p\,dv.\vec{v} \)
                 </div>
                 <div class="p-txt">
                     Para hallar la aceleración del centro de masa, 
@@ -272,19 +281,19 @@
                     aceleración:
                 </div>
                 <div class="form">
-
+                    \( \vec{a}_{CM}=\frac{1}{M}.\sum_{i=1}^{n}m_i.\vec{a}_i=\frac{1}{M}\int p\, dv.\vec{a} \)
                 </div>
                 <div class="p-txt">
                     Y en el dinámico:
                 </div>
                 <div class="form">
-
+                    \( \vec{F}_{Resultante}=\vec{F}_{Resultante Externa} \) <br> \(= \frac{d}{dt}\vec{p}=\frac{d}{dt}M.\vec{v}_{CM}=M.\vec{a}_{CM} \)
                 </div>
                 <div class="p-txt">
                     Por lo tanto
                 </div>
                 <div class="form">
-
+                    \( \vec{F}_{R.EXT.}=M.\vec{a}_{CM} \)
                 </div>
                 <div class="p-txt">
                     Con este resultado, se puede inferir que el sistema de 
@@ -299,6 +308,15 @@
                 <div class="cinetica">
                     <div class="subtema-tittle">
                         Energía Cinética de un Sistema de Partículas
+                    </div>
+                    <div class="form">
+                        \( E_{K(SP)}=E_{K(CM)} +\sum_{i=1}^{n}E_{Ki}\)<br>
+                        \( =\frac{1}{2}v_{CM}M+\frac{1}{2}\sum_{i=1}^{n}m_i.v_{i}^{2}  \) 
+                    </div>
+                    <div class="p-txt">
+                        Donde: <br>
+                        \( E_{K(SP)} \):Energía Cinética del SP<br>
+                        \( \sum_{i=1}^{n}E_{Ki} \):Sumatoria de las energías cinéticas de cada componente del sistema.
                     </div>
                 </div>
                 <div class="potencial">

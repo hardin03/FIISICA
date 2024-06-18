@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CODIGO LATEX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],  // Define delimitadores para matemáticas en línea
+                displayMath: [['$$', '$$'], ['\\[', '\\]']], // Define delimitadores para matemáticas en bloque
+                processEscapes: true,
+                tags: 'ams'  // Usa etiquetado estilo AMS para numerar ecuaciones automáticamente si es necesario
+            },
+            options: {
+                ignoreHtmlClass: 'tex2jax_ignore',  // Ignora las clases CSS asignadas a este nombre
+                processHtmlClass: 'tex2jax_process'  // Procesa solo las clases CSS asignadas a este nombre
+            },
+            startup: {
+                pageReady: () => {
+                    return MathJax.startup.defaultPageReady().then(() => {
+                        document.querySelectorAll("mjx-container").forEach((node) => {
+                        node.style.fontSize = "1.2em"; // Ajusta el tamaño de la fuente de las fórmulas
+                        });
+                    });
+                }
+            }
+        };
+    </script>
+
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPITULO 7</title>
+    <link rel="stylesheet" href="../css/resources-dropdown.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/chapters.css">
+    <link rel="stylesheet" href="../css/chapter-7.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/8d1aadf525.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="../img/einstein.png"/>
+</head>
+<body>
+    <header>
+        <img src="../img/fisica_logo.png" class="logo" alt="">
+        <button id="bar-toggle" class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav" id="nav">
+            <ul class="nav-list">
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <div class="nav-operation">
+                        <div class="deploy" id="deploy">
+                            <button id="btn-left" class="deploy-left">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <a>Recursos</a>
+                            <button class="deploy-right">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        
+                        <ul id="dropdown-list" class="dropdown-list">
+                            <li><a href="../virtual_laboratory.html">Laboratorios Virtuales</a></li>
+                            <li><a href="../academic_resources.html">Recursos Académicos</a></li>
+                            <li><a href="../biblioteca.html">biblioteca</a></li>
+                        </ul>        
+                    </div>
+                    
+                </li>
+                <li>
+                    <a href="../comments.html" >Envianos tu comentario</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="menu">
+        <div class="item__left">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="list__item">
+            <div class="list__button list__button-click">
+                <i class="fa-solid fa-bookmark"></i>
+                <a>CAPITULOS</a>
+                <div class="deploy_caps">
+                    <i class ="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="list__show">
+                <ul>
+                    <li><a href="chapter1.html">CAPITULO 1</a></li>
+                    <li><a href="chapter2.html">CAPITULO 2</a></li>
+                    <li><a href="chapter3.html">CAPITULO 3</a></li>
+                    <li><a href="chapter4.html">CAPITULO 4</a></li>
+                    <li><a href="chapter5.html">CAPITULO 5</a></li>
+                    <li><a href="chapter6.html">CAPITULO 6</a></li>
+                    <li><a href="#">CAPITULO 7</a></li>
+                    <li><a href="chapter8.html">CAPITULO 8</a></li>
+                    <li><a href="chapter9.html">CAPITULO 9</a></li>
+                    <li><a href="chapter10.html">CAPITULO 10</a></li>
+                    <li><a href="chapter11.html">CAPITULO 11</a></li>
+                    <li><a href="chapter12.html">CAPITULO 12</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="tittle">
+            <h1>MOVIMIENTO ARMÓNICO</h1>
+        </div>
+        <div class="temas">
+            <div class="mas">
+                <div class="tema-tittle">MOVIMIENTO ARMÓNICO SIMPLE</div>
+                <div class="def">
+                    <div class="sub-tittle">
+                        DEFINICIÓN
+                    </div>
+                    <div class="p-txt">
+                        El movimiento Armónico Simple (MAS) es un tipo de movimiento oscilatorio en el cual 
+                        un objeto se mueve de un lado a otro a lo largo de una línea recta bajo la infleuncia de una fuerza 
+                        restauradora que es proporcional al desplazamiento y actúa en dirección 
+                        opuesta a este desplazamiento.
+                    </div>
+                </div>
+                <div class="mas-img">
+                    <img src="../img/mas.gif" alt="">
+                </div>
+                <div class="form">
+                    <div class="cabecero">
+                        <div class="p-txt">
+                            Fórmulas Importantes
+                        </div>
+                    </div>
+                    <div class="cuerpo">
+                        <div class="n">
+                            <div class="p-txt">
+                                <i>Amplitud(A):</i><br>La máxima distancia que el objeto se desplaza desde su posición de equilibrio.
+                            </div>
+                        </div>
+                        <div class="n">
+                            <div class="p-txt">
+                                <i>Frecuencia Anglar (\( {\omega} \)):</i><br>La rapidez con la que el objeto oscila, medida en radianes por segundo.
+                            </div>
+                            <div class="form">
+                                \( {\omega} = 2.{\pi}.f \)
+                            </div>
+                        </div>
+                        <div class="n">
+                            <div class="p-txt">
+                                <i>Periodo(T)</i>:<br>El tiempo que tarda en completarse una oscilación completa.
+                            </div>
+                            <div class="form">
+                                \( T=\frac{2\pi}{\omega} \)
+                            </div>
+                        </div>
+                        <div class="n">
+                            <div class="p-txt">
+                                <i>Fase Inicial (\( {\phi} \)):</i><br>El ángulo de fase en el tiempo t=0, que determina la posición inicial del objeto en su ciclo de oscilación.
+                            </div>
+                        </div>
+                        <div class="n">
+                            <div class="p-txt">
+                                <i>Frecuencia (f):</i><br>El número de oscilaciones por unidad de tiempo.
+                            </div>
+                            <div class="form">
+                                \( f=\frac{1}{T}=\frac{\omega}{2\pi} \)
+                            </div>
+                        </div>
+                        <div class="n">
+                            <div class="p-txt">
+                                <i>Fuerza Restauradora (F):</i><br>La fuerza que actúa para devolver el objeto a su posición 
+                                de equilibrio.
+                            </div>
+                            <div class="form">
+                                \( F=-kx \)
+                            </div>
+                            <div class="p-txt">Donde k es la constante de resorte</div>
+                        </div>
+                        
+                        <div class="n">
+                            <div class="p-txt">
+                                <i>Ecuación de Posición</i><br>
+                            </div>
+                            <div class="form">
+                                \( x_{(t)}=Asin({\omega}t+\phi) \)
+                            </div>
+                        </div>
+                        <div class="n">
+                            <div class="p-txt">
+                                <i>Velocidad (V):</i><br>La rapidez y dirección del movimiento del objeto.
+                            </div>
+                            <div class="form">
+                                \( v_{(t)}=A{\omega}cos({\omega}t+\phi) \)
+                            </div>
+                        </div>
+                        <div class="n">
+                            <div class="p-txt">
+                                <i>Aceleración (a):</i><br>
+                                La rapidez con la que cambia la velocidad del objeto.
+                            </div>
+                            <div class="form">
+                                \( a_{(t)}=-A{\omega}^2sin({\omega}t+\phi) \)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="maa">
+                <div class="tema-tittle">
+                    MOVIMIENTO ARMÓNICO AMORTIGUADO (MAA)
+                </div>
+                <div class="def">
+                    <div class="sub-tittle">
+                        DEFINICIÓN
+                    </div>
+                    <div class="p-txt">
+                        El movimiento Armónico Amortiguado es un tipo de movimiento osclaorio donde la 
+                        amplitud de las oscilaciones disminuye con el tiempo debido a una 
+                        fuerza de fricción o resistencia que disipa la energía.
+                    </div>
+                </div>
+                <div class="cuerpo2">
+                    <div class="coeficiente-amortiguamiento">
+                        <div class="p-txt">
+                            <i>Coeficiente de Amortiguamiento (\( {\gamma} \): )</i><br>Una medida de la rapidez con la que se disipa la energía del sistema.
+                        </div>
+                        <div class="form">
+                            \( {\gamma}=\frac{b}{2m} \)
+                        </div>
+                    </div>
+                    <div class="frecuencia-angular-amortiguada">
+                        <div class="p-txt">
+                            <i>Frecuencia Angular Amortiguada ( \({\omega}_{\gamma} \) ): </i><br>
+                            La frecuencia angular de las oscilaciones cuando hay amortiguamiento.
+                        </div>
+                        <div class="form">
+                            \( {\omega}_{\gamma}=\sqrt{{\omega}^2-{\gamma}^2} \)
+                        </div>
+                    </div>
+                    <div class="fuerza-amortiguadora">
+                        <div class="p-txt">
+                            <i>Fuerza de Amortiguamiento ( \( F_{amort} \) )</i><br>La fuerza que actúa en dirección opuesta a la velocidad del objeto, disminuyendo su 
+                            energía.
+                        </div>
+                        <div class="form">
+                            \( F_{amort}=-\gamma v \)
+                        </div>
+                    </div>
+                </div>
+                <div class="casos-maa">
+                    <div class="sub-tittle">
+                        CASOS DEL MOVIMIENTO ARMÓNICO AMORTIGUADO (MAA)
+                    </div>
+                    <div class="subamortiguado">
+                        <div class="p-tittle">
+                            Caso Subarmortiguado ( \( \gamma < \omega \) )
+                        </div>
+                        <div class="p-txt">
+                            En el caso subamortiguado, la fuerza de amortiguamiento es suficientemente 
+                            pequeña para que el sistema siga oscilando, aunque con una amplitud que disminuye exponencialmente 
+                            con el tiempo.
+                        </div>
+                        <div class="p-txt">
+                            Características:<br>
+                            -Las oscilaciones son amortiguadas, pero aún presentes.<br>
+                            -La amplitud de las oscilaciones decrece con el tiempo.<br>
+                            -La frecuencia de las oscilaciones disminuye ligeramente debido al amortiguamiento.
+                        </div>
+                        <div class="p-txt">
+                            Ecuación de Posición:
+                        </div>
+                        <div class="form">
+                            \( x_{(t)}=A_o.e^{-\gamma t}.sin(\omega _{\gamma} t+\phi) \)
+                        </div>
+                    </div>
+                    <div class="critico-amortiguado">
+                        <div class="p-tittle">
+                            Caso Críticamente Armortiguado ( \( \gamma = \omega \) )
+                        </div>
+                        <div class="p-txt">
+                            En el caso criticamente amortiguado, el amortiguamiento es justo suficiente para evitar 
+                            que el sistema oscile. El sistema vuelve a la posición de equilibrio lo más rápido posible sin oscilar.
+                        </div>
+                        <div class="p-txt">
+                            Características:<br>
+                            - No hay oscilaciones<br>
+                            - El sistema retorna a la posición de equilibrio en el menor tiempo posible sin sobrepasarla<br>
+                            - Es el límite entre el comportamiento oscilatorio y no oscilatorio.
+                        </div>
+                        <div class="p-txt">Ecuación de Posición:</div>
+                        <div class="form">
+                            \( x_{(t)}=(A+Bt)e^{-\gamma t} \)
+                        </div>
+                        <div class="p-txt">Donde A y B son constantes determinadas por las condiciones iniciales</div>
+                    </div>
+                    <div class="sobre-amortiguado">
+                        <div class="p-tittle">
+                            Caso Sobreamortiguado ( \( \gamma > \omega \) )
+                        </div>
+                        <div class="p-txt">
+                            En el caso sobreammortiguado, la fuerza de amortiguamiento es tan grande que el sistema 
+                            no oscila y regresa a la posición de equilibrio más lentamente que en el caso críticamente amortiguado.
+                        </div>
+                        <div class="p-txt">
+                            Características <br>
+                            - No hay oscilaciones<br>
+                            - El sistema regresa a la posición de equilibrio más lentamente que en el caso críticamente amortiguado<br>
+                            - El movimiento es una combinación de dos exponentes decrecientes.
+                        </div>
+                        <div class="p-txt">
+                            Ecuación de Posición:
+                        </div>
+                        <div class="form">
+                            \( x_{(t)}=e^{-\gamma t}(C_1e^{\sqrt{(\gamma ^2 - \omega ^2)t}  }+C_2e^{\sqrt{(\gamma ^2 - \omega ^2)t}}) \)
+                        </div>
+                        <div class="p-txt">Donde \( C_1\)  y  \( C_2 \) son constantes determinadas por las condiciones iniciales</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>##</h4>
+                    <ul>
+                        <li><a href="https://portal.uni.edu.pe/" target="_blank">UNIVERSIDAD NACIONAL DE INGENIERIA</a></li>
+                        <li><a href="http://www0.unsl.edu.ar/~cornette/FISICA_LQ/Francis%20Sears,%20Mark%20Zemansky.pdf" target="_blank">FISICA UNIVERSITARIA. YOUNG FREEDMAN</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>¡Sigue a la UNI!</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/UNIoficial.pe/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/uni_oficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>¡Sigue a la FIIS!</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/FacultaddeIngenieriaIndustrialydeSistemas/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ceiis.uni/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-img">
+                <img src="../img/logouniblanco.png" alt="Logo UNI">
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="../js/all.js"></script>
+    <script src="../js/academic_resources.js"></script>
+</body>
+</html>

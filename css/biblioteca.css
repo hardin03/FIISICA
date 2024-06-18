@@ -18,18 +18,21 @@ body {
 .books-body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3,  minmax(1fr, 700px));
+    grid-template-rows: repeat(3, 1fr);
     grid-gap: 20px;
     text-align: center;
     background-color: #ddd;
+    align-items: center;
     height: 0;
     overflow: hidden;
 }
 .n-grid {
     position: relative;
+    border: 1px solid #000;
+    border-radius: 40px;
 }
 .n-grid > img {
-    width: 100px;
+    height: 220px;
 }
 .section__head {
     display: flex;
@@ -82,5 +85,8 @@ body {
     .books-body {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
+    }
+    .n-grid > img {
+        height: 130px;
     }
 }

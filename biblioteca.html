@@ -71,44 +71,112 @@
                 <div class="n-grid">
                     <img src="img/book2.png">
                     <p class="name">S. Frish, A. Timoreva</p>
+                    <button class="book-info">DESPLEGAR INFORMACION</button>
                     <p class="description">CINEMÁTICA, DINÁMICA, TRABAJO Y ENERGÍA, FUERZAS DE GRAVITACIÓN, MOVIMIENTO DEL SÓLIDO, MOVIMIENTO DE LOS LÍQUIDOS, GASES, PRINCIPIOS DE TERMODINÁMICA, FENÓMENOS MOLECULARES DE LOS LÍQUIDOS, SÓLIDOS, MOVIMIENTO VIBRATORIO ARMÓNICO, ONDAS, VIBRACIONES ACÚSTICAS</p>
+                    <a href="#">IR AHORA</a>
                 </div>
                 <div class="n-grid">
                     <img src="img/book3.png">
                     <p class="name">Írodov</p>
+                    <button class="book-info">DESPLEGAR INFORMACION</button>
                     <p class="description">FUNDAMENTOS FÍSICOS DE LA MECÁNICA, TERMODINÁMICA Y FÍSICA MOLECULAR, ELECTRODINÁMICA, OSCILACIONES Y ONDAS, ÓPTICA, FÍSICA ATÓMICA Y NUCLEAR</p>
+                    <a href="#">IR AHORA</a>
                 </div>
                 <div class="n-grid">
                     <img src="img/book4.png">
                     <p class="name">A. I. KITAGORODSKI</p>
+                    <button class="book-info">DESPLEGAR INFORMACION</button>
                     <p class="description">LEY FUNDAMENTAL DE LA MECÁNICA, ENERGÍA MECÁNICA, IMPULSO, ROTACIÓN DE UN SÓLIDO, OSCILACIONES, ONDAS VIAJERAS, ONDAS ESTACIONARIAS, PROBLEMAS DE ACÚSTICA, TEMPERATURA Y CALOR, PROCESOS TERMODINÁMICOS, ENTROPÍA, TEORÍA CINÉTICA DE LOS GASES, PROVESOS DE TRANSICIÓN AL ESTADO DE EQUILIBRIO, CAMPO ELÉCTRICO, CAMPO MAGNÉTICO, etc</p>
+                    <a href="#">IR AHORA</a>
                 </div>
                 <div class="n-grid">
                     <img src="img/book5.png">
                     <p class="name">S. Kósel</p>
+                    <button class="book-info">DESPLEGAR INFORMACION</button>
                     <p class="description">MECÁNICA, CALOR, ELECTRICIDAD Y MAGENTISMO, ÓPTICA</p>
+                    <a href="#">IR AHORA</a>
                 </div>
                 <div class="n-grid">
                     <img src="img/book6.png">
                     <p class="name">L. Landau, A. Ajiezer, E. Lifshitz</p>
+                    <button class="book-info">DESPLEGAR INFORMACION</button>
                     <p class="description">MECÁNICA DEL PUNTO, CAMPO, MOVIMIENTO DEL SÓLIDO, OSCILACIONES, ESTRUCTURA DE LA MATERIA, ESTUDIO DE LA SIMETRÍA, CALOR, PROCESOS TERMODINÁMICOS, TRANSICIONES DE FASE, etc</p>
+                    <a href="#">IR AHORA</a>
                 </div>
                 <div class="n-grid">
                     <img src="img/book7.png">
                     <p class="name">Piórishkin</p>
+                    <button class="book-info">DESPLEGAR INFORMACION</button>
                     <p class="description">INTRODUCCIÓN, MOVIMIENTO Y FUERZAS, PRESIÓN DE LOS LÍQUIDOS Y GASES, TRABAJO - POTENCIA - ENERGÍA, FENÓMENOS TÉRMICOS, etc</p>
+                    <a href="#">IR AHORA</a>
                 </div>
                 <div class="n-grid">
                     <img src="img/book8.png">
                     <p class="name">Savchenko</p>
+                    <button class="book-info">DESPLEGAR INFORMACION</button>
                     <p class="description">CINEMÁTICA, DINÁMICA, OSCILACIONES Y ONDAS, MECÁNICA DEL LÍQUIDO, FÍSICA MOLECULAR, ELECTROSTÁTICA, MOVIMIENTO DE UN CAMPO ELÉCTRICO, CORRIENTE ELÉCTRICA, CAMPO MAGÉTICO, etc</p>
+                    <a href="#">IR AHORA</a>
                 </div>
                 <div class="n-grid">
                     <img src="img/book9.png">
                     <p class="name">Savéliev</p>
+                    <button class="book-info">DESPLEGAR INFORMACION</button>
                     <p class="description">ÓPTICA CUÁNTICA, FÍSICA ATÓMICA, FÍSICA DE LOS SÓLIDOS, FÍSICA NUCLEAR Y DE LAS PARTÍCULAS ELEMENTALES</p>
+                    <a href="#">IR AHORA</a>
                 </div>
             </div>
+        </div>
+        <div class="section__planchas">
+            <div class="pc1">
+                <div class="cañote">
+                    <div class="profe">
+
+                    </div>
+                    <button class="btn-plancha"><a href=""></a></button>
+                </div>
+                <div class="bartolome">
+                    <div class="profe">
+
+                    </div>
+                    <button class="btn-plancha"><a href=""></a></button>
+                </div>
+                <div class="valdivia">
+                    <div class="profe">
+
+                    </div>
+                    <button class="btn-plancha"><a href=""></a></button>
+                </div>
+                <div class="romero">
+                    <div class="profe">
+
+                    </div>
+                    <button class="btn-plancha"><a href=""></a></button>
+                </div>
+            </div>
+            <div class="pc2">
+
+            </div>
+            <div class="parcial">
+
+            </div>
+            <div class="pc3">
+
+            </div>
+            <div class="pc4">
+
+            </div>
+            <div class="pc5">
+
+            </div>
+            <div class="final">
+
+            </div>
+            <div class="susti">
+
+            </div>
+        </div>
+        <div class="section__canales">
+
         </div>
     </div>
 
@@ -153,7 +221,7 @@
             let heightInfo = 0;
             let info = listElement.nextElementSibling;
             if (info.clientHeight == "0") {
-                heightInfo = info.scrollHeight;
+                heightInfo = info.scrollHeight+400;
             }
             info.style.height = `${heightInfo}px`;
             })

@@ -1,0 +1,68 @@
+body {
+    background-color: inherit;
+    background: url("../img/Imagen1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.formulario {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+form {
+    margin-left: 100px;
+    padding: 30px 20px;
+    border: 1px solid rgb(93, 141, 150);
+    border-radius: 30px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 0 0 20px 0 ;
+    border-bottom: 1px solid rgb(93, 141, 150);
+}
+label {
+    color: aqua;
+    font-size: 17px;
+    font-weight: 700;
+    border-bottom: 1px solid rgb(93, 141, 150) ;
+    padding: 0 0 10px;
+}
+input {
+    border: none;
+    background-color: none;
+    font-size: 17px;
+}
+button {
+    background-color: antiquewhite;
+}
+.rating {
+    display: flex;
+    justify-content: center;
+}
+.star {
+    color: #ccc;
+    font-size: 27px;
+    cursor: pointer;
+    transition: color .3s ease;
+}
+.star.checked, .star:hover {
+    color: #ffc107;
+}
+@media only screen and (max-width:530px) {
+    .formulario {
+        align-items: center;
+        grid-template-columns: none;
+    }
+    form {
+        margin-left: inherit;
+    }
+}

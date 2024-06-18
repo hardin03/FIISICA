@@ -6,7 +6,7 @@
 }
 .resorte {
     height: 150px;
-    transition: width .5s;
+    transition: ease-in-out .5s;
     padding: 0 50px;
 }
 .resorte img {

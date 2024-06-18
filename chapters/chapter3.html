@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CODIGO LATEX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],  // Define delimitadores para matemáticas en línea
+                displayMath: [['$$', '$$'], ['\\[', '\\]']], // Define delimitadores para matemáticas en bloque
+                processEscapes: true,
+                tags: 'ams'  // Usa etiquetado estilo AMS para numerar ecuaciones automáticamente si es necesario
+            },
+            options: {
+                ignoreHtmlClass: 'tex2jax_ignore',  // Ignora las clases CSS asignadas a este nombre
+                processHtmlClass: 'tex2jax_process'  // Procesa solo las clases CSS asignadas a este nombre
+            },
+            startup: {
+                pageReady: () => {
+                    return MathJax.startup.defaultPageReady().then(() => {
+                        document.querySelectorAll("mjx-container").forEach((node) => {
+                        node.style.fontSize = "1.2em"; // Ajusta el tamaño de la fuente de las fórmulas
+                        });
+                    });
+                }
+            }
+        };
+    </script>
+
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPITULO 3</title>
+    <link rel="stylesheet" href="../css/resources-dropdown.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/chapters.css">
+    <link rel="stylesheet" href="../css/chapter-3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/8d1aadf525.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="../img/einstein.png"/>
+</head>
+<body>
+    <header>
+        <img src="../img/fisica_logo.png" class="logo" alt="">
+        <button id="bar-toggle" class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav" id="nav">
+            <ul class="nav-list">
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <div class="nav-operation">
+                        <div class="deploy" id="deploy">
+                            <button id="btn-left" class="deploy-left">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <a>Recursos</a>
+                            <button class="deploy-right">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        
+                        <ul id="dropdown-list" class="dropdown-list">
+                            <li><a href="../virtual_laboratory.html">Laboratorios Virtuales</a></li>
+                            <li><a href="../academic_resources.html">Recursos Académicos</a></li>
+                            <li><a href="../biblioteca.html">biblioteca</a></li>
+                        </ul>        
+                    </div>
+                    
+                </li>
+                <li>
+                    <a href="../comments.html" >Envianos tu comentario</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="menu">
+        <div class="item__left">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="list__item">
+            <div class="list__button list__button-click">
+                <i class="fa-solid fa-bookmark"></i>
+                <a>CAPITULOS</a>
+                <div class="deploy_caps">
+                    <i class ="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="list__show">
+                <ul>
+                    <li><a href="chapter1.html">CAPITULO 1</a></li>
+                    <li><a href="chapter2.html">CAPITULO 2</a></li>
+                    <li><a href="chapter3.html">CAPITULO 3</a></li>
+                    <li><a href="chapter4.html">CAPITULO 4</a></li>
+                    <li><a href="chapter5.html">CAPITULO 5</a></li>
+                    <li><a href="#">CAPITULO 6</a></li>
+                    <li><a href="chapter7.html">CAPITULO 7</a></li>
+                    <li><a href="chapter8.html">CAPITULO 8</a></li>
+                    <li><a href="chapter9.html">CAPITULO 9</a></li>
+                    <li><a href="chapter10.html">CAPITULO 10</a></li>
+                    <li><a href="chapter11.html">CAPITULO 11</a></li>
+                    <li><a href="chapter12.html">CAPITULO 12</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="tittle">
+            <h1>TRABAJO Y ENERGÍA</h1>
+        </div>
+        <div class="trabajo">
+            <div class="cabeza">
+                <h3>Trabajo</h3>
+            </div>
+            <div class="cuerpo">
+                <div class="p-txt">
+                    El trabajo W es una magnitud escalar que, 
+                    como veremos, da la cantidad de energía 
+                    cinética transferida por una fuerza.
+                    <br><br>
+                    En la siguiente figura se ha representado 
+                    una partícula que se desplaza por una 
+                    trayectoria C entre los puntos A y B. 
+                    Sobre ella actúa una fuerza F. Su vector 
+                    desplazamiento, tangente a la trayectoria 
+                    en cada punto, es dr.
+
+                </div>
+                <div class="trabajo-img">
+                    <img class="img" src="../img/trabajo.jpg">
+                </div>
+                <div class="p-txt">
+                    El trabajo de dicha fuerza se define:
+                </div>
+                <div class="form">
+                    <div class="resaltado">
+                        \( W_{A\rightarrow B}=\int_A^B \vec{F}\,d\vec{r} \)
+                    </div>
+
+                </div>
+                <div class="p-txt">
+                    Las unidades de trabajo en el Sistema Internacional son los julios (J).
+                    <br><br>
+                    1 julio es el trabajo realizado por una fuerza de 1 N en un desplazamiento 
+                    de 1 m, y su nombre fue elegido en honor del físico inglés James Prescott 
+                    Joule (1818-1889), que estudió la naturaleza del calor y descubrió su relación con el trabajo.
+                    <br><br>
+                    La integral que aparece en la definición anterior se denomina 
+                    integral de línea y se calcula a lo largo de la trayectoria especificada 
+                    (C). La razón de especificar la trayectoria a lo largo de la cual 
+                    se calcula el trabajo es que, en general, el trabajo de una fuerza es 
+                    distinto dependiendo de la trayectoria que describe la partícula cuando 
+                    se desplaza desde su posición inicial A hasta la posición final B.
+                </div>
+                <div class="trabajo-img">
+                    <img class="img" src="../img/trabajo2.jpg">
+                </div>
+                <div class="p-txt">
+                    Como en la definición de trabajo aparece un producto escalar 
+                    (que depende del ángulo formado por los vectores F y dr), este 
+                    producto escalar dependerá en general de la trayectoria descrita 
+                    por la partícula.
+                    <br><br>
+                    Si sobre un cuerpo actúan varias fuerzas, el trabajo total es la 
+                    suma del trabajo de cada una de las fuerzas que actúan sobre el cuerpo:
+                </div>  
+                <div class="form">
+                    \( W_{A\rightarrow B}=\sum_{i=1}^n \int_A^B\vec{F}_i\, d\vec{r} \)
+                </div>
+                <div style="text-align: center;" class="p-txt">
+                    Trabajo de N fuerzas actuando sobre una partícula.
+                    <br><br>
+                    De la definición de trabajo se deduce lo siguiente:
+                </div>
+                <div class="p-txt">
+                    -	El trabajo de una fuerza perpendicular a la trayectoria de una partícula 
+                    es nulo, ya que <b>F</b> y <b>dr</b> son perpendiculares y su producto escalar es nulo. <br>
+                    -	Cuando el ángulo que forman los vectores <b>F</b> y <b>dr</b> es mayor que 90º el 
+                    trabajo es negativo. En particular, <b>el trabajo de la fuerza de rozamiento que se opone al movimiento es negativo.</b>
+                </div>
+            </div>
+        </div>
+        <div class="energia-cinetica">
+            <div class="cabeza">
+                <h3>Energía Cinética de una Partícula</h3>
+            </div>
+            <div class="cuerpo">
+                <div class="p-txt">
+                    <b>La energía cinética</b> es una energía que tienen los cuerpos por el hecho de estar en movimiento. 
+                    A continuación deduciremos cuánto vale y cuál es su relación con el trabajo de una fuerza. <br><br>
+                    Desarrollando la definición de trabajo dada en la sección anterior y aplicando la Segunda Ley de Newton:
+                </div>
+                <div class="form">
+                    \( W_{A\rightarrow B}=\int_A^BF\,d\vec{r} \) <br><br>
+                    \( =\int_A^BF\,dr cos(\alpha)=\int_A^BF_T\,dr\) <br><br>
+                    \( =\int_A^Bma_T\,dr \)
+                </div>
+                <div class="p-txt">
+                    Donde \( F_T \) es la proyección de la fuerza sobre un eje tangente 
+                    a la trayectoria (ver figura siguiente).
+                </div>
+                <div class="energia-img">
+                    <img class="img" src="../img/energia.jpg">
+                </div>
+                <div class="p-txt">
+                    Sustituyendo el valor del módulo de la aceleración tangencial:
+                </div>
+                <div class="form">
+                    \( W_{A\rightarrow B}^C=\int_{A(C)}^Bma_T\,dr \) <br><br>
+                    \( \int_{A(C)}^Bm\frac{dv}{dt}\,dr=\int_{A(C)}^Bmv\,dv \)
+                </div>
+                <div class="p-txt">Por lo que finalmente quedaría:</div>
+                <div class="form">
+                    \( W_{A\rightarrow B}^C=\int_{v_A}^{v_B}mv\,dv \) <br><br>
+                    \( =\frac{1}{2}mv_B^2-\frac{1}{2}mv_A^2 \)
+                </div>
+                <div class="p-txt">
+                    La expresión que aparece es la <b>energía cinética</b>.
+                </div>
+                <div class="form">
+                    \(E_C=\frac{1}{2}mv^2 \)
+                </div>
+                <div class="p-txt">
+                    <b>Las unidades de energía cinética en el Sistema Internacional son los julios (J).</b> <br>
+                    Por tanto, el <b>trabajo</b> que realiza una fuerza sobre una partícula <b>es igual a la energía cinética transferida a la misma</b>:
+                </div>
+                <div class="form">
+                    \( W_{A\rightarrow B}^C=\Delta E_C \)
+                </div>
+                <div class="p-txt">
+                    Como el trabajo puede ser positivo o negativo, la energía cinética de una partícula sometida a la acción 
+                    de una fuerza puede aumentar o disminuir.
+                </div>
+            </div>
+        </div>
+        <div class="fuerzas-conservativas">
+            <div class="cabeza">
+                <h3>Fuerzas Conservativas</h3>
+            </div>
+            <div class="cuerpo">
+                <div class="p-txt">
+                    Una <b>fuerza conservativa</b> es aquella cuyo 
+                    trabajo depende únicamente de las 
+                    posiciones inicial y final de la 
+                    partícula y no de la trayectoria que ésta 
+                    ha descrito para ir desde la posición 
+                    inicial a la final. <br>
+                    Una consecuencia de este hecho 
+                    es que <b>el trabajo de una fuerza 
+                    conservativa a lo largo de una 
+                    trayectoria cerrada es cero</b>:
+                </div>
+                <div class="form">
+                    \( W=\int\vec{F}\,d\vec{r}=0 \)
+                </div>
+                <div class="fuerza-conservativa-img">
+                    <img class="img" src="../img/fuerza-conservativa1.jpg">
+                </div>
+                <div class="p-txt">
+                    Si el trabajo de una fuerza conservativa no depende 
+                    del camino seguido por la partícula y el punto 
+                    final coincide con el inicial, el trabajo de dicha fuerza es cero. <br>
+                    Utilizando la descomposición de Helmholtz una fuerza conservativa puede ser escrita 
+                    como el gradiente de una función escalar cambiado de signo:
+                </div>
+                <div class="form">
+                    \(\vec{F}=-\bigtriangledown E_P \)
+                </div>
+                <div class="p-txt">
+                    Dicha función escalar se denomina energía potencial, y 
+                    sólo depende de las coordenadas. <br><br>
+                    Las fuerzas conservativas son muy importantes en Física, 
+                    ya que fuerzas como la gravitatoria o la elástica 
+                    son conservativas. Como veremos a continuación, cada 
+                    una de estas fuerzas lleva asociada su propia energía 
+                    potencial. <br><br>
+                    Puede demostrarse (con ayuda del teorema fundamental 
+                    de las integrales de línea) que el trabajo de una 
+                    fuerza conservativa viene dado por:
+                </div>
+                <div class="form">
+                    \(W_{A \rightarrow B}=\int_A^B\vec{F}\,d\vec{r} \) <br><br>
+                    \( =E_{P(A)}-E_{P(B)}=-\Delta E_P \)
+                </div>
+                <div class="p-txt">
+                    <b>Las unidades de energía potencial en el Sistema Internacional son los julios (J).</b> <br>
+                    Por tanto, para una fuerza conservativa podemos igualar las dos expresiones 
+                    anteriores y, pasando al primer miembro lo que depende 
+                    del estado inicial y al segundo lo del final:
+                </div>
+                <div class="form">
+                    \( E_{P(A)}+E_{K(A)}=E_{P(B)}+E_{K(B)} \)
+                </div>
+                <div class="p-txt">
+                    La suma de la energía cinética y potencial de una partícula se denomina <b>energía mecánica (E)</b>. <br>
+                    Si sobre una partícula actúan varias fuerzas conservativas, la energía potencial 
+                    será la suma de las energías potenciales asociadas a cada fuerza. <br>
+                    La expresión anterior indica que, <b>cuando sobre una partícula actúan únicamente fuerzas 
+                    conservativas, su energía mecánica se conserva</b>, esto es, permanece constante. 
+                    Esta es la razón por la cual las fuerzas conservativas tienen este nombre: porque bajo 
+                    la acción de dichas fuerzas la energía mecánica se conserva.
+
+                </div>
+                <div class="fuerza-conservativa-img">
+                    <img class="img" src="../img/fuerza-conservativa2.jpg">
+                </div>
+                <div class="p-txt">
+                    En la figura anterior se observa el movimiento de una partícula a lo largo de una pista sin rozamiento. 
+                    La normal no hace trabajo por ser perpendicular a la trayectoria, de modo que la única fuerza que 
+                    transfiere energía cinética a la partícula es el peso. <br> <br>
+                    Como el peso es una fuerza conservativa, la energía mecánica de la partícula se conserva, 
+                    por lo que la suma de su energía cinética y su energía potencial será la misma a lo largo de 
+                    todo el recorrido. <br> <br>
+                    En el punto A la partícula sólo tiene energía potencial (no tiene velocidad), 
+                    mientras que en el punto B sólo tiene energía cinética, que será igual a la energía potencial 
+                    en A. En cualquier otro punto de la trayectoria tendrá una combinación de ambas, pero de tal 
+                    manera que <b>la energía total es la misma en todos los puntos</b>. El punto E no es alcanzable por 
+                    la partícula, puesto que para llegar a él necesitaría más energía mecánica de la que tiene, pero 
+                    la energía mecánica se conserva en esta situación.
+                </div>
+            </div>
+        </div>
+        <div class="trabajo-energia-fuerzas">
+            <div class="cabeza">
+                <h3>Trabajo y energía cuando actúan fuerzas no conservativas </h3>
+            </div>
+            <div class="cuerpo">
+                <div class="p-txt">
+                    Cuando sobre la partícula actúan fuerzas conservativas y no conservativas, hay que utilizar la expresión 
+                    que relaciona el trabajo con la variación de energía cinética, calculando el trabajo de cada fuerza y 
+                    sumándolos todos. Si alguna fuerza es conservativa su trabajo se calculará como menos la variación de su 
+                    energía potencial asociada, y de las demás habrá que calcular el trabajo aplicando la definición de este. <br><br>
+                    Cuando actúa la <b>fuerza de rozamiento (no conservativa)</b>, habrá que proceder de la manera 
+                    que se explica a continuación. <br><br>
+                    Partiendo de la expresión de la variación de energía cinética:
+                </div>
+                <div class="form">
+                    \( W_{A\rightarrow B}^C=\Delta E_K \)
+                </div>
+                <div class="p-txt">
+                    El trabajo del primer miembro es ahora la suma del trabajo del peso y del de la fuerza de rozamiento; 
+                    el primero puede calcularse como menos la variación de la energía potencial gravitatoria, por lo que:
+                </div>
+                <div class="form min">
+                    \(W_{A\rightarrow B}^C= W_{A\rightarrow B}^P+W_{A\rightarrow B (C)}^{FR} \) <br><br>
+                    \( =-\Delta E_P+W_{A\rightarrow B(C)}^{FR}=E_{P(A)}-E_{P(B)}+W_{A\rightarrow B(C)}^{FR} \) <br><br>
+                    \( =E_{C(B)}-E_{C(A)}+E_{P(B)}+E_{C(B)}-[E_{P(A)}+E_{C(A)}] \) <br><br>
+                    \( =W_{A\rightarrow B(C)}^{FR} \)
+                </div>
+                <div class="p-txt">
+                    Lo que aparece en el primer término de esta ecuación es la variación de 
+                    energía mecánica, por lo que finalmente queda:
+                </div>
+                <div class="form">
+                    \( \Delta E=W_{A\rightarrow B(C)}^{FR} \)
+                </div>
+            </div>
+        </div>
+        
+    </div>
+        
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>##</h4>
+                    <ul>
+                        <li><a href="https://portal.uni.edu.pe/" target="_blank">UNIVERSIDAD NACIONAL DE INGENIERIA</a></li>
+                        <li><a href="http://www0.unsl.edu.ar/~cornette/FISICA_LQ/Francis%20Sears,%20Mark%20Zemansky.pdf" target="_blank">FISICA UNIVERSITARIA. YOUNG FREEDMAN</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>¡Sigue a la UNI!</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/UNIoficial.pe/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/uni_oficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>¡Sigue a la FIIS!</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/FacultaddeIngenieriaIndustrialydeSistemas/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ceiis.uni/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-img">
+                <img src="../img/logouniblanco.png" alt="Logo UNI">
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="../js/all.js"></script>
+    <script src="../js/academic_resources.js"></script>
+</body>
+</html>

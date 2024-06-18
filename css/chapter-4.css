@@ -1,5 +1,64 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 80;
+}
+.introduccion {
+    line-height: 1.8;
+    padding: 0 50px;
+}
 .cap-temas {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+}
+.cantidad-movimiento-sp {
+    margin-top: 50px;
+    padding: 0 50px;
+    text-align: center;
+}
+.tema-tittle {
+    font-size: 25px;
+    color: #4a4ba0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #4a4ba0;
+}
+.p-txt {
+    font-size: 18px;
+    line-height: 1.5;
+}
+.img {
+    width: 60%;
+    margin: auto;
+}
+.form {
+    margin: 30px 0;
+    line-height: 3;
+    font-size: 25px;
+}
+.impulso-fuerza {
+    margin-top: 50px;
+    text-align: center;
+    padding: 0 50px;
+}
+.impulso-fuerza-resultante {
+    margin-top: 90px;
+    text-align: center;
+    padding: 50px;
+}
+.centro-masa-sp {
+    padding: 0 50px;
+    margin: 90px 0;
+    text-align: center;
+}
+.energia-sp {
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    padding: 0 50px;
+}
+
+@media only screen and (max-width: 725px) {
+    .form {
+        font-size: 17px;
+    }
 }

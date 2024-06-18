@@ -1,0 +1,81 @@
+.menu {
+    z-index: 20;
+}
+.cuerpo {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+.introduccion {
+    font-size: 18px;
+    line-height: 2.2;
+}
+.estilo-seccion {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+h3 {
+    font-size: 24px;
+    color: rgb(89, 71, 155);
+}
+h4 {
+    color: rgb(16, 82, 71);
+}
+.p-txt {
+    line-height: 1.6;
+}
+.mpcl-img {
+    width: 100%;
+}
+.form {
+    font-size: 18px;
+    margin: auto;
+}
+.flex {
+    margin-top: 30px;
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.flex-mcu {
+    justify-content: space-around;
+}
+.mcu-img {
+    width: 300px;
+}
+.flex-mcuv {
+    justify-content: center;
+}
+
+.tren-animacion img, .carro-animacion img{
+    width: 100%;
+}
+.form-cnt {
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+@media (max-width:720px) {
+    .form {
+        font-size: 13px;
+    }
+    .flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .flex-mcu .form {
+        font-size: 20px;
+    }
+    .mcu-img {
+        width: 100%;
+    }
+    .flex-mcuv .form {
+        font-size: 20px;
+    }
+}
