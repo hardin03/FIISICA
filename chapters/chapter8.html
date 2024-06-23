@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ondas Mecánicas</title>
+    <link rel="stylesheet" href="../css/chapter-8.css">
+    <link rel="stylesheet" href="../css/resources-dropdown.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/chapters.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/8d1aadf525.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="../img/einstein.png"/>
+    <!-- CODIGO LATEX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],  // Define delimitadores para matemáticas en línea
+                displayMath: [['$$', '$$'], ['\\[', '\\]']], // Define delimitadores para matemáticas en bloque
+                processEscapes: true,
+                tags: 'ams'  // Usa etiquetado estilo AMS para numerar ecuaciones automáticamente si es necesario
+            },
+            options: {
+                ignoreHtmlClass: 'tex2jax_ignore',  // Ignora las clases CSS asignadas a este nombre
+                processHtmlClass: 'tex2jax_process'  // Procesa solo las clases CSS asignadas a este nombre
+            },
+            startup: {
+                pageReady: () => {
+                    return MathJax.startup.defaultPageReady().then(() => {
+                        document.querySelectorAll("mjx-container").forEach((node) => {
+                            node.style.fontSize = "1.2em"; // Ajusta el tamaño de la fuente de las fórmulas
+                        });
+                    });
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <header>
+        <img src="../img/fisica_logo.png" class="logo" alt="">
+        <button id="bar-toggle" class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav" id="nav">
+            <ul class="nav-list">
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <div class="nav-operation">
+                        <div class="deploy" id="deploy">
+                            <button id="btn-left" class="deploy-left">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <a>Recursos</a>
+                            <button class="deploy-right">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        
+                        <ul id="dropdown-list" class="dropdown-list">
+                            <li><a href="../virtual_laboratory.html">Laboratorios Virtuales</a></li>
+                            <li><a href="../academic_resources.html">Recursos Académicos</a></li>
+                            <li><a href="../biblioteca.html">biblioteca</a></li>
+                        </ul>        
+                    </div>
+                    
+                </li>
+                <li>
+                    <a href="../comments.html" >Envianos tu comentario</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="menu">
+        <div class="item__left">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="list__item">
+            <div class="list__button list__button-click">
+                <i class="fa-solid fa-bookmark"></i>
+                <a>CAPITULOS</a>
+                <div class="deploy_caps">
+                    <i class ="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="list__show">
+                <ul>
+                    <li><a href="chapter1.html">CAPITULO 1</a></li>
+                    <li><a href="chapter2.html">CAPITULO 2</a></li>
+                    <li><a href="chapter3.html">CAPITULO 3</a></li>
+                    <li><a href="chapter4.html">CAPITULO 4</a></li>
+                    <li><a href="chapter5.html">CAPITULO 5</a></li>
+                    <li><a href="chapter6.html">CAPITULO 6</a></li>
+                    <li><a href="chapter7.html">CAPITULO 7</a></li>
+                    <li><a href="#">CAPITULO 8</a></li>
+                    <li><a href="chapter9.html">CAPITULO 9</a></li>
+                    <li><a href="chapter10.html">CAPITULO 10</a></li>
+                    <li><a href="chapter11.html">CAPITULO 11</a></li>
+                    <li><a href="chapter12.html">CAPITULO 12</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Ondas Mecánicas</h1>
+        </div>
+        <main>
+            <section id="ConceptosPrevios">
+                <h2>Conceptos Previos</h3>
+                <div class = "concep">
+                    <div id = "box">
+                        <h3>Medio</h3>
+                        <p>Región del espacio. Se llama medio material si hay materia y en ausencia se denomina vacío</p>
+                    </div>
+                    <div id = "box">
+                        <h3>Propagación</h3>
+                        <p>movimiento de una entidad a través de un medio, de modo que sus partes no experimenten un desplazamiento.</p>
+                    </div>
+                </div>
+                <div class = "concep">
+                    <div id="box">
+                        <h3>Perturbación</h3>
+                        <p>Alteración del estado de equilibrio del medio.</p>
+                    </div>
+                    <div id = "box">
+                        <h3>Fuente</h3>
+                        <p>Cuerpo que produce la perturbación.</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Introducción a las Ondas</h2>
+                <p>
+                    Las ondas que se producen en un estanque, los sonidos musicales y los movimientos causados por un terremoto son fenómenos ondulatorios. Las ondas se generan cuando se perturba el estado de equilibrio de un sistema, y tal perturbación viaja o se propaga de una región del sistema a otra. <br>Al propagarse una onda, transporta energía. La energía de las ondas de la luz solar calienta la superficie terrestre, en tanto que la energía de las ondas sísmicas puede agrietar la corteza de nuestro planeta.
+                </p>
+                <div class="tenor-gif-embed" data-postid="15031091" data-share-method="host" data-aspect-ratio="2.5" data-width="100%">
+                    <a href="https://tenor.com/view/wave-frequency-bounce-flap-gif-15031091">Wave Frequency GIF</a>
+                    from <a href="https://tenor.com/search/wave-gifs">Wave GIFs</a>
+                </div> 
+                <script type="text/javascript" async src="https://tenor.com/embed.js"></script>                  
+                <p>
+                    En este capítulo se profundizará el estudio de las ondas mecánicas, ondas que viajan por un material llamado medio. Iniciaremos este capítulo deduciendo las ecuaciones básicas que describen las ondas, incluyendo el importante caso especial de las ondas sinusoidales donde el patrón de la onda es una función repetitiva seno o coseno.
+                </p>
+            </section>
+            <section id="DefinicionOndas"">
+                <h2>Ondas Mecánicas</h2>
+                <h3>Definición de Onda Mecánica</h3>
+                <p>
+                    Una onda mecánica es una perturbación que viaja a través de un material o una sustancia que es el medio de la onda. Al viajar la onda por el medio, las partículas que constituyen el medio experimentan desplazamientos de varios tipos, según la naturaleza de la onda.
+                </p>
+            </section>
+            <section id = "ClasificacionOndasMecanicas">
+                <h3>Clasificación de las Ondas Mecánicas</h3>
+                <p>Las ondas mecánicas se pueden clasificar en:</p>
+                <ul class="ul">
+                    <li><strong>Ondas Transversales</strong>: Las partículas del medio se desplazan perpendicularmente a la dirección en que la onda viaja por el medio.</li>
+                    <li><strong>Ondas Longitudinales</strong>: Las partículas del medio se desplazan en la misma dirección en que viaja la onda.</li>
+                </ul>
+                <figure>
+                    <img src="../img/ondas.png" alt="Tipos de Ondas Mecánicas">
+                    <figcaption>Tipos de Ondas Mecánicas: a) Onda transversal, b) Onda longitudinal</figcaption>
+                </figure>
+            </section>
+            <section>
+                <h2>Ondas Periódicas</h2>
+                <h3>Definición de Onda Periódica</h3>
+                <p>Una onda periódica es aquella en la que la perturbación que la origina se repite a intervalos regulares de tiempo. Un caso especial de onda periódica es la onda sinusoidal, donde el patrón de la onda es una función seno o coseno.</p>
+                <h3>Función de Onda Sinusoidal</h3>
+                <p>La función de onda para una onda sinusoidal que se propaga en la dirección positiva del eje \( x \) es:</p>
+                <p class="formula">
+                    \( y(x,t) = A \cos (kx - \omega t) \)
+                </p>
+                <p>donde:</p>
+                <ul>
+                    <li>\( A \) es la amplitud de la onda.</li>
+                    <li>\( k \) es el número de onda, \( k = \frac{2\pi}{\lambda} \).</li>
+                    <li>\( \omega \) es la frecuencia angular, \( \omega = 2\pi f \).</li>
+                    <li>\( \lambda \) es la longitud de onda.</li>
+                    <li>\( f \) es la frecuencia de la onda.</li>
+                    <li>\( t \) es el tiempo.</li>
+                    <li>\( x \) es la posición.</li>
+                </ul>
+                <h3>Rapidez de una Onda Periódica</h3>
+                <p>La rapidez \( v \) de una onda periódica está dada por la relación:</p>
+                <p class="formula">
+                    \( v = \lambda f \)
+                </p>
+                <p>Esto significa que la rapidez de propagación de la onda es el producto de su longitud de onda y su frecuencia.</p>
+                <h3>Propagación de Ondas en una Cuerda</h3>
+                <p>Para una onda transversal que se propaga en una cuerda, la rapidez de la onda \( v \) depende de la tensión \( F \) en la cuerda y de la masa por unidad de longitud \( \mu \):</p>
+                <p class="formula">
+                    \( v = \sqrt{\frac{F}{\mu}} \)
+                </p>
+                <div id="ondaperiodica">
+                    <div id="controls">
+                        <button class="btn-onda" id="increaseAmplitude">A (+) </button>
+                        <button class="btn-onda" id="decreaseAmplitude">A (-) </button>
+                        <button class="btn-onda" id="increaseFrequency">f (+) </button>
+                        <button class="btn-onda" id="decreaseFrequency">f (-)</button>
+                    </div>
+                    <div id="waveContainer">
+                        <canvas id="waveCanvas"></canvas>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Descripción Matemática de una Onda</h2>
+                <p>Muchas características de las ondas periódicas pueden describirse usando los conceptos de rapidez, amplitud, periodo, frecuencia y longitud de onda; sin embargo, es común que necesitemos una descripción más detallada de las posiciones y los movimientos de las partículas individuales del medio en determinados instantes durante la propagación de la onda.</p>
+                <h3>Función de Onda</h3>
+                <p>La posición de una partícula en una cuerda que oscila con una onda sinusoidal está descrita por la función de onda:</p>
+                <p class="formula">
+                    \( y(x,t) = Acos(kx- \omega t) \)
+                </p>
+                <h3>Velocidad y Aceleración de las Partículas</h3>
+                <p>La velocidad transversal de una partícula en una onda transversal se obtiene derivando la función de onda con respecto al tiempo:</p>
+                <p class="formula">
+                    \( v_y(x, t) = -A \omega \sin (kx - \omega t) \)
+                </p>
+                <p>La aceleración transversal de una partícula se obtiene derivando la velocidad con respecto al tiempo:</p>
+                <p class="formula">
+                    \( a_y(x, t) = -A \omega^2 \cos (kx - \omega t) \)
+                </p>
+                <h3>Ecuación de Onda</h3>
+                <p>La ecuación de onda relaciona las segundas derivadas parciales de la función de onda con respecto a \( x \) y \( t \):</p>
+                <p class="formula">
+                    \( \frac{\partial^2 y}{\partial t^2} = v^2 \frac{\partial^2 y}{\partial x^2} \)
+                </p>
+                <p>Esta ecuación indica que cualquier perturbación en la cuerda se propagará a una rapidez \( v \) que depende de las propiedades del medio.</p>
+                <h3>Número de Onda y Frecuencia Angular</h3>
+                <p>Es conveniente definir una cantidad \( k \) llamada número de onda y la frecuencia angular \( \omega \):</p>
+                <p class="formula">
+                    \( k = \frac{2\pi}{\lambda} \)
+                    \( \omega = 2\pi f \)
+                </p>
+                <p>Podemos reescribir la función de onda en términos del número de onda y la frecuencia angular:</p>
+                <p class="formula">
+                    \( y(x, t) = A \cos(kx - \omega t) \)
+                </p>
+            </section>
+            <section>
+                <h2>Ondas Transversales en una Cuerda</h2>
+                <p>Las ondas transversales en una cuerda son un ejemplo importante de ondas mecánicas. Consideremos una cuerda perfectamente flexible con tensión \( F \) y densidad lineal de masa \( \mu \). La rapidez de una onda transversal en esta cuerda está dada por:</p>
+                <p class="formula">
+                    \( v = \sqrt{\frac{F}{\mu}} \)
+                </p>
+                <h3>Derivación de la Rapidez de Onda</h3>
+                <p>Para deducir la expresión para la rapidez de onda, observamos que todas las partículas de la parte en movimiento de la cuerda se mueven hacia arriba con velocidad constante \( v_y \), pero no con aceleración constante. Aplicando la segunda ley de Newton a un pequeño segmento de cuerda, cuya longitud en la posición de equilibrio es \( \Delta x \), obtenemos:</p>
+                <p class="formula">
+                    \( F_y = F \left( \left. \frac{\partial y}{\partial x} \right|_{x+\Delta x} - \left. \frac{\partial y}{\partial x} \right|_x \right) \)
+                </p>
+                <p>Igualando esto a la masa del segmento multiplicada por la aceleración transversal, obtenemos la ecuación de onda:</p>
+                <p class="formula">
+                    \( \frac{\partial^2 y}{\partial x^2} = \frac{\mu}{F} \frac{\partial^2 y}{\partial t^2} \)
+                </p>
+                <p>De aquí deducimos que la rapidez de propagación de la onda es:</p>
+                <p class="formula">
+                    \( v = \sqrt{\frac{F}{\mu}} \)
+                </p>
+                <h3>Ejemplo de Cálculo de la Rapidez de Onda</h3>
+                <p>Supongamos que tenemos una cuerda con una tensión de 50 N y una densidad lineal de masa de 0.1 kg/m. La rapidez de una onda transversal en la cuerda es:</p>
+                <p class="formula">
+                    \( v = \sqrt{\frac{50}{0.1}} = \sqrt{500} = 22.36 \, \text{m/s} \)
+                </p>
+            </section>
+            <section>
+                <h2>Ondas Longitudinales</h2>
+                <h3>Descripción de una Onda Longitudinal</h3>
+                <p>Para una onda longitudinal que se propaga en un tubo lleno de fluido, con un pistón que oscila en un extremo, la función de onda es similar a la de una onda transversal, pero el desplazamiento es paralelo al eje del tubo:</p>
+                <p class="formula">
+                    \( y(x, t) = A \cos (kx - \omega t) \)
+                </p>
+                <p>Las regiones de compresión y rarefacción se mueven a lo largo del tubo, y la longitud de onda es la distancia entre dos compresiones sucesivas.</p>
+                <h3>Rapidez de una Onda Longitudinal</h3>
+                <p>La rapidez de una onda longitudinal en un fluido depende de las propiedades elásticas del fluido y de su densidad. En el caso de ondas sonoras en el aire, la rapidez está dada por:</p>
+                <p class="formula">
+                    \( v = \sqrt{\frac{B}{\rho}} \)
+                </p>
+                <p>donde \( B \) es el módulo de elasticidad volumétrica del fluido y \( \rho \) es la densidad del fluido.</p>
+                <h3>Ejemplo de Onda Sonora</h3>
+                <p>Calculemos la longitud de onda de una onda sonora en el aire a 20°C, si la frecuencia es de 262 Hz (la frecuencia aproximada del do central de un piano). La rapidez del sonido a 20°C es de 344 m/s.</p>
+                <p class="formula">
+                    \( \lambda = \frac{v}{f} = \frac{344}{262} = 1.31 \, \text{m} \)
+                </p>
+            </section>
+            <section>
+                <h2>Interferencia y Superposición de Ondas</h2>
+                <h3>Principio de Superposición</h3>
+                <p>Cuando dos o más ondas se encuentran en un punto, la perturbación resultante es la suma algebraica de las perturbaciones individuales. Este principio se conoce como el principio de superposición.</p>
+                <h3>Interferencia Constructiva y Destructiva</h3>
+                <p>Dependiendo de las fases relativas de las ondas que se superponen, podemos tener interferencia constructiva o destructiva:</p>
+                <ul>
+                    <li><strong>Interferencia Constructiva</strong>: Ocurre cuando las crestas de una onda se alinean con las crestas de otra, resultando en una onda de mayor amplitud.</li>
+                    <li><strong>Interferencia Destructiva</strong>: Ocurre cuando las crestas de una onda se alinean con los valles de otra, resultando en una disminución de la amplitud.</li>
+                </ul>
+                <h3>Ondas Estacionarias</h3>
+                <p>Las ondas estacionarias se forman cuando dos ondas de la misma frecuencia y amplitud se propagan en direcciones opuestas y se superponen. En una onda estacionaria, ciertos puntos llamados nodos permanecen en reposo, mientras que los antinodos son puntos de máxima amplitud.</p>
+                <h3>Fórmulas de Ondas Estacionarias</h3>
+                <p>La longitud de onda de las ondas estacionarias en una cuerda fija en ambos extremos está dada por:</p>
+                <p class="formula">
+                    \( \lambda = \frac{2L}{n} \)
+                </p>
+                <p>donde \( L \) es la longitud de la cuerda y \( n \) es el número de armónicos. La frecuencia de las ondas estacionarias está dada por:</p>
+                <p class="formula">
+                    \( f_n = \frac{n}{2L} \sqrt{\frac{F}{\mu}} \)
+                </p>
+            </section>
+            <section>
+                <h2>Ondas en Instrumentos Musicales</h2>
+                <h3>Cuerdas Vibrantes</h3>
+                <p>Los instrumentos de cuerda como la guitarra o el violín producen ondas que viajan en direcciones opuestas a lo largo de las cuerdas del instrumento. Al superponerse estas ondas, se genera interferencia y se forman ondas estacionarias con frecuencias específicas llamadas frecuencias de modo normal.</p>
+                <h3>Ondas en Tubos de Aire</h3>
+                <p>Los instrumentos de viento como las flautas y los órganos de tubos también producen ondas estacionarias. En estos instrumentos, el aire en el tubo vibra con ciertas frecuencias específicas determinadas por la longitud del tubo y la velocidad del sonido en el aire.</p>
+                <h3>Fórmulas para Instrumentos de Viento</h3>
+                <p>Para un tubo cerrado en un extremo, las frecuencias de resonancia están dadas por:</p>
+                <p class="formula">
+                    \( f_n = \frac{(2n-1)v}{4L} \)
+                </p>
+                <p>donde \( n \) es un número entero positivo, \( v \) es la velocidad del sonido y \( L \) es la longitud del tubo.</p>
+            </section>
+            <section>
+                <h2>Ondas Electromagnéticas</h2>
+                <h3>Definición de Onda Electromagnética</h3>
+                <p>Las ondas electromagnéticas son ondas que no requieren un medio material para propagarse. Incluyen la luz visible, las ondas de radio, las radiaciones infrarroja y ultravioleta, y los rayos X.</p>
+                <h3>Propagación en el Vacío</h3>
+                <p>Las ondas electromagnéticas se pueden propagar en el vacío. La rapidez de propagación de las ondas electromagnéticas en el vacío es igual a la velocidad de la luz, \( c \):</p>
+                <p class="formula">
+                    \( c = 3 \times 10^8 \, \text{m/s} \)
+                </p>
+                <h3>Ecuación de Maxwell</h3>
+                <p>Las ecuaciones de Maxwell describen la propagación de las ondas electromagnéticas. La forma de onda de una onda electromagnética puede representarse como:</p>
+                <p class="formula">
+                    \( E(x, t) = E_0 \cos (kx - \omega t) \)
+                    \( B(x, t) = B_0 \cos (kx - \omega t) \)
+                </p>
+                <p>donde \( E \) es el campo eléctrico y \( B \) es el campo magnético.</p>
+            </section>
+            <section>
+                <h2>Conclusión</h2>
+                <p>Las ondas mecánicas y electromagnéticas son fundamentales en la física y tienen aplicaciones en diversas áreas, desde la música hasta la comunicación y la medicina. La comprensión de las propiedades y el comportamiento de las ondas es esencial para el desarrollo de tecnologías avanzadas y la mejora de nuestras capacidades de percepción y análisis del entorno.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>##</h4>
+                    <ul>
+                        <li><a href="https://portal.uni.edu.pe/" target="_blank">UNIVERSIDAD NACIONAL DE INGENIERIA</a></li>
+                        <li><a href="http://www0.unsl.edu.ar/~cornette/FISICA_LQ/Francis%20Sears,%20Mark%20Zemansky.pdf" target="_blank">FISICA UNIVERSITARIA. YOUNG FREEDMAN</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>¡Sigue a la UNI!</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/UNIoficial.pe/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/uni_oficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>¡Sigue a la FIIS!</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/FacultaddeIngenieriaIndustrialydeSistemas/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ceiis.uni/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-img">
+                <img src="../img/logouniblanco.png" alt="Logo UNI">
+            </div>
+        </div>
+    </footer>
+    <script>
+        const canvas = document.getElementById('waveCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = canvas.parentElement.clientWidth;
+        canvas.height = canvas.parentElement.clientHeight;
+
+        let width = canvas.width;
+        let height = canvas.height;
+        let amplitude = 20;
+        let frequency = 0.05;
+        let phase = 0;
+        let speed = 0.02;
+        let numCopies = 3; // Número de copias desfasadas por onda
+        let phaseOffset = Math.PI / 6; // Desfase entre las copias
+
+        class Wave {
+            constructor(amplitude, frequency, phase, speed) {
+                this.amplitude = amplitude;
+                this.frequency = frequency;
+                this.phase = phase;
+                this.speed = speed;
+            }
+
+            draw() {
+                ctx.clearRect(0, 0, width, height);
+                ctx.beginPath();
+                for (let x = 0; x < width; x++) {
+                    let y = this.amplitude * Math.sin(this.frequency * x + this.phase) + height / 2;
+                    ctx.lineTo(x, y);
+                }
+                ctx.strokeStyle = 'rgba(0, 0, 0, 0.5)';
+                ctx.stroke();
+    
+                for (let j = 1; j <= numCopies; j++) {
+                ctx.beginPath();
+                for (let x = 0; x < width; x++) {
+                    let y = this.amplitude * Math.sin(this.frequency * x + this.phase + j * phaseOffset) + height / 2;
+                    ctx.lineTo(x, y);
+                }
+                ctx.strokeStyle = `rgba(0, 0, 0, ${0.5 / (j + 1)})`;
+                ctx.stroke();
+                }
+            }
+
+            update() {
+                this.phase += this.speed;
+            }
+        }  
+
+        let wave = new Wave(amplitude, frequency, phase, speed);
+
+        function animate() {
+            requestAnimationFrame(animate);
+            wave.update();
+            wave.draw();
+        }
+
+        document.getElementById('increaseAmplitude').addEventListener('click', () => {
+            wave.amplitude += 5;
+        });
+
+        document.getElementById('decreaseAmplitude').addEventListener('click', () => {
+            wave.amplitude -= 5;
+        });
+
+        document.getElementById('increaseFrequency').addEventListener('click', () => {
+            wave.frequency += 0.01;
+        });
+
+        document.getElementById('decreaseFrequency').addEventListener('click', () => {
+            wave.frequency -= 0.01;
+        });
+
+        animate();
+
+
+    </script>
+    <script src="../js/academic_resources.js"></script>
+    <script src="../js/all.js"></script>
+    
+</body>
+</html>

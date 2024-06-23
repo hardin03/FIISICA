@@ -1,0 +1,179 @@
+
+
+.container {
+    max-width: 80%; /* Ajusta este valor según tus necesidades */
+    margin: 20px auto; /* Añade un margen para evitar que el contenedor toque los bordes */
+    background-color: #E4E0DA; /* Si deseas un color de fondo diferente para el contenedor */
+    border-radius: 0 0 10px; /* Opcional: Añade esquinas redondeadas */
+}
+
+.header {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 2s;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    animation: fadeIn 3s;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    text-align: center;
+    background-color: #1a1a68;
+    color: #E4E0DA;
+    padding-bottom: 10px;
+    padding-top:10px;
+    margin-bottom: 20px;
+    animation: slideInLeft 1s;
+}
+
+h3 {
+    color: rgb(4, 11, 70);
+    animation: slideInRight 1s;
+}
+
+.ul, p {
+    margin: 20px 0;
+}
+
+.formula {
+    background-color: #ffffff; /* Color de fondo gris para el contenedor de las fórmulas */
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    color: #5f5f61; /* Color de texto blanco para las fórmulas */
+}
+.concep{
+    display: flex; /* Cambiado de inline-flexbox a flex */
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 10px 0;
+}
+#box{
+    text-align: center;
+    background-color: rgb(149, 152, 156);
+    width: 60vw;
+    height: 20vh;
+}
+#box h3{
+    color: rgb(232, 230, 245);
+}
+#box p{
+    color:#ffffff
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    margin-top: 10px;
+    color: #090a55;
+}
+#ondaperiodica{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: #ffffffc4;
+    width: 100%;
+    height: auto;
+    top: auto;
+    border-color: #E2D9F3;
+}
+#waveContainer {
+    position: relative;
+    background-color: rgb(233, 233, 253);
+    top: 50%;
+    left: 70px;
+    width: 50%;
+    height: 20vh;
+    border: 1px solid #f0f0f0;
+    margin-top: 20px;
+}
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-onda {
+    padding: 10px;
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 700px) {
+    #ondaperiodica {
+        flex-direction: column;
+    }
+    #controls {
+        flex-direction: row;
+    }
+    #waveContainer {
+        position: relative;
+        background-color: rgb(233, 233, 253);
+        top: inherit;
+        left: initial;
+        width: 90%;
+        height: 20vh;
+        border: 1px solid #f0f0f0;
+        margin-top: 20px;
+    }
+}

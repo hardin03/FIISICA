@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CODIGO LATEX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],  // Define delimitadores para matemáticas en línea
+                displayMath: [['$$', '$$'], ['\\[', '\\]']], // Define delimitadores para matemáticas en bloque
+                processEscapes: true,
+                tags: 'ams'  // Usa etiquetado estilo AMS para numerar ecuaciones automáticamente si es necesario
+            },
+            options: {
+                ignoreHtmlClass: 'tex2jax_ignore',  // Ignora las clases CSS asignadas a este nombre
+                processHtmlClass: 'tex2jax_process'  // Procesa solo las clases CSS asignadas a este nombre
+            },
+            startup: {
+                pageReady: () => {
+                    return MathJax.startup.defaultPageReady().then(() => {
+                        document.querySelectorAll("mjx-container").forEach((node) => {
+                        node.style.fontSize = "1.2em"; // Ajusta el tamaño de la fuente de las fórmulas
+                        });
+                    });
+                }
+            }
+        };
+    </script>
+
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPITULO 10</title>
+    <link rel="stylesheet" href="../css/resources-dropdown.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/chapters.css">
+    <link rel="stylesheet" href="../css/chapter-10.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/8d1aadf525.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="../img/einstein.png"/>
+</head>
+<body>
+    <header>
+        <img src="../img/fisica_logo.png" class="logo" alt="">
+        <button id="bar-toggle" class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav" id="nav">
+            <ul class="nav-list">
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <div class="nav-operation">
+                        <div class="deploy" id="deploy">
+                            <button id="btn-left" class="deploy-left">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <a>Recursos</a>
+                            <button class="deploy-right">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        
+                        <ul id="dropdown-list" class="dropdown-list">
+                            <li><a href="../virtual_laboratory.html">Laboratorios Virtuales</a></li>
+                            <li><a href="../academic_resources.html">Recursos Académicos</a></li>
+                            <li><a href="../biblioteca.html">biblioteca</a></li>
+                        </ul>        
+                    </div>
+                    
+                </li>
+                <li>
+                    <a href="../comments.html" >Envianos tu comentario</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="menu">
+        <div class="item__left">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="list__item">
+            <div class="list__button list__button-click">
+                <i class="fa-solid fa-bookmark"></i>
+                <a>CAPITULOS</a>
+                <div class="deploy_caps">
+                    <i class ="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="list__show">
+                <ul>
+                    <li><a href="chapter1.html">CAPITULO 1</a></li>
+                    <li><a href="chapter2.html">CAPITULO 2</a></li>
+                    <li><a href="chapter3.html">CAPITULO 3</a></li>
+                    <li><a href="chapter4.html">CAPITULO 4</a></li>
+                    <li><a href="chapter5.html">CAPITULO 5</a></li>
+                    <li><a href="chapter6.html">CAPITULO 6</a></li>
+                    <li><a href="chapter7.html">CAPITULO 7</a></li>
+                    <li><a href="chapter8.html">CAPITULO 8</a></li>
+                    <li><a href="chapter9.html">CAPITULO 9</a></li>
+                    <li><a href="#">CAPITULO 10</a></li>
+                    <li><a href="chapter11.html">CAPITULO 11</a></li>
+                    <li><a href="chapter12.html">CAPITULO 12</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="tittle">
+            <h1>TEMPERATURA Y CALOR</h1>
+        </div>
+        <div class="cuerpo">
+            <div class="parte introduccion">
+                <div class="p-txt">
+                    En la física universitaria, la comprensión de los 
+                    conceptos de temperatura y calor es fundamental 
+                    para el estudio de la termodinámica y otras ramas 
+                    de la física. Este tema abarca desde la definición 
+                    y medición de la temperatura hasta los principios 
+                    de la transferencia de calor, proporcionando una 
+                    base sólida para el análisis de fenómenos térmicos 
+                    en sistemas físicos.
+                </div>
+            </div>
+            <div class="parte definiciones">
+                <div class="sub-temas">
+                    <div class="titulo">TEMPERATURA</div>
+                    <div class="p-txt">
+                        La temperatura es una magnitud física que refleja 
+                        la cantidad de energía térmica presente en un cuerpo o 
+                        sistema. Se mide a través de diferentes escalas y es 
+                        fundamental para entender el comportamiento de la 
+                        materia a nivel microscópico y macroscópico.
+                    </div>
+                </div>
+                <div class="sub-temas">
+                    <div class="titulo">EQUILIBRIO QUÍMICO</div>
+                    <div class="p-txt">
+                        Es aquel estado que se alcanza cuando dos o más cuerpos en 
+                        contacto térmico dejan de intercambiar calor y alcanzan 
+                        la misma temperatura.
+                    </div>
+                </div>
+                <div class="sub-temas">
+                    <div class="titulo">LEY CERO</div>
+                    <div class="p-txt">
+                        La ley cero de la termodinámica establece que, si dos 
+                        sistemas están en equilibrio térmico con un tercer 
+                        sistema, entonces ellos están en equilibrio térmico 
+                        entre sí. Esta ley permite definir la temperatura de 
+                        manera consistente, y nos manifiesta que <b>2 sistemas 
+                        están en equilibrio térmico si y solo si están a la 
+                        misma temperatura.</b>
+                    </div>
+                    <div class="img">
+                        <img src="../img/ley0.jpg">
+                    </div>
+                </div>
+                <div class="sub-temas">
+                    <div class="titulo">ESCALAS DE TEMPERATURA</div>
+                    <div class="p-txt">
+                        Las principales escalas de temperatura son Celsius (°C), 
+                        Fahrenheit (°F) y Kelvin (°K). Cada una tiene su 
+                        aplicación particular y es importante en diferentes 
+                        contextos científicos y de ingeniería. A continuación, 
+                        se presentan las siguientes conversiones.
+                    </div>
+                    <div class="form">
+                        \( T_K=T_C+273.15 \)<br><br>
+                        \( T_F=\frac{9}{5}T_C+32° \)
+                    </div>
+                    <div class="cero-absoluto">
+                        Cero absoluto
+                    </div>
+                    <div class="p-txt">
+                        Este concepto se refiere a los 0 K y donde un sistema de moléculas 
+                        (como una cantidad de gas, líquido o sólido) tiene 
+                        su energía total (cinética + potencial) mínima posible.
+                    </div>
+                </div>
+                <div class="sub-temas">
+                    <div class="titulo">CALOR</div>
+                    <div class="p-txt">
+                        Es una forma de energía que se transfiere entre cuerpos debido a una 
+                        diferencia de temperatura. No debe confundirse con la 
+                        temperatura, ya que el calor es energía en tránsito. 
+                        El calor tiene como unidad de medida a la caloría(cal) 
+                        la cual tiene las siguientes equivalencias.
+                    </div>
+                    <div class="form">
+                        \( 1cal=4.186J \) <br> <br>
+                        \( 1kcal=1000cal=4186 J \)
+                    </div>
+                    <div class="p-txt">
+                        Donde J representa a las unidades Joule vistas en trabajo y energía mecánica
+                    </div>
+                </div>
+                <div class="sub-temas">
+                    <div class="titulo">CALOR ESPECÍFICO</div>
+                    <div class="p-txt">
+                        El calor específico (c) es la cantidad de calor necesaria para elevar la temperatura 
+                        de un gramo de una sustancia en un grado Celsius. 
+                        Puede representarse como calor específico molar (C)  
+                        , la cual se refiere a la cantidad de calor necesaria 
+                        para elevar la temperatura de una mol de una sustancia 
+                        en un grado Celsius y que puede calcularse mediante la 
+                        siguiente ecuación.
+                    </div>
+                    <div class="form">
+                        \( C=Mc\)
+                    </div>
+                    <div class="p-txt">Donde c es calor especifico y M es la masa molar.</div>
+                </div>
+            </div>
+            <div class="parte expansion-termica">
+                <div class="parte1">
+                    <h2>EXPANSION TÉRMICA</h2>
+                    <div class="p-txt">
+                        La expansión térmica describe cómo los materiales cambian 
+                        de tamaño en respuesta a un cambio de temperatura.
+                    </div>
+                </div>
+                <div class="parte2">
+                    <div class="sub-tema">
+                        <div class="titulo">EXPANSION LINEAL</div>
+                        <div class="p-txt">La expansión térmica lineal es el cambio en una dimensión de un material debido a una variación en la temperatura.  </div>
+                        <div class="form">
+                            \( \Delta L=\alpha L_{0}\Delta T \)
+                        </div>
+                        <div class="p-txt">Donde alfa es el coeficiente de expansión lineal y depende del material, L0 es la longitud inicial y delta de t es la variación 
+                            de temperatura. Esta fórmula aplica para para 
+                            cualquier dimensión así L </div>
+                            <div class="img img__"><img src="../img/expansion-lineal.png"></div>
+                            <div class="p-txt">
+                                podría ser el espesor de una varilla, la longitud del lado de una lámina cuadrada o el diámetro de un agujero.
+                            </div>
+                    </div>
+                    <div class="sub-tema">
+                        <div class="titulo">EXPANSION VOLUMÉTRICA</div>
+                        <div class="p-txt">La expansión térmica volumétrica se refiere al cambio en el volumen de un material como resultado de una variación en la temperatura.</div>
+                        <div class="form">
+                            \( \Delta V=\beta V_0 \Delta T \)
+                        </div>
+                        <div class="p-txt">
+                            Donde beta es el coeficiente de expansión volumétrica y depende del material, V0 es el volumen inicial y delta de t es la variación de temperatura. <br> <br>
+                            Además, para materiales sólidos se cumple que:
+                        </div>
+                        <div class="form">
+                            \(\beta = 3\alpha \)
+                        </div>
+                    </div>
+                    <div class="sub-tema">
+                        <div class="titulo">ESFUERZO TÉRMICO</div>
+                        <div class="p-txt">El esfuerzo térmico es la tensión desarrollada en un material con el fin de evitar su expansión o comprensión debido a cambios en la temperatura, estos esfuerzos pueden llevar a deformaciones si no se permite la expansión o comprensión libre.</div>
+                        <div class="form">
+                            \( \frac{F}{A}=-Y\alpha \Delta T \)
+                        </div>
+                        <div class="p-txt">
+                            Donde de lo nuevo F es la fuerza aplicada, Y es el módulo de Young y A el área transversal del objeto 
+                        </div>
+                    </div>
+                    <div class="sub-tema">
+                        <div class="titulo">CALORIMETRÍA</div>
+                        <div class="p-txt">La calorimetría es la ciencia de medir la cantidad de calor transferido hacia o desde un objeto. Ahora se proporciona algunos conceptos.</div>
+                    </div>
+                    <div class="sub-tema">
+                        <div class="titulo">CALOR SENSIBLE</div>
+                        <div class="p-txt">La cantidad de calor es la energía térmica transferida de un sistema a otro, generalmente medida en julios o calorías.</div>
+                        <div class="form">
+                            \( Q=mc \Delta T \) <br> <br>
+                            \(Q=nC\Delta T \)
+                        </div>
+                        <div class="p-txt">Donde m es masa, n es número de moles c es calor especifico, C es calor especifico molar y Q calorías.</div>
+                    </div>
+                    <div class="sub-tema">
+                        <div class="titulo">CALOR DE TRANSFORMACIÓN (CAMBIO DE BASE)</div>
+                        <div class="p-txt">Es la cantidad de calor necesaria para cambiar la fase de una sustancia sin cambiar su temperatura, como la fusión/solidificación o vaporización/condensación.</div>
+                        <div class="form">\(Q=\pm mL \)</div>
+                        <div class="p-txt">Donde L es calor latente y el signo expresa si está perdiendo o recibiendo calor.</div>
+                    </div>
+                    <div class="sub-tema">
+                        <div class="titulo">BALANCE DE CALOR</div>
+                        <div class="p-txt">El balance de calor implica calcular el intercambio de calor en un sistema para entender cómo se distribuye la energía térmica, solo basta recordar que no hay transferencia de calor en un equilibrio térmico es decir que el Q total es cero.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="parte transferencia-calor">
+                <div class="parte1">
+                    <h1>TRANSFERENCIA DE CALOR</h1>
+                    <div class="p-txt">La transferencia de calor es el proceso mediante el cual la energía térmica se mueve de un lugar a otro. Puede ser hasta de 3 tipos</div>
+                </div>
+                <div class="parte2">
+                    <div class="sub-temas">
+                        <div class="titulo">CONDUCCIÓN</div>
+                        <div class="p-txt">
+                            La conducción es la transferencia de calor a través de un material sólido debido a la interacción entre sus moléculas.
+                        </div>
+                        <div class="form">
+                            \(H=\frac{dQ}{dt}=kA\frac{T_H-T_C}{L} \)
+                        </div>
+                        <div class="p-txt">Donde H es la corriente de calor o tasa de calor, k es la constante llamada conductividad térmica y depende del material, A es el área transversal, Th es la temperatura de un extremo (la más alta) y Tc es la temperatura del extremo más bajo, finalmente L es la longitud del conducto. </div>
+                    </div>
+                    <div class="sub-temas">
+                        <div class="titulo">CONVECCIÓN</div>
+                        <div class="p-txt">La convección es la transferencia de calor en fluidos (líquidos y gases) debido al movimiento del propio fluido. Es mucho más complejo que el anterior por lo cual no existe una fórmula para expresarla.</div>
+                    </div>
+                    <div class="sub-temas">
+                        <div class="titulo">RADIACIÓN</div>
+                        <div class="p-txt">La radiación es la transferencia de energía térmica a través del espacio por ondas electromagnéticas, sin necesidad de un medio material, cualquier cosa pueda emitir radiacion.</div>
+                        <div class="form">\(H=Ae\sigma T^4\)</div>
+                        <div class="p-txt">Donde s es la constante física fundamental llamada constante de Stefan-Boltzmann, e es la emisividad y depende del material, A el área total del objeto y T la temperatura de este. <br><br>
+                            Ahora un objeto asi como emite energía también la recibe entonces genera una emisión neta.</div>
+                        <div class="form">
+                            \(H_net=Ae\sigma T^4-Ae\sigma T_S^4\) <br><br>
+                            \(=Ae\sigma (T^4-T_S^4) \)
+                        </div>
+                        <div class="p-txt">Donde Ts es la temperatura del medio exterior al objeto <br> <br>
+                            Esta estructura proporciona una visión integral del tema de temperatura y calor, que es esencial para los estudiantes de física universitaria. A medida que profundices en cada sección, entenderás mejor cómo estos conceptos se interrelacionan y aplican a fenómenos físicos diversos.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>##</h4>
+                    <ul>
+                        <li><a href="https://portal.uni.edu.pe/" target="_blank">UNIVERSIDAD NACIONAL DE INGENIERIA</a></li>
+                        <li><a href="http://www0.unsl.edu.ar/~cornette/FISICA_LQ/Francis%20Sears,%20Mark%20Zemansky.pdf" target="_blank">FISICA UNIVERSITARIA. YOUNG FREEDMAN</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>¡Sigue a la UNI!</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/UNIoficial.pe/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/uni_oficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>¡Sigue a la FIIS!</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/FacultaddeIngenieriaIndustrialydeSistemas/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ceiis.uni/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-img">
+                <img src="../img/logouniblanco.png" alt="Logo UNI">
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/all.js"></script>
+    <script src="../js/academic_resources.js"></script>
+</body>
+</html>
