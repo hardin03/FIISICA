@@ -34,6 +34,7 @@
     border-left: 1px solid #aaa;
     margin-top: 10px;
     margin-left: 50px;
+    height: 0;
     transition: height .3s;
 }
 .list__show ul {
