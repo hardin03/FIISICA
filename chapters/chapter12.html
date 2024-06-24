@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CODIGO LATEX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],  // Define delimitadores para matemáticas en línea
+                displayMath: [['$$', '$$'], ['\\[', '\\]']], // Define delimitadores para matemáticas en bloque
+                processEscapes: true,
+                tags: 'ams'  // Usa etiquetado estilo AMS para numerar ecuaciones automáticamente si es necesario
+            },
+            options: {
+                ignoreHtmlClass: 'tex2jax_ignore',  // Ignora las clases CSS asignadas a este nombre
+                processHtmlClass: 'tex2jax_process'  // Procesa solo las clases CSS asignadas a este nombre
+            },
+            startup: {
+                pageReady: () => {
+                    return MathJax.startup.defaultPageReady().then(() => {
+                        document.querySelectorAll("mjx-container").forEach((node) => {
+                        node.style.fontSize = "1.2em"; // Ajusta el tamaño de la fuente de las fórmulas
+                        });
+                    });
+                }
+            }
+        };
+    </script>
+
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segunda Ley de la Termodinámica</title>
+    <link rel="stylesheet" href="../css/resources-dropdown.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/chapters.css">
+    <link rel="stylesheet" href="../css/chapter-12.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/8d1aadf525.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="../img/einstein.png"/>
+</head>
+<body>
+    <header>
+        <img src="../img/fisica_logo.png" class="logo" alt="">
+        <button id="bar-toggle" class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav" id="nav">
+            <ul class="nav-list">
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <div class="nav-operation">
+                        <div class="deploy" id="deploy">
+                            <button id="btn-left" class="deploy-left">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <a>Recursos</a>
+                            <button class="deploy-right">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        
+                        <ul id="dropdown-list" class="dropdown-list">
+                            <li><a href="../virtual_laboratory.html">Laboratorios Virtuales</a></li>
+                            <li><a href="../academic_resources.html">Recursos Académicos</a></li>
+                            <li><a href="../biblioteca.html">biblioteca</a></li>
+                        </ul>        
+                    </div>
+                    
+                </li>
+                <li>
+                    <a href="../comments.html" >Envianos tu comentario</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="menu">
+        <div class="item__left">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="list__item">
+            <div class="list__button list__button-click">
+                <i class="fa-solid fa-bookmark"></i>
+                <a>CAPITULOS</a>
+                <div class="deploy_caps">
+                    <i class ="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="list__show">
+                <ul>
+                    <li><a href="chapter1.html">CAPITULO 1</a></li>
+                    <li><a href="chapter2.html">CAPITULO 2</a></li>
+                    <li><a href="chapter3.html">CAPITULO 3</a></li>
+                    <li><a href="chapter4.html">CAPITULO 4</a></li>
+                    <li><a href="chapter5.html">CAPITULO 5</a></li>
+                    <li><a href="chapter6.html">CAPITULO 6</a></li>
+                    <li><a href="chapter7.html">CAPITULO 7</a></li>
+                    <li><a href="chapter8.html">CAPITULO 8</a></li>
+                    <li><a href="chapter9.html">CAPITULO 9</a></li>
+                    <li><a href="chapter10.html">CAPITULO 10</a></li>
+                    <li><a href="chapter11.html">CAPITULO 11</a></li>
+                    <li><a href="#">CAPITULO 12</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Segunda Ley de la Termodinámica</h1>
+        </div>
+        <div class="cuerpo">
+            <section id="introduccion" class="section-box">
+                <h2>Introducción</h2>
+                <p>La segunda ley de la termodinámica es una de las leyes fundamentales de la física que describe la dirección de los procesos termodinámicos. Esta ley establece que ciertos procesos ocurren espontáneamente en una dirección y no en la inversa. Por ejemplo, el calor fluye de un cuerpo caliente a uno frío y no al revés. Esta ley también introduce el concepto de entropía, que mide el grado de desorden o aleatoriedad de un sistema.</p>
+                <p>La segunda ley de la termodinámica se puede enunciar de varias maneras, pero todas las formulaciones son equivalentes y conducen a la misma conclusión: la entropía del universo tiende a aumentar. Esta ley tiene implicaciones profundas en muchos campos, desde la ingeniería hasta la cosmología, y es esencial para comprender la eficiencia de las máquinas térmicas y la evolución de los sistemas naturales.</p>
+                <p>En este artículo, exploraremos en profundidad la segunda ley de la termodinámica, sus formulaciones, ejemplos prácticos, y su importancia en diversos campos de la ciencia y la ingeniería.</p>
+                <div class="image-container">
+                    <img src="../img/SegúndaLey.png" alt="Imagen Centrada" id="centered-image">
+                </div>
+            </section>
+            <section id="formulaciones" class="section-box">
+                <h2>Formulaciones de la Segunda Ley de la Termodinámica</h2>
+                <p>Existen varias formulaciones de la segunda ley de la termodinámica, cada una de las cuales proporciona una perspectiva diferente pero equivalente de esta ley fundamental. Algunas de las formulaciones más comunes incluyen:</p>
+                <h3>Enunciado de Clausius</h3>
+                <p>El enunciado de Clausius establece que es imposible construir un dispositivo cuyo único efecto sea transferir calor de un cuerpo frío a uno caliente sin realizar trabajo sobre el dispositivo. En otras palabras, no es posible que el calor fluya espontáneamente de un cuerpo frío a uno caliente.</p>
+                <div class="image-container">
+                    <img src="../img/Clausius2.png" alt="Imagen Centrada" id="centered-image">
+                </div>
+                <h3>Enunciado de Kelvin-Planck</h3>
+                <p>El enunciado de Kelvin-Planck establece que es imposible construir una máquina térmica que, operando en un ciclo, convierta todo el calor absorbido en trabajo. Siempre habrá una parte del calor que no se convierte en trabajo y se rechaza al entorno.</p>
+                <div class="image-container">
+                    <img src="../img/plank.png" alt="Imagen Centrada" id="centered-image">
+                </div>
+                <h3>Entropía</h3>
+                <p>La segunda ley también puede formularse en términos de entropía. La entropía de un sistema aislado siempre aumenta o, en el mejor de los casos, permanece constante. Esto implica que los procesos naturales tienden a evolucionar hacia estados de mayor desorden.</p>
+                <div class="image-container">
+                    <img src="../img/Entropia.gif" alt="Imagen Centrada" id="centered-image">
+                </div>
+            </section>
+            <section id="procesos-termicos" class="section-box">
+                <h2>Dirección de los Procesos Termodinámicos</h2>
+                <p>Todos los procesos termodinámicos naturales son irreversibles. Esto significa que ocurren espontáneamente en una dirección pero no en la otra. Por ejemplo, cuando se desliza un libro sobre una mesa, la energía mecánica se convierte en calor debido a la fricción, y este proceso es irreversible.</p>
+                <p>La irreversibilidad de los procesos termodinámicos está relacionada con la producción de entropía. En un proceso irreversible, la entropía total del sistema y su entorno aumenta. Esto contrasta con los procesos reversibles ideales, en los cuales la entropía total permanece constante.</p>
+                <p>Un proceso reversible es un proceso idealizado que ocurre infinitamente lento, de manera que el sistema permanece en equilibrio termodinámico en todo momento. En la práctica, todos los procesos reales son irreversibles, pero los procesos reversibles son útiles como modelos teóricos para analizar la eficiencia de las máquinas térmicas.</p>
+                <p>Ejemplos de procesos irreversibles incluyen la expansión libre de un gas, la fricción, la disipación de energía en forma de calor, y las reacciones químicas espontáneas. Estos procesos aumentan la entropía del sistema y del entorno, y no pueden revertirse sin intervención externa.</p>
+                <h3>Ejemplos de Procesos Irreversibles</h3>
+                <p>A continuación se presentan algunos ejemplos comunes de procesos irreversibles:</p>
+                <ul class="list">
+                    <li>Expansión libre de un gas: Cuando un gas se expande libremente en un recipiente, su entropía aumenta y el proceso es irreversible.</li>
+                    <li>Fricción: La fricción entre dos superficies convierte la energía mecánica en calor, aumentando la entropía y haciendo que el proceso sea irreversible.</li>
+                    <li>Disipación de energía: La disipación de energía en forma de calor, como en una resistencia eléctrica, es un proceso irreversible.</li>
+                    <li>Reacciones químicas espontáneas: Las reacciones químicas que ocurren espontáneamente, como la combustión, son procesos irreversibles que aumentan la entropía del sistema.</li>
+                </ul>
+            </section>
+            <section id="maquinas-termicas" class="section-box">
+                <h2>Máquinas Térmicas</h2>
+                <p>Una máquina térmica convierte calor parcialmente en trabajo mecánico. Por lo general, una máquina térmica realiza un proceso cíclico en el que una sustancia de trabajo (como el aire y el combustible en un motor de combustión interna) experimenta entrada y salida de calor, expansión y compresión.</p>
+                <p>La eficiencia térmica de una máquina, denotada por \( e \), es la fracción del calor absorbido que se convierte en trabajo:</p>
+                <p>\[
+                e = \frac{W}{Q_H} = 1 - \frac{Q_C}{Q_H}
+                \]</p>
+                <p>Donde \( Q_H \) es el calor absorbido del depósito caliente y \( Q_C \) es el calor rechazado al depósito frío.</p>
+                <p>Una máquina térmica ideal que opera de acuerdo con el ciclo de Carnot es la más eficiente posible. La eficiencia de una máquina de Carnot depende únicamente de las temperaturas de los depósitos caliente y frío:</p>
+                <p>\[
+                e_{Carnot} = 1 - \frac{T_C}{T_H}
+                \]</p>
+                <p>Donde \( T_H \) es la temperatura del depósito caliente y \( T_C \) es la temperatura del depósito frío. Ninguna máquina real puede superar la eficiencia de una máquina de Carnot.</p>
+                <p>Las máquinas térmicas incluyen motores de combustión interna, motores de vapor, y turbinas de gas y vapor. Cada uno de estos dispositivos opera según ciclos termodinámicos específicos que determinan su eficiencia y su capacidad para realizar trabajo útil.</p>
+                <h3>Tipos de Máquinas Térmicas</h3>
+                <p>Existen varios tipos de máquinas térmicas, cada una con sus propias características y aplicaciones. A continuación se describen algunos de los tipos más comunes:</p>
+                <ul class="list">
+                    <li><strong>Motor de Combustión Interna:</strong> Utiliza la combustión de un combustible para generar calor, que luego se convierte en trabajo mecánico.</li>
+                    <li><strong>Motor de Vapor:</strong> Utiliza vapor de agua generado por la combustión de un combustible para producir trabajo mecánico.</li>
+                    <li><strong>Turbina de Gas:</strong> Utiliza gases calientes generados por la combustión de un combustible para impulsar una turbina y producir trabajo mecánico.</li>
+                    <li><strong>Turbina de Vapor:</strong> Similar al motor de vapor, pero utiliza una turbina en lugar de un pistón para convertir el vapor en trabajo mecánico.</li>
+                </ul>
+                <h3>Eficiencia de Máquinas Térmicas</h3>
+                <p>La eficiencia de las máquinas térmicas es una medida de cuán efectivamente convierten el calor en trabajo. La eficiencia de una máquina térmica se puede expresar como la relación entre el trabajo producido y el calor absorbido:</p>
+                <p>\[
+                e = \frac{W}{Q_H}
+                \]</p>
+                <p>Donde \( W \) es el trabajo producido y \( Q_H \) es el calor absorbido. La eficiencia de una máquina térmica siempre será menor que uno debido a las pérdidas de calor y la producción de entropía.</p>
+            </section>
+            <section id="entropia" class="section-box">
+                <h2>Entropía y Segunda Ley de la Termodinámica</h2>
+                <p>La entropía es una medida del desorden de un sistema. La segunda ley de la termodinámica establece que la entropía de un sistema aislado siempre aumenta con el tiempo. Esto explica por qué ciertos procesos, como la mezcla de tinta con agua, no se revierten espontáneamente.</p>
+                <p>Matemáticamente, el cambio en la entropía \( \Delta S \) se puede expresar como:</p>
+                <p>\[
+                \Delta S = \int \frac{dQ}{T}
+                \]</p>
+                <p>Donde \( dQ \) es el calor transferido y \( T \) es la temperatura del sistema.</p>
+                <p>El concepto de entropía es fundamental para la termodinámica y tiene implicaciones en muchos campos, desde la física hasta la teoría de la información. La segunda ley implica que el desorden en el universo tiende a aumentar, lo que tiene profundas implicaciones filosóficas y científicas.</p>
+                <p>En términos de eficiencia, la segunda ley establece que ninguna máquina térmica puede ser 100% eficiente, ya que siempre habrá una parte del calor que no se convierte en trabajo y se pierde como calor residual. Esta limitación fundamental está relacionada con el aumento de la entropía.</p>
+                <p>La entropía también juega un papel crucial en la teoría de la información, donde se utiliza para cuantificar la cantidad de incertidumbre o desorden en un conjunto de datos. En este contexto, la entropía mide la cantidad de información necesaria para describir un sistema o proceso.</p>
+                <h3>Ejemplos de Entropía</h3>
+                <p>A continuación se presentan algunos ejemplos que ilustran el concepto de entropía:</p>
+                <ul class="list">
+                    <li><strong>Mezcla de Tinta y Agua:</strong> Cuando se mezcla tinta con agua, la entropía del sistema aumenta debido al incremento del desorden.</li>
+                    <li><strong>Disolución de Sal en Agua:</strong> Cuando la sal se disuelve en agua, la entropía del sistema aumenta ya que las moléculas de sal se distribuyen de manera más desordenada.</li>
+                    <li><strong>Expansión de un Gas:</strong> Cuando un gas se expande en un recipiente, su entropía aumenta debido al incremento del desorden molecular.</li>
+                </ul>
+            </section>
+            <section id="ciclo-carnot" class="section-box">
+                <h2>El Ciclo de Carnot</h2>
+                <p>El ciclo de Carnot es un ciclo termodinámico ideal que proporciona la máxima eficiencia posible para una máquina térmica operando entre dos temperaturas. Consta de dos procesos isotérmicos y dos adiabáticos:</p>
+                <ol>
+                    <li>Expansión isotérmica a alta temperatura \( T_H \).</li>
+                    <li>Expansión adiabática hasta una temperatura más baja \( T_C \).</li>
+                    <li>Compresión isotérmica a baja temperatura \( T_C \).</li>
+                    <li>Compresión adiabática hasta la temperatura inicial \( T_H \).</li>
+                </ol>
+                <p>La eficiencia del ciclo de Carnot se expresa como:</p>
+                <p>\[
+                e_{Carnot} = 1 - \frac{T_C}{T_H}
+                \]</p>
+                <p>Donde \( T_H \) es la temperatura del depósito caliente y \( T_C \) es la temperatura del depósito frío.</p>
+                <p>El ciclo de Carnot es útil como modelo teórico para comprender los límites de la eficiencia de las máquinas térmicas. Aunque ninguna máquina real puede operar exactamente según el ciclo de Carnot, este ciclo proporciona un estándar contra el cual se pueden comparar las máquinas reales.</p>
+                <p>El ciclo de Carnot consiste en los siguientes pasos:</p>
+                <ul class="list">
+                    <li><strong>Expansión isotérmica:</strong> El gas se expande a temperatura constante \( T_H \), absorbiendo calor \( Q_H \) del depósito caliente.</li>
+                    <li><strong>Expansión adiabática:</strong> El gas sigue expandiéndose sin intercambio de calor, y su temperatura disminuye hasta \( T_C \).</li>
+                    <li><strong>Compresión isotérmica:</strong> El gas se comprime a temperatura constante \( T_C \), liberando calor \( Q_C \) al depósito frío.</li>
+                    <li><strong>Compresión adiabática:</strong> El gas sigue comprimiéndose sin intercambio de calor, y su temperatura aumenta nuevamente hasta \( T_H \).</li>
+                </ul>
+                <p>El ciclo de Carnot ilustra los principios fundamentales de la termodinámica y proporciona una base para el diseño y análisis de máquinas térmicas eficientes.</p>
+                <h3>Aplicaciones del Ciclo de Carnot</h3>
+                <p>El ciclo de Carnot se utiliza como modelo teórico para evaluar la eficiencia de las máquinas térmicas. Aunque ninguna máquina real puede operar exactamente según el ciclo de Carnot, este ciclo proporciona un límite superior para la eficiencia de las máquinas térmicas reales. Algunas aplicaciones incluyen:</p>
+                <ul class="list">
+                    <li><strong>Diseño de Motores:</strong> Los ingenieros utilizan el ciclo de Carnot para diseñar motores más eficientes.</li>
+                    <li><strong>Análisis de Procesos Térmicos:</strong> El ciclo de Carnot se utiliza para analizar y mejorar los procesos térmicos en la industria.</li>
+                    <li><strong>Investigación Científica:</strong> Los científicos utilizan el ciclo de Carnot como herramienta para estudiar los principios fundamentales de la termodinámica.</li>
+                </ul>
+                <div class="image-container">
+                    <img src="../img/ciclocarnot.gif" alt="Imagen Centrada" id="centered-image">
+                </div>
+            </section>
+            <section id="ejemplos" class="section-box">
+                <h2>Ejemplos Prácticos de la Segunda Ley de la Termodinámica</h2>
+                <p>Para comprender mejor la segunda ley de la termodinámica, es útil ver algunos ejemplos prácticos de cómo se aplica esta ley en diferentes situaciones:</p>
+                <h3>Ejemplo 1: Motor de Combustión Interna</h3>
+                <p>Un motor de combustión interna toma 10,000 J de calor y produce 2,000 J de trabajo mecánico por ciclo. El calor se obtiene quemando gasolina. La eficiencia térmica del motor es:</p>
+                <p class="form">\[
+                e = \frac{W}{Q_H} = \frac{2000 \, \text{J}}{10000 \, \text{J}} = 0.20 = 20\%
+                \]</p>
+                <p>El calor rechazado en cada ciclo es:</p>
+                <p class="form">\[
+                Q_C = Q_H - W = 10000 \, \text{J} - 2000 \, \text{J} = 8000 \, \text{J}
+                \]</p>
+                <p>La potencia de salida desarrollada en watts y en caballos de fuerza (hp) si el motor realiza 25 ciclos por segundo es:</p>
+                <p class="form">\[
+                P = W \times \text{ciclos/segundo}  \]<br>\[ =2000 \, \text{J} \times 25 \, \text{ciclos/segundo} \]<br>\[= 50,000 \, \text{W} = 67 \, \text{hp}
+                \]</p>
+                <h3>Ejemplo 2: Refrigerador</h3>
+                <p>Un refrigerador toma 500 J de calor del interior y expulsa 700 J al exterior. El trabajo realizado por el refrigerador es:</p>
+                <p class="form">\[
+                W = Q_H - Q_C = 700 \, \text{J} - 500 \, \text{J} = 200 \, \text{J}
+                \]</p>
+                <p>El coeficiente de rendimiento (COP) del refrigerador es:</p>
+                <p class="form">\[
+                COP = \frac{Q_C}{W} = \frac{500 \, \text{J}}{200 \, \text{J}} = 2.5
+                \]</p>
+                <h3>Ejemplo 3: Calentador de Agua</h3>
+                <p>Un calentador de agua toma 3,000 J de calor y transfiere 2,500 J al agua. La eficiencia del calentador es:</p>
+                <p class="form">\[
+                e = \frac{Q_C}{Q_H} = \frac{2500 \, \text{J}}{3000 \, \text{J}} = 0.833 = 83.3\%
+                \]</p>
+                <h3>Ejemplo 4: Planta de Energía</h3>
+                <p>Una planta de energía convierte 50,000 J de calor en 20,000 J de trabajo mecánico. La eficiencia de la planta es:</p>
+                <p class="form">\[
+                e = \frac{W}{Q_H} = \frac{20000 \, \text{J}}{50000 \, \text{J}} = 0.4 = 40\%
+                \]</p>
+                <p>El calor rechazado es:</p>
+                <p class="form">\[
+                Q_C = Q_H - W = 50000 \, \text{J} - 20000 \, \text{J} = 30000 \, \text{J}
+                \]</p>
+            </section>
+            <section id="resumen" class="section-box">
+                <h2>Resumen de la Segunda Ley de la Termodinámica</h2>
+                <p>La segunda ley de la termodinámica establece que en cualquier proceso espontáneo, la entropía total del sistema y su entorno siempre aumenta. Esta ley tiene varias implicaciones importantes:</p>
+                <ul class="list">
+                    <li>La dirección de los procesos naturales está determinada por el aumento de la entropía.</li>
+                    <li>Ninguna máquina térmica puede ser 100% eficiente debido a la producción inevitable de entropía.</li>
+                    <li>El ciclo de Carnot proporciona un límite superior para la eficiencia de las máquinas térmicas.</li>
+                    <li>La entropía es una medida del desorden, y su aumento implica que los sistemas tienden a evolucionar hacia estados de mayor desorden.</li>
+                </ul>
+                <p>La segunda ley de la termodinámica es una de las leyes fundamentales de la naturaleza y tiene aplicaciones en una amplia variedad de campos, desde la ingeniería hasta la cosmología. Comprender esta ley es esencial para el estudio de la física y la ingeniería térmica.</p>
+                <p>La segunda ley también explica fenómenos cotidianos, como por qué el hielo se derrite en un vaso de agua caliente, por qué los motores de los automóviles no pueden convertir toda la energía del combustible en trabajo útil, y por qué los seres vivos necesitan consumir energía para mantener su organización interna.</p>
+            </section>
+            <section id="conclusiones" class="section-box">
+                <h2>Conclusiones</h2>
+                <p>La segunda ley de la termodinámica nos proporciona una comprensión profunda de la dirección y la eficiencia de los procesos termodinámicos. Nos enseña que todos los procesos naturales tienden a aumentar el desorden del universo y que la eficiencia de las máquinas térmicas siempre estará limitada por esta ley fundamental.</p>
+                <p>El estudio de la termodinámica y, en particular, de la segunda ley, es esencial para muchas disciplinas, desde la ingeniería y la física hasta la biología y la informática. Al comprender y aplicar esta ley, podemos diseñar sistemas más eficientes y sostenibles, y entender mejor el funcionamiento del universo.</p>
+                <p>En resumen, la segunda ley de la termodinámica es una piedra angular de la ciencia moderna que influye en nuestra comprensión del mundo y en el desarrollo de tecnologías avanzadas.</p>
+                <p>Para finalizar, recordemos las palabras de Sadi Carnot, uno de los padres de la termodinámica: "La naturaleza nos ha dado una máquina térmica ideal; nuestra tarea es aprender a usarla de la mejor manera posible."</p>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>##</h4>
+                    <ul>
+                        <li><a href="https://portal.uni.edu.pe/" target="_blank">UNIVERSIDAD NACIONAL DE INGENIERIA</a></li>
+                        <li><a href="http://www0.unsl.edu.ar/~cornette/FISICA_LQ/Francis%20Sears,%20Mark%20Zemansky.pdf" target="_blank">FISICA UNIVERSITARIA. YOUNG FREEDMAN</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>¡Sigue a la UNI!</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/UNIoficial.pe/?locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/uni_oficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>¡Sigue a la FIIS!</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/FacultaddeIngenieriaIndustrialydeSistemas/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ceiis.uni/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-img">
+                <img src="../img/logouniblanco.png" alt="Logo UNI">
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/all.js"></script>
+    <script src="../js/academic_resources.js"></script>
+</body>
+</html>

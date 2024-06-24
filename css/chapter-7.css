@@ -25,7 +25,7 @@
 }
 .mas-img {
     width: 60%;
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
 }
 .mas-img img {
     width: 100%;
@@ -88,6 +88,7 @@
 @media only screen and (max-width:800px) {
     .temas {
         padding: 0 30px;
+        display: block;
     }
     .cuerpo {
         grid-template-columns: none;
@@ -97,5 +98,17 @@
     }
     .cuerpo2 {
         grid-template-columns: none;
+    }
+    .mas-img {
+        width: initial;
+    }
+    .subamortiguado .form {
+        font-size: 12px;
+    }
+    .sobre-amortiguado .form {
+        font-size: 10px;
+    }
+    .maa {
+        margin-top: 50px;
     }
 }

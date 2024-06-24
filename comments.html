@@ -48,7 +48,6 @@
             </ul>
         </nav>
     </header>
-
     <div class="container">
         <div class="formulario">
             <form action="" method="POST">
@@ -76,7 +75,7 @@
                     </div>
                 </div>
                 <div class="section">
-                    <input type="submit" class="botonenviar" value="Enviar Respuesta">
+                    <input onclick="verificarClave()" type="submit" class="botonenviar" value="Enviar Respuesta">
                 </div>
             </form>
         </div>
@@ -86,7 +85,7 @@
         <div class="footer-container">
             <div class="footer-row">
                 <div class="footer-links">
-                    <h4>##</h4>
+                    <button style="border: none; background-color: #000; cursor: pointer;" class="btn-intranet"><a href="#"><i style="color: #fff;" class="fa-solid fa-network-wired"></i></a></button>
                     <ul>
                         <li><a href="https://portal.uni.edu.pe/" target="_blank">UNIVERSIDAD NACIONAL DE INGENIERIA</a></li>
                         <li><a href="http://www0.unsl.edu.ar/~cornette/FISICA_LQ/Francis%20Sears,%20Mark%20Zemansky.pdf" target="_blank">FISICA UNIVERSITARIA. YOUNG FREEDMAN</a></li>
@@ -136,6 +135,20 @@
                 star.classList.remove('checked');
             });
         }
+        claveSecreta = "software";
+        function verificarClave() {
+            // Solicitar clave mediante un prompt
+            var claveIngresada = prompt("Ingresa la clave:");
+
+            // Verificar si la clave ingresada es correcta
+            if (claveIngresada === claveSecreta) {
+                // Clave correcta, redireccionar a la página deseada
+                window.location.href = "intranet/intranet.php";
+            } else {
+                // Clave incorrecta, puedes mostrar un mensaje o simplemente no hacer nada
+            alert("Clave incorrecta.");
+        }
+}
     </script>
 </body>
 </html>
